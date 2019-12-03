@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader/AppHeader';
 import AddCupboardItem from './components/AddCupboardItem/AddCupboardItem';
 import CupboardDisplayItems from './components/CupboardDisplayItems/CupboardDisplayItems';
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
+import FinalMealsDisplay from './components/FinalMealsDisplay/FinalMealsDisplay';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <AddCupboardItem/>
             <CupboardDisplayItems/>
             <IngredientsNumCounter/>
+            <FinalMealsDisplay/>
     </div>
 );
 }

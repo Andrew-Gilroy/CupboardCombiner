@@ -1,11 +1,16 @@
+body {
+  background-color: lightslategray;
+}
+
 .App {
   text-align: center;
   margin: 100px auto;
-  width: 70vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 10px 5px #2e2d2d;
 }
 
 /*.App-header {
@@ -26,26 +31,38 @@
 .AppHeader {
   display: block;
   height: 100px;
-  width: 60%;
+  width: 100%;
   border: 10px solid teal;
+  background-color: lightgrey;
 }
 
 .AddCupboardItem{
   display: block;
   height: 150px;
-  width: 60%;
+  width: 100%;
   border: 10px solid pink;
+background-color: lightgrey;
 }
 .CupboardDisplayItems{
   display: block;
   height: auto;
   min-height: 300px;
-  width: 60%;
+  width: 100%;
   border: 10px solid green;
+background-color: lightgrey;
 }
 .IngredientsNumCounter{
   display: block;
   height: 400px;
-  width: 60%;
+  width: 100%;
   border: 10px solid red;
+background-color: lightgrey;
+}
+
+.FinalMealsDisplay {
+  display: block;
+  height: 150px;
+  width: 100%;
+  border: 10px solid lightgreen;
+  background-color: lightgrey;
 }

@@ -1,3 +1,11 @@
 {
+    //removes es6 version warning from jshint
     "jshint.options": { "esversion": 6 }
+    //adds emmet support for react and other languages
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "razor": "html",
+        "plaintext": "jade"
+    }
 }

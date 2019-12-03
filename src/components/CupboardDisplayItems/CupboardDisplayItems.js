@@ -5,7 +5,7 @@ function CupboardDisplayItems() {
   // Import result is the URL of your image
 return (
     <div className="CupboardDisplayItems">
-    
+    CupboardDisplayItems
     </div>
     );
   

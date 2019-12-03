@@ -6,8 +6,11 @@ function AppHeader() {
   // Import result is the URL of your image
   return (
   <div className="AppHeader">
-  <img src={backgroundTexture} alt="" width="100%" height="100px"/>;
+    AppHeader
   </div>
   );
 }
 export default AppHeader;
+
+//<img src={backgroundTexture} alt="" width="100%" height="100px"/>;
+  
