@@ -1,12 +1,14 @@
 .App {
   text-align: center;
+  margin: 100px auto;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+/*.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -16,7 +18,34 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+*/
 .App-link {
   color: #09d3ac;
+}
+
+.AppHeader {
+  display: block;
+  height: 100px;
+  width: 60%;
+  border: 10px solid teal;
+}
+
+.AddCupboardItem{
+  display: block;
+  height: 150px;
+  width: 60%;
+  border: 10px solid pink;
+}
+.CupboardDisplayItems{
+  display: block;
+  height: auto;
+  min-height: 300px;
+  width: 60%;
+  border: 10px solid green;
+}
+.IngredientsNumCounter{
+  display: block;
+  height: 400px;
+  width: 60%;
+  border: 10px solid red;
 }
