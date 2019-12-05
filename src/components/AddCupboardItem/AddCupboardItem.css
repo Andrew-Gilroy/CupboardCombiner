@@ -1,0 +1,29 @@
+CupboardItem {
+    display: block;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(94, 136, 214);
+  }
+  
+  #AddCupboardItem-input{
+    display: inline-block;
+    height: auto;
+    font-family: Roboto;
+    font-size: 20pt;
+    margin: 50px 20px;
+    height: 42px;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+  }
+
+#cupboardSubmitBtn {
+  display: inline-block;
+  height: 50px;
+  color: rgb(4, 131, 57);
+  font-size: 16pt;
+  width: 200px;
+  background-color: var(--bttn-submit);
+  border-radius: 10px;
+  border: none;
+  margin: 50px 0 0 0;
+}

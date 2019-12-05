@@ -1,0 +1,6 @@
+.AppHeader {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background-color: var(--app-bg-color);
+  }

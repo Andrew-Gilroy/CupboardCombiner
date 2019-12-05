@@ -1,0 +1,35 @@
+/*
+.CupboardDisplayItems{
+    display: block;
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+    background-color: rgb(230, 80, 80);
+  }
+*/  
+
+  .CupboardDisplayItems-Wrapper {
+    width: 100%;
+    min-height: 120px;
+    margin: 40px auto;
+    display: flexbox;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    background-color: rgb(236, 236, 236);
+    align-items: stretch;
+  }
+  .CupboardItem {
+    display: inline-block;
+    height: 50px;
+    min-width: 20%;
+    width: auto;
+    margin: 4px;
+    font-size: 18pt;
+    line-height: 50px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgb(81, 102, 50);
+    border-radius: 2px;
+  }

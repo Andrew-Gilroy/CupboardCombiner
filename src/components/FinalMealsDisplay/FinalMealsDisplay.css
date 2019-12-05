@@ -1,0 +1,6 @@
+.FinalMealsDisplay {
+    display: block;
+    height: 150px;
+    width: 100%;
+    background-color: var(--app-bg-color);
+  }
