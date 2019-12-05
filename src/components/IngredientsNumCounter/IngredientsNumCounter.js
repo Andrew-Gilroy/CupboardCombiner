@@ -1,4 +1,5 @@
 import React from 'react';
+import './IngredientsNumCounter.css';
 
 export default class IngredientsNumCounter extends React.Component{
   constructor(props){

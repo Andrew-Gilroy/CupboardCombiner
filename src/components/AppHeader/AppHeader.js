@@ -1,5 +1,5 @@
 import React from 'react';
-//import backgroundTexture from '../../images/metal--Texture1.jpg'; // Tell Webpack this JS file uses this image
+import '../AppHeader/AppHeader.css';
 
 
 function AppHeader() {

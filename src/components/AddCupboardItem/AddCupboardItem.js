@@ -1,6 +1,7 @@
-import React from 'react';
 
 /*
+import React from 'react';
+import 'SOMETHING HERE.css';
 let AddCupboardItem = props => (
   <div>
     <form onSubmit={props.onSubmit}>
@@ -22,9 +23,9 @@ render() {
       </div>
     );
   }
+  export default AddCupboardItem;
 */
 
-    export default AddCupboardItem;
 /*
 class App extends React.Component{
   constructor(props){

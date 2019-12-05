@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './components/AddCupboardItem/AddCupboardItem.css';
 import AppHeader from './components/AppHeader/AppHeader';
 //import AddCupboardItem from './components/AddCupboardItem/AddCupboardItem';
 import CupboardDisplayItems from './components/CupboardDisplayItems/CupboardDisplayItems';
