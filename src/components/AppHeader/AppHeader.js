@@ -1,12 +1,12 @@
 import React from 'react';
-import backgroundTexture from '../../images/metal--Texture1.jpg'; // Tell Webpack this JS file uses this image
+//import backgroundTexture from '../../images/metal--Texture1.jpg'; // Tell Webpack this JS file uses this image
 
 
 function AppHeader() {
   // Import result is the URL of your image
   return (
   <div className="AppHeader">
-    AppHeader
+   <h1>Cupboard Combiner</h1>
   </div>
   );
 }

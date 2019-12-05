@@ -1,13 +1,12 @@
 /* jshint esversion: 6 */
 import React from 'react';
 
-function CupboardDisplayItems() {
-  // Import result is the URL of your image
-return (
-    <div className="CupboardDisplayItems">
-    CupboardDisplayItems
-    </div>
-    );
-  
-}
+const CupboardDisplayItems = props => (
+  <div className="cupboardDisplayItems-Wrapper">
+    {
+      props.items.map((item, index) => <div key={index} className="CupboardItem">{item}</div>)
+    }
+  </div>
+);
+
 export default CupboardDisplayItems;

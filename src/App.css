@@ -1,15 +1,24 @@
+:root {
+  --main-body-color: rgb(68, 68, 68);
+  --app-bg-color: rgb(215, 217, 219);
+  --bttn-submit: rgb(32, 192, 32);
+  --bttn-remove: rgb(192, 56, 32);
+}
+//background-color: var(--bttn-submit: green);
+
 body {
-  background-color: lightslategray;
+  background-color: var(--main-body-color);
 }
 
 .App {
   text-align: center;
   margin: 100px auto;
-  width: 50vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+  //justify-content: center;
+  background-color: var(--app-bg-color);
   box-shadow: 0px 10px 5px #2e2d2d;
 }
 
@@ -24,45 +33,134 @@ body {
   color: white;
 }
 */
-.App-link {
-  color: #09d3ac;
-}
 
 .AppHeader {
   display: block;
   height: 100px;
   width: 100%;
-  border: 10px solid teal;
-  background-color: lightgrey;
+  background-color: var(--app-bg-color);
 }
 
-.AddCupboardItem{
+.AddCupboardItem {
   display: block;
   height: 150px;
   width: 100%;
-  border: 10px solid pink;
-background-color: lightgrey;
+  background-color: rgb(94, 136, 214);
+}
+
+#AddCupboardItem-input{
+  display: inline-block;
+  height: auto;
+  font-family: Roboto;
+  font-size: 20pt;
+  margin: 50px 20px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+}
+#cupboardSubmitBtn {
+  display: inline-block;
+  height: 50px;
+  color: rgb(4, 131, 57);
+  font-size: 16pt;
+  width: 200px;
+  background-color: var(--bttn-submit);
+  border-radius: 10px;
+  border: none;
+  margin: 50px 0 0 0;
 }
 .CupboardDisplayItems{
   display: block;
   height: auto;
   min-height: 300px;
   width: 100%;
-  border: 10px solid green;
-background-color: lightgrey;
+  background-color: lightgrey;
 }
 .IngredientsNumCounter{
   display: block;
   height: 400px;
   width: 100%;
-  border: 10px solid red;
-background-color: lightgrey;
+  background-color: var(--app-bg-color);
 }
+.IngredientsNumCounter button {
+  
+}
+#addIngredientsButton {
+  display: inline-block;
+  height: 50px;
+  color: white;
+  font-size: 16pt;
+  width: 200px;
+  background-color: var(--bttn-submit);
+  border-radius: 10px;
+  border: none;
+  margin: 0 0 0 0;
+}
+#removeIngredientsButton {
+  display: inline-block;
+  height: 50px;
+  color: white;
+  font-size: 16pt;
+  width: 200px;
+  background-color: var(--bttn-remove);
+  border-radius: 10px;
+  border: none;
+  margin: 0 0 0 0;
+}
+#ingredientsNumCounterDisplay {
+  font-size: 23pt;
+  line-height: 23pt;
+  width: 12vw;
+  display: inline-block;
+}
+
+#submitTotalIngredientsButton {
+  display: block;
+  height: 50px;
+  color: rgb(4, 131, 57);
+  font-size: 16pt;
+  width: 200px;
+  background-color: var(--bttn-submit);
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto;
+}
+
+
+
 
 .FinalMealsDisplay {
   display: block;
   height: 150px;
   width: 100%;
-  border: 10px solid lightgreen;
-  background-color: lightgrey;
+  background-color: var(--app-bg-color);
 }
+
+
+
+
+.cupboardDisplayItems-Wrapper {
+  width: 100%;
+  min-height: 200px;
+  margin: 40px auto;
+  display: flexbox;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  background-color: rgb(236, 236, 236);
+  align-items: stretch;
+}
+.CupboardItem {
+  display: inline-block;
+  height: 50px;
+  width: 20%;
+  margin: 4px;
+  font-size: 18pt;
+  line-height: 50px;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid rgb(81, 102, 50);
+  border-radius: 2px;
+}
+

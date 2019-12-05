@@ -1,12 +1,35 @@
 import React from 'react';
 
-function IngredientsNumCounter() {
-  // Import result is the URL of your image
+export default class IngredientsNumCounter extends React.Component{
+  constructor(props){
+    // Pass props to parent class
+    super(props);
+    // Set initial state
+    this.state = {
+      counter: 0,
+      items: []
+    };
+  }
+
+  increment = () => {
+    const { counter } = this.state;
+    return this.setState({ counter: counter + 1 });
+  };
+  decrement = () => {
+    const { counter } = this.state;
+    return this.setState({ counter: counter - 1 });
+  };
+
+  render() {
   return (
   <div className="IngredientsNumCounter">
-    IngredientsNumCounter
+    <h2>How many ingredients would you like to use?</h2>
+    <button id="removeIngredientsButton" onClick={this.decrement} >-</button>
+  <p id="ingredientsNumCounterDisplay">{this.state.counter}</p>
+    <button id="addIngredientsButton" onClick={this.increment}>+</button>
+    <button type="submit" id="submitTotalIngredientsButton">SUBMIT</button>
   </div>
   );
+  
+};
 }
-
-export default IngredientsNumCounter;
