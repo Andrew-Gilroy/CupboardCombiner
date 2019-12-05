@@ -6,7 +6,7 @@ function AppHeader() {
   // Import result is the URL of your image
   return (
   <div className="AppHeader">
-   <h1>Cupboard Combiner</h1>
+   <h1>CUPBOARD COMBINER</h1>
   </div>
   );
 }

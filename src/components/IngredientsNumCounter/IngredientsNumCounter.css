@@ -1,40 +1,46 @@
 .IngredientsNumCounter{
   display: block;
-  height: 400px;
+  height: auto;
+  
   width: 100%;
   background-color: var(--app-bg-color);
 }
 .IngredientsNumCounter button {
-  
-}
-
-#addIngredientsButton {
   display: inline-block;
-  height: 50px;
+  height: 100px;
+  width: 100px;
   color: white;
   font-size: 16pt;
-  width: 200px;
-  background-color: var(--bttn-submit);
-  border-radius: 10px;
+  border-radius: 100%;
   border: none;
   margin: 0 0 0 0;
+}
+.IngredientsNumCounter h2 {
+  font-size: 20pt;
+  font-family: Roboto;
+  font-weight: 700;
+  color: var(--input-text);
+  margin-bottom: 30px;
+}
+#addIngredientsButton {
+  
+  background-color: var(--bttn-submit);
 }
 #removeIngredientsButton {
-  display: inline-block;
-  height: 50px;
-  color: white;
-  font-size: 16pt;
-  width: 200px;
+  
   background-color: var(--bttn-remove);
-  border-radius: 10px;
-  border: none;
-  margin: 0 0 0 0;
+  
 }
 #ingredientsNumCounterDisplay {
-  font-size: 23pt;
-  line-height: 23pt;
+  font-size: 46pt;
+  line-height: 46pt;
+  font-family: Roboto;
+  font-weight: 700;
   width: 12vw;
+  color: var(--counter-text);
   display: inline-block;
+  //border: 3px solid red;
+
 }
 
 #submitTotalIngredientsButton {
