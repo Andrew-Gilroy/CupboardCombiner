@@ -13,7 +13,7 @@
     width: 550px;
     color: var(--input-text);
     font-family: Roboto;
-    font-size: 18pt;
+    font-size: 16pt;
     //margin: 50px 20px;
     border: none;
     border-radius: 5px;
@@ -27,7 +27,7 @@
   width: 170px;
   color: rgb(4, 131, 57);
   background-color: var(--bttn-submit);
-  font-size: 20pt;
+  font-size: 15pt;
   border-radius: 5px;
   border: none;
   margin: auto;

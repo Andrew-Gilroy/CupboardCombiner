@@ -3,6 +3,7 @@
     height: 70px;
     width: 100%;
     background-color: var(--app-bg-color);
+    border-radius: 5px;
 
   }
 
@@ -15,6 +16,6 @@
     line-height: 70px;
     //justify-self: center;
     font-weight: 600;
-    color: var(--item-text);
+    color: var(--dark-text);
 
   }

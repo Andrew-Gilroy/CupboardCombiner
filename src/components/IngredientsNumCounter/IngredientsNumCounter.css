@@ -7,8 +7,8 @@
 }
 .IngredientsNumCounter button {
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   color: white;
   font-size: 16pt;
   border-radius: 100%;
@@ -19,7 +19,7 @@
   font-size: 20pt;
   font-family: Roboto;
   font-weight: 700;
-  color: var(--input-text);
+  color: var(--dark-text);
   margin-bottom: 30px;
 }
 #addIngredientsButton {
@@ -47,10 +47,11 @@
   display: block;
   height: 50px;
   color: rgb(4, 131, 57);
-  font-size: 16pt;
-  width: 200px;
-  background-color: var(--bttn-submit);
+  font-size: 12pt;
+  width: 400px;
+  //background-color: var(--bttn-submit);
+  background-color: none;
   border-radius: 10px;
-  border: none;
+  border: 3px solid var(--bttn-submit);
   margin: 0 auto;
 }

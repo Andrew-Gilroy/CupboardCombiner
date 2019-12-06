@@ -1,22 +1,25 @@
 :root {
+
   --main-body-color: rgb(68, 68, 68);
   --app-bg-color: rgb(215, 217, 219);
   --bttn-submit: rgb(32, 192, 32);
   --bttn-remove: rgb(192, 56, 32);
   --input-text: rgb(121, 121, 121);
-  --counter-text: rgb(76, 41, 189);
+  --counter-text: rgb(54, 54, 63);
   --item-text: rgb(136, 136, 136);
+  --dark-text: rgb(66, 66, 66);
   --cupboard-item-text: rgb(65, 161, 97);
-
+  
 }
+
 //background-color: var(--bttn-submit: green);
 html {
   
 }
 body {
   //background-color: var(--main-body-color);
-  background: none;
-  background: url('images/foodbg1.jpg');
+  //background-color: rgb(12, 141, 247);
+  background: url('images/foodbg2.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;

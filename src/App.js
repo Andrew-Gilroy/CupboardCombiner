@@ -22,8 +22,7 @@ class App extends React.Component{
   }
 
   onChange = (event) => {
-    
-    this.setState({ term: event.target.value });
+    this.setState({ term: event.target.value});
   };
 
   onSubmit = (event) => {
@@ -33,6 +32,7 @@ class App extends React.Component{
       items: [...this.state.items, this.state.term]
     });
   };
+
 
 // function for submit
 // function for update
@@ -46,7 +46,7 @@ class App extends React.Component{
         <AppHeader/> 
         <div className="AddCupboardItem">
             <form onSubmit={this.onSubmit}>
-            <input value={this.term} onChange={this.onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input"/>
+            <input value={this.state.term} onChange={this.onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input"/>
             <button id="cupboardSubmitBtn">Submit</button>
             </form>
         </div>
