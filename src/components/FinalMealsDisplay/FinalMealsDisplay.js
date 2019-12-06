@@ -1,12 +1,12 @@
 import React from 'react';
 import './FinalMealsDisplay.css';
 
-function FinalMealsDisplay() {
-  // Import result is the URL of your image
+function FinalMealsDisplay(props) {
+
   return (
   <div className="FinalMealsDisplay-Wrapper">
     <div className="FinalMealsDisplay">
-      <p>Your final meal appears here</p>
+      <p>{props.result}</p>
     </div>
   </div>
   );

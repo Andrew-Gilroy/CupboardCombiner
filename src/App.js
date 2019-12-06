@@ -7,21 +7,22 @@ import CupboardDisplayItems from './components/CupboardDisplayItems/CupboardDisp
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
 import FinalMealsDisplay from './components/FinalMealsDisplay/FinalMealsDisplay';
 
-// i should be storing state here to pass down the array via props
-
 
 class App extends React.Component{
   constructor(props){
     // Pass props to parent class
     super(props);
+    //binds the submitIngredients method so that it can be passed to submit button via props.
+    this.submitIngredients = this.submitIngredients.bind(this);
     // Set initial state
     this.state = {
       term: '',
-      items: []
+      items: [],
+      result: []
     };
   }
 
-  onChange = (event) => {
+  inputOnChange = (event) => {
     this.setState({ term: event.target.value});
   };
 
@@ -29,16 +30,20 @@ class App extends React.Component{
     event.preventDefault();
     this.setState({
       term: '',
-      items: [...this.state.items, this.state.term]
+      items: [...this.state.items, this.state.term],
+      
     });
+    //console.log(this.state.items);
   };
 
+//randomiser functinon here. Take array and return new random/results array
 
-// function for submit
-// function for update
-// function for delete
-// function for onchange
 
+  submitIngredients = () => { 
+    this.setState({ result: [...this.state.items, " array & string logic here" , " added to array index"] })
+    return console.log(this.state.result);
+  };
+  
   render() {
     return (
 
@@ -46,18 +51,20 @@ class App extends React.Component{
         <AppHeader/> 
         <div className="AddCupboardItem">
             <form onSubmit={this.onSubmit}>
-            <input value={this.state.term} onChange={this.onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input"/>
+            <input value={this.state.term} onChange={this.inputOnChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input"/>
             <button id="cupboardSubmitBtn">Submit</button>
             </form>
         </div>
         <CupboardDisplayItems items={this.state.items} />
-        <IngredientsNumCounter/>
-        <FinalMealsDisplay/>
+        
+        <IngredientsNumCounter submitIngredients={this.submitIngredients}/>
+        <FinalMealsDisplay result={this.state.result}/>
       </div>
 );
 };
 }
-
+//LESSON HERE
+/*submitIngredients={this.submitIngredients} is how the submitIngredients function/method is passed down to IngredientsNumCounter*/
 
 
 
