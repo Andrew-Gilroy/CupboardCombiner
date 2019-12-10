@@ -10,7 +10,7 @@
 
   #AddCupboardItem-input{
     height: 55px;
-    width: 550px;
+    width: 500px;
     color: var(--input-text);
     font-family: Roboto;
     font-size: 16pt;
@@ -25,8 +25,20 @@
   display: inline-block;
   min-height: 60px;
   width: 170px;
-  color: rgb(4, 131, 57);
+  color: rgb(196, 253, 220);
   background-color: var(--bttn-submit);
+  font-size: 15pt;
+  border-radius: 5px;
+  border: none;
+  margin: auto;
+}
+
+#cupboardDeleteBtn {
+  display: inline-block;
+  min-height: 60px;
+  width: 170px;
+  color: rgb(252, 198, 198);
+  background-color: var(--bttn-remove);
   font-size: 15pt;
   border-radius: 5px;
   border: none;
