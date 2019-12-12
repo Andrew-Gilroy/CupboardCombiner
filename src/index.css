@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*******testing css******/
+#console-log-btn {
+  background-color: white;
+  color: green;
+  border: 7px solid rgb(133, 132, 132);
+  height: 75px;
+  width: 50% auto;
+  margin: 10px 0 0 0;
+
+}
+#console-log-btn-others {
+  background-color: white;
+  color: rgb(13, 45, 189);
+  border: 7px solid rgb(133, 132, 132);
+  height: 75px;
+  width: 50% auto;
+  margin: 10px 0 0 0;
+
+}
