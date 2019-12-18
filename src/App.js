@@ -14,7 +14,7 @@ function App() {
 /// HOOKS STATE MANAGEMENT //
 /////////////////////////////
   const [term, updateTerm] = useState('');
-  const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Chicken", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
+  const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
   // eslint-disable-next-line
   const [removed, updateRemovedItems] = useState([]);
   const [counter, updateCounter] = useState(1);
@@ -57,14 +57,14 @@ function App() {
     
     const copyArray = [...items];
     let shuffled = copyArray.sort(() => 0.5 - Math.random());
-    let selected = shuffled.slice(0, counter);
-    let poppedSingle = selected.pop(0, 1);
-    let joined = selected.join(", ")
-    let finaltems = joined + " and " + poppedSingle;
-    updateResult(finaltems);
-    // duplicate the items array. shuffle new array then select *(counter num) of items. 
-    // Pop out the first array item (poppedSingle) then Join -stringified with ,'s. 
-    // Add poppedSingle item to result.
+    let sliced = shuffled.slice(0, counter);
+    let poppedSingle = sliced.pop(0, 1);
+    let finaltems = sliced.join(", ") + " and " + poppedSingle;
+    counter === 1 ? updateResult(poppedSingle) : updateResult(finaltems);
+  
+    // duplicate the items array. Shuffle new array then slice *(counter num) of items. 
+    // Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
+    // ternarary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
     // Update the state via updateResult
   };
   
