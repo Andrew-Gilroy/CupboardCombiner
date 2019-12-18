@@ -1,15 +1,17 @@
 import React from 'react';
 import './FinalMealsDisplay.css';
 
-function FinalMealsDisplay(props) {
+function FinalMealsDisplay({result}) {
 
   return (
   <div className="FinalMealsDisplay-Wrapper">
     <div className="FinalMealsDisplay">
-      <p>{props.result}</p>
+      <h2>Your next meal will be:</h2>
+      <p>{result}</p>
     </div>
   </div>
   );
 }
 
 export default FinalMealsDisplay;
+//"Tonight's meal will be" + " 🤗 " +

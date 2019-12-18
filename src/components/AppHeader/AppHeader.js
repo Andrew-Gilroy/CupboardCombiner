@@ -1,12 +1,13 @@
 import React from 'react';
 import '../AppHeader/AppHeader.css';
+import logo from '../../images/logo.svg';
 
 
 function AppHeader() {
   // Import result is the URL of your image
   return (
   <div className="AppHeader">
-   <h1>CUPBOARD COMBINER</h1>
+    <img id="AppLogo" src={logo} alt={"Cupboard Combiner Logo"}/>
   </div>
   );
 }

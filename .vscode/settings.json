@@ -9,3 +9,8 @@
         "plaintext": "jade"
     }
 }
+{
+    "emmet.includeLanguages": {
+       "javascript": "javascriptreact"
+    }
+ }

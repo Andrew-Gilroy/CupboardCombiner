@@ -1,0 +1,10 @@
+
+.AppFooter {
+    display: block;
+    height: 30px;
+    line-height: normal;
+    width: 100%;
+    background-color: none;
+    margin: 0 auto 20px auto;
+    color: var(--light-text);
+  }

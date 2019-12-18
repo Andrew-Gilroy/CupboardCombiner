@@ -1,130 +1,124 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import './components/AddCupboardItem/AddCupboardItem.css';
+//import './components/AddCupboardItem/AddCupboardItem.css';
 import AppHeader from './components/AppHeader/AppHeader';
-import AddCupboardItem from './components/AddCupboardItem/AddCupboardItem';
-import CupboardDisplayItems from './components/CupboardDisplayItems/CupboardDisplayItems';
+import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
+import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupboardItems';
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
 import FinalMealsDisplay from './components/FinalMealsDisplay/FinalMealsDisplay';
+import AppFooter from './components/AppFooter/AppFooter';
 
+function App() {
 
-class App extends React.Component{
-  constructor(props){
-    // Pass props to parent class
-    super(props);
-    this.handleRemove = this.handleRemove.bind(this);
-    this.inputOnChange = this.inputOnChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-    
-    // Set initial state
-    this.state = {
-      term: '',
-      items: ["Fruit", "Rice", "Beef", "Strawberries"],
-      result: [],
-    };
+/////////////////////////////  
+/// HOOKS STATE MANAGEMENT //
+/////////////////////////////
+  const [term, updateTerm] = useState('');
+  const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Chicken", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
+  // eslint-disable-next-line
+  const [removed, updateRemovedItems] = useState([]);
+  const [counter, updateCounter] = useState(1);
+  const [result, updateResult] = useState([]);
+
+/////////////////////////////  
+///// FUNCTIONS & LOGIC /////
+/////////////////////////////
+
+//captures user input and updates the term to live reflect the current user input
+  const inputOnChange = (event) => {
+    updateTerm(event.target.value);
+  };
+
+//Adds user inputted term to the items array. Term is then updated to being blank. Items array is updated using updateItems function listed above in hooks  
+  const onSubmitItemHandler = (event) => {
+    event.preventDefault();
+    const termAddedToArray = [...items, term];
+    updateTerm('');
+    updateItems(termAddedToArray);
+  };
+
+//Removes an item from the original array via splice. RemovedItems array is updated. User clicks X button to remove item
+  const handleRemove = (cats) => {
+    const itemRemove = items.splice(cats, 1);
+    updateRemovedItems({removed: itemRemove});
   }
 
-  inputOnChange = (event) => {
-    this.setState({ term: event.target.value});
+//Deletes all items in the cupboard   
+  const deleteAllItems = () => { 
+    updateItems([]);
   };
 
-  onSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      term: '',
-      items: [...this.state.items, this.state.term,]      
-    });
+  const handleIncrement = () => { if(counter <= 4)updateCounter(counter + 1); else(alert("5 ingredients maximum"))};
+  const handleDecrement = () => { if(counter >= 2)updateCounter(counter - 1); };
+
+
+//Returns random final results based on number of ingredients selected  
+  const finalResultsHandler = () => { 
+    
+    const copyArray = [...items];
+    let shuffled = copyArray.sort(() => 0.5 - Math.random());
+    let selected = shuffled.slice(0, counter);
+    let poppedSingle = selected.pop(0, 1);
+    let joined = selected.join(", ")
+    let finaltems = joined + " and " + poppedSingle;
+    updateResult(finaltems);
+    // duplicate the items array. shuffle new array then select *(counter num) of items. 
+    // Pop out the first array item (poppedSingle) then Join -stringified with ,'s. 
+    // Add poppedSingle item to result.
+    // Update the state via updateResult
   };
-
-  submitIngredients = () => { 
-    this.setState({ result: [...this.state.items.join(", ")] });
-  };
-
-  deleteAllItems = () => { 
-    this.setState({ items : [] })
-  };
-
-handleRemove (cats) {
-  const items = this.state.items.splice(cats, 1);
-   // const items = this.state.items.filter(item => item.id !== itemId);
-  this.setState({otherItems: items});
-}
-
-Itemslogger = () => console.log(this.state.items);
-otherItemslogger = () => console.log(this.state.otherItems);
-
-/*
-<div className="AddCupboardItem">
-            <form onSubmit={this.onSubmit}>
-            <input value={this.state.term} onChange={this.inputOnChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input"/>
-            <button id="cupboardSubmitBtn">Submit</button>
-            </form>
-        </div>
-*/
-  render() {
-    return (
-
-      <div className="App">
-        <AppHeader/> 
-
-        <AddCupboardItem onSubmit={this.onSubmit} value={this.state.term} onChange={this.inputOnChange} term={this.state.term}/>
-        
-        <CupboardDisplayItems items={this.state.items}  removeItem={this.handleRemove} key={() => this.state.items.toString()}/>
-        <button id="cupboardDeleteBtn" onClick={this.deleteAllItems}>Clear List</button>
-        <IngredientsNumCounter submitIngredients={this.submitIngredients}/>
-        <FinalMealsDisplay result={this.state.result} />
-        
-        <button id="console-log-btn" onClick={this.Itemslogger} >CONSOLE ITEMS</button>
-        <button id="console-log-btn-others" onClick={this.otherItemslogger} >CONSOLE OTHER ITEMS</button>
-
-      </div>
-
-);
+  
+// return keyword with wrapper div on same line--important!
+  return <div className="App">
+            <AppHeader/> 
+            <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
+            <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>
+            <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>
+            <FinalMealsDisplay result={result}/> 
+            <AppFooter/>
+          </div>
 };
-}
 
 export default App;
-//LESSON HERE
-/*submitIngredients={this.submitIngredients} is how the submitIngredients function/method is passed down to IngredientsNumCounter*/
 
+//const [objectstate, updateObjectState ] = useState({firstname: 'Andrew', lastname:'Gilroy'})
+//object hooks state example with access example,  objectstate.firstname = Andrew
 
-/*
-/*
-handleRemove (itemIndex) {
-  const items = this.state.items.splice(itemIndex, 1);
-  this.setState({items: items});
+  /* 
+  <AppFooter/>
+  <button id="console-log-btn" onClick={Itemslogger}>CONSOLE ITEMS</button>
+  <button id="console-log-btn-others" onClick={otherItemslogger}>CONSOLE OTHER ITEMS</button>
+      
+  */
+
+/* 
+<input value={firstname} onChange={firstNameonChangeHandler} onSubmit={onSubmitFirstNameHandler}placeholder="Change the name"></input>
+      
+<input value={lastname} onChange={lastNameonChangeHandler} onSubmit={onSubmitLastNameHandler}placeholder="Change the name"></input>
+      <p>My name is: {objectstate.firstname} {objectstate.lastname} </p>
+
+*/
+
+/* const updateObjectStateHandler = (event) => {
+  updateTerm(event.target.value);
+ } 
+ const firstNameonChangeHandler = (event) => {
+   updateTerm(event.target.value);
+ }
+ 
+ const onSubmitFirstNameHandler = (event) => {
+ event.preventDefault();
+ const objectTermValue = event.target.value;
+ updateFirstName({firstname: objectTermValue});
 };
-*/
-/*
-  removeItem(item){
-    this.setState({
-      items: this.state.items.filter(el => el !== item)
-    })
-}
-*/
 
-//delete single items handler
-/*
-handleDelete = itemId => {
-  const items = this.state.items.filter(item => item.id !== itemId);
- // const items = this.state.items.filter(item => item.id !== itemId);
-  this.setState({ items: items });
-  console.log(this.state.items);  
+ const lastNameonChangeHandler = (event) => {
+  updateTerm(event.target.value);
+ }
+ 
+const onSubmitLastNameHandler = (event) => {
+  event.preventDefault();
+  const objectTermValue = event.target.value;
+  updateLastName({lastname: objectTermValue});
 };
-*/
-/*
-otherItems: [{id: 0, firstName:"Andrew"},{id: 1, firstName:"Ana"} ]
-*/
-/*
-onDelete={this.handleDelete}
-*/
-
-
-/*
-<img src={logo} className="App-logo" alt="logo" />
-       <LogoMastHead name="PROPS" > </LogoMastHead>
-
-    />
-
-*/
-
+ */
