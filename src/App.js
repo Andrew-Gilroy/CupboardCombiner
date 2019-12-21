@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-//import './components/AddCupboardItem/AddCupboardItem.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
 import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupboardItems';
@@ -13,6 +12,7 @@ function App() {
 /////////////////////////////  
 /// HOOKS STATE MANAGEMENT //
 /////////////////////////////
+
   const [term, updateTerm] = useState('');
   const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
   // eslint-disable-next-line
@@ -56,7 +56,7 @@ function App() {
   const finalResultsHandler = () => { 
     
     const copyArray = [...items];
-    if (copyArray.length === 0 || copyArray.length <= counter - 1) {return alert("Please add more cupboard items");}
+    if (copyArray.length === 0 || copyArray.length < counter) {return alert("Please add more cupboard items");}
     const shuffled = copyArray.sort(() => 0.5 - Math.random());
     const sliced = shuffled.slice(0, counter);
     const poppedSingle = sliced.pop(0, 1);

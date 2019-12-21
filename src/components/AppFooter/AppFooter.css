@@ -1,10 +1,22 @@
 
 .AppFooter {
     display: block;
-    height: 30px;
+    min-height: 30px;
     line-height: normal;
     width: 100%;
-    background-color: none;
-    margin: 0 auto 20px auto;
-    color: var(--light-text);
+    background-color: var(--main-body-color);
+    margin: 0 auto 0px auto;
+    color: var(--item-text);
+  }
+
+  #footerReactLogo {
+    height: 30px;
+    margin: 16px auto -16px auto;
+  }
+
+  #smallFooterText {
+    font-size: 10pt;
+  }
+  #medFooterText {
+    font-size: 12pt;
   }

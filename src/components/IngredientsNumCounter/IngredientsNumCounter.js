@@ -1,15 +1,8 @@
 import React from 'react';
 import './IngredientsNumCounter.css';
 
-//import React, { useState } ---- useState is required to enable hooks stateful components
-//{finalResultsHandler} is how i pass in props with functional components!!!
 function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecrement, counter}) {
   
-  //Hooks state
-  //const [counter, updateCounter] = useState(1);
-  //const handleIncrement = () => { if(counter <= 4)updateCounter(counter + 1); else(alert("5 ingredients maximum"))};
-  //const handleDecrement = () => { if(counter >= 2)updateCounter(counter - 1); };
-
   return <div className="IngredientsNumCounter">
     <h2>How many ingredients would you like to use?</h2>
       <div className="buttons-wrapper">
@@ -23,4 +16,6 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
 };
 export default IngredientsNumCounter;
 
+//import React, { useState } ---- useState is required to enable hooks stateful components
+//{finalResultsHandler} is how i pass in props with functional components!!!
 

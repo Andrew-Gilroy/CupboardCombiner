@@ -1,10 +1,8 @@
 import React from 'react';
 import '../InputCupboardItem/InputCupboardItem.css';
 
-
-//{onSubmit etc} is how i pass in props with hooks!!!
 function InputCupboardItem({value, onChange, onSubmit}) {
-
+  
   return <div className="AddCupboardItem">
             <form onSubmit={onSubmit}>
             <input value={value} onChange={onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input" required/>
@@ -16,4 +14,5 @@ function InputCupboardItem({value, onChange, onSubmit}) {
 export default InputCupboardItem;
 
 
+//{value, onChange, onSubmit} is how i pass in props with hooks!!!
 //function IngredientsNumCounterHOOKS({finalResultsHandler}) {
