@@ -4,12 +4,13 @@
     display: block;
     height: 170px;
     width: 100%;
-    background-color: var(--app-header-blue);
+    background-color: var(--app-highlight);
     border-radius: 5px 5px 0 0;
     margin: 0px auto;
     padding: 15px 0;
     //border: 1px solid grey;
   }
+
 #AppLogo {
   height: 100%;
   width: 40%;

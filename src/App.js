@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import ThemeToggler from './components/ThemeToggler/ThemeToggler';
 import AppHeader from './components/AppHeader/AppHeader';
 import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
 import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupboardItems';
@@ -9,9 +10,9 @@ import AppFooter from './components/AppFooter/AppFooter';
 
 function App() {
 
-/////////////////////////////  
-/// HOOKS STATE MANAGEMENT //
-/////////////////////////////
+///////////////////////////////  
+/// HOOKS STATE MANAGEMENT ////
+///////////////////////////////
 
   const [term, updateTerm] = useState('');
   const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
@@ -20,9 +21,10 @@ function App() {
   const [counter, updateCounter] = useState(1);
   const [result, updateResult] = useState([]);
 
-/////////////////////////////  
-///// FUNCTIONS & LOGIC /////
-/////////////////////////////
+
+/////////////////////////////// 
+////// FUNCTIONS & LOGIC //////
+///////////////////////////////
 
 //captures user input and updates the term to live reflect the current user input
   const inputOnChange = (event) => {
@@ -71,6 +73,7 @@ function App() {
   
 // return keyword with wrapper div on same line--important!
   return <div className="App">
+            <ThemeToggler/>
             <AppHeader/> 
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
             <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>

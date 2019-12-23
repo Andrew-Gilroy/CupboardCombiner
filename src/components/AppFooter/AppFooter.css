@@ -4,7 +4,7 @@
     min-height: 30px;
     line-height: normal;
     width: 100%;
-    background-color: var(--main-body-color);
+    background-color: var(--app-body-color);
     margin: 0 auto 0px auto;
     color: var(--item-text);
   }

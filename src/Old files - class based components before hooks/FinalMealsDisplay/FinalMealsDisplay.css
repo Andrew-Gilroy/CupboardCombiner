@@ -2,7 +2,7 @@
   display: block;
   height: 250px;
   width: 100%;
-  background-color: var(--app-bg-color);
+  background-color: var(--app-body-color-light);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -11,7 +11,7 @@
   display: block;
   height: 200px;
   width: 100%;
-  background-color: var(--app-bg-color);
+  background-color: var(--app-body-color-light);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

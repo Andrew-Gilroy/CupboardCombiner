@@ -1,6 +1,6 @@
 .CupboardDisplayItems-Wrapper--paddingWrapper {
   width: 100%;
-  background-color: rgb(236, 236, 236);
+  background-color: var(--app-body-color-light);
   //max-width: 89%;
   //padding: 0px 0px;
   //min-height: 120px;
@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: rgb(236, 236, 236);
+  background-color: var(--app-body-color-light);
   justify-content: center;
 }
 
@@ -26,7 +26,7 @@
   width: 29%;
   margin: 4px;
   background-color: white;
-  border: 3px solid var(--app-header-blue);
+  border: 3px solid var(--app-highlight);
 /*   rgb(97, 221, 255)*/  
   border-radius: 5px;
   box-shadow: 0 2px 2px rgb(76, 88, 126);

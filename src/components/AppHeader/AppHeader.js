@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../AppHeader/AppHeader.css';
 import logo from '../../images/logo.svg';
 
+//const [App_class, updateClass] = useState('AppHeader');
 
 function AppHeader() {
   return (
@@ -16,3 +17,16 @@ export default AppHeader;
 // Import "logo" is one way to pass in the URL of my image
 //<img src={logo} alt={"Cupboard Combiner Logo"} width="100%" height="100px"/>;
   
+
+//class toggle - className={ this.state.condition ? "button toggled" : "button" }
+/* 
+this.state = {
+  condition: false
+}
+this.handleClick = this.handleClick.bind(this)
+}
+handleClick() {
+this.setState({
+  condition: !this.state.condition
+})
+} */

@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(80, 80, 80);
+    background-color: var(--app-body-color);
   }
 
   #AddCupboardItem-input{

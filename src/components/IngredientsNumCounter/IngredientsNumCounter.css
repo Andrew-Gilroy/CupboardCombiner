@@ -2,7 +2,7 @@
   display: block;
   height: auto;
   width: 100%;
-  background-color: var(--main-body-color);
+  background-color: var(--app-body-color);
 }
 
 .buttons-wrapper {
