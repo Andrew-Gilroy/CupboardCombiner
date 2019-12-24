@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import ThemeToggler from './components/ThemeToggler/ThemeToggler';
 import AppHeader from './components/AppHeader/AppHeader';
+import ThemeToggler from './components/ThemeToggler/ThemeToggler';
 import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
 import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupboardItems';
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
@@ -73,8 +73,8 @@ function App() {
   
 // return keyword with wrapper div on same line--important!
   return <div className="App">
-            <ThemeToggler/>
             <AppHeader/> 
+            <ThemeToggler/>
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
             <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>
             <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>
@@ -88,7 +88,6 @@ export default App;
 //const [objectstate, updateObjectState ] = useState({firstname: 'Andrew', lastname:'Gilroy'})
 //object hooks state example with access example,  objectstate.firstname = Andrew
 
-
 /* 
 <input value={firstname} onChange={firstNameonChangeHandler} onSubmit={onSubmitFirstNameHandler}placeholder="Change the name"></input>
       
@@ -96,27 +95,3 @@ export default App;
       <p>My name is: {objectstate.firstname} {objectstate.lastname} </p>
 
 */
-
-/* const updateObjectStateHandler = (event) => {
-  updateTerm(event.target.value);
- } 
- const firstNameonChangeHandler = (event) => {
-   updateTerm(event.target.value);
- }
- 
- const onSubmitFirstNameHandler = (event) => {
- event.preventDefault();
- const objectTermValue = event.target.value;
- updateFirstName({firstname: objectTermValue});
-};
-
- const lastNameonChangeHandler = (event) => {
-  updateTerm(event.target.value);
- }
- 
-const onSubmitLastNameHandler = (event) => {
-  event.preventDefault();
-  const objectTermValue = event.target.value;
-  updateLastName({lastname: objectTermValue});
-};
- */

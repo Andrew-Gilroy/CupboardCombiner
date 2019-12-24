@@ -1,5 +1,34 @@
+.ThemeToggler-Wrapper {
+    height: 60px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px;
+}
+#theme-text {
+    display: block;
+    height: 10px;
+    font-size: 1.2rem;
+
+    //margin-right: 14px;
+    color: var(--app-highlight);
+}
 .ThemeToggler_btn {
-  margin: 10px auto;
-  width: 80px;
-  height: 40px;  
+    margin-right: 8px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px; 
+    border: none;
+    box-shadow: 0 2px 2px rgb(76, 88, 126);
+    cursor: pointer;
+}
+.ThemeToggler_btn:hover {
+    color: white;
+    background-color:var(--app-highlight);
+}
+.ThemeToggler_btn:focus {
+    background-color: var(--app-highlight);
+  }
+.ThemeToggler_btn:last-of-type {
+    margin-right: 0px;
 }

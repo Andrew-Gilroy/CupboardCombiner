@@ -37,7 +37,7 @@
   font-size: 20pt;
   font-family: Roboto;
   font-weight: 700;
-  color: var(--light-text);
+  color: var(--counter-text);
   margin-top: 70px;
 }
 
@@ -90,7 +90,7 @@
 #submitTotalIngredientsButton:hover {
   text-shadow: 1px 1px 0 rgb(54, 97, 161);
   color: white;
-  background-color: var(--bttn-submit-dark);
+  background-color: var(--bttn-submit-toggled);
   cursor: pointer;
 }
 

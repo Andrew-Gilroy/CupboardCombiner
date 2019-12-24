@@ -44,7 +44,7 @@
   //color: rgb(196, 253, 220);
   text-shadow: 1px 1px 0 rgb(54, 97, 161);
   color: white;
-  background-color: var(--bttn-submit-dark);
+  background-color: var(--bttn-submit-toggled);
   cursor: pointer;
 }
 
