@@ -1,5 +1,3 @@
-
-
 :root {
   --app-highlight: rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
@@ -7,7 +5,7 @@
   --bttn-submit: rgb(97, 221, 255);
   --bttn-submit-toggled: rgb(59, 134, 155);
   --bttn-remove: rgb(219, 34, 1);
-  --bttn-remove-toggle: rgb(167, 57, 27);
+  --bttn-remove-toggled: rgb(167, 57, 27);
   --input-text: rgb(121, 121, 121);
   --counter-text: rgb(255, 255, 255);
   --item-text: rgb(136, 136, 136);
@@ -41,6 +39,7 @@ body {
   flex-direction: column;
   background-color: var(--app-body-color-light);
   box-shadow: 0px 6px 5px #413e3e;
+  border-radius: 5px;
 }
 
 textarea:focus, input:focus{

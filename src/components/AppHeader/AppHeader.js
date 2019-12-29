@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../AppHeader/AppHeader.css';
 import logo from '../../assets/images/logo.svg';
-
-//const [App_class, updateClass] = useState('AppHeader');
 
 function AppHeader() {
   return (

@@ -15,7 +15,7 @@ function App() {
 ///////////////////////////////
 
   const [term, updateTerm] = useState('');
-  const [items, updateItems] = useState(["Bacon", "Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
+  const [items, updateItems] = useState(["Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
   // eslint-disable-next-line
   const [removed, updateRemovedItems] = useState([]);
   const [counter, updateCounter] = useState(1);

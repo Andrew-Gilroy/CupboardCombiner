@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 .CupboardItem button:hover {
-  background-color: var(--bttn-remove-toggle);
+  background-color: var(--bttn-remove-toggled);
   //filter:brightness(70%);
   //filter:invert(80%);
   //filter: hue-rotate(0deg) brightness(80%);
