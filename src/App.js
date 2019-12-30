@@ -73,8 +73,8 @@ function App() {
   
 // return keyword with wrapper div on same line--important!
   return <div className="App">
-            <AppHeader/> 
             <ThemeToggler/>
+            <AppHeader/> 
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
             <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>
             <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>

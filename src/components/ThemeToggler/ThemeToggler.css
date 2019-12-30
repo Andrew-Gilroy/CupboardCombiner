@@ -1,34 +1,88 @@
 .ThemeToggler-Wrapper {
-    height: 60px;
+    height: fit-content;
+    //max-height: 100px;
+    width: 8vw;
+    position: fixed;
+    top: 10px;
+    right: 30px;
     display: flex;
+    flex-direction: column;
     align-items:center;
     justify-content: center;
     border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgb(220, 225, 235);
+    padding: 20px;
 }
 #theme-text {
     display: block;
-    height: 10px;
+    line-height: 1px;
+    height: auto;
+    //width: auto;
     font-size: 1.2rem;
 
     //margin-right: 14px;
-    color: var(--app-highlight);
+    //color: var(--app-highlight);
+    color: rgb(59, 59, 59);
 }
+.themeChevron{
+    display: block;
+    font-size: 2rem;
+    height: 5px;
+    //width: 100%;
+    color: red;
+    margin: 15px auto 0 auto;
+    cursor: pointer;
+}
+
+#themePickerVisibility {
+    display: none ;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 .ThemeToggler_btn {
-    margin-right: 8px;
-    width: 80px;
+    margin: 4px;
+    width: 30px;
     height: 30px;
     border-radius: 5px; 
     border: none;
     box-shadow: 0 2px 2px rgb(76, 88, 126);
     cursor: pointer;
 }
+.ThemeToggler_btn:focus {
+    outline: none;
+}
+.dark {
+    background-color: rgb(133, 135, 136);
+}
+.light {
+    background-color: rgb(130, 210, 220);
+}
+.red {
+    background-color: rgb(223, 55, 55);
+}
+.blue {
+    background-color: rgb(95, 194, 252);
+}
+.green {
+    background-color: rgb(55, 223, 055);
+}
+.yellow {
+    background-color: rgb(235, 220, 13);
+}
+.reset {
+    background-color: rgb(97, 221, 255);
+}
+
 .ThemeToggler_btn:hover {
-    color: white;
-    background-color:var(--app-highlight);
+    filter: brightness(0.7);
 }
 .ThemeToggler_btn:focus {
     background-color: var(--app-highlight);
   }
 .ThemeToggler_btn:last-of-type {
-    margin-right: 0px;
+   width: 105px;
 }
