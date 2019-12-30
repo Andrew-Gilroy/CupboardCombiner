@@ -11,7 +11,7 @@
 
   #footerReactLogo {
     height: 30px;
-    margin: 16px auto -16px auto;
+    margin: 16px auto -10px auto;
     animation: rotate-center 12s linear infinite both;
   }
 

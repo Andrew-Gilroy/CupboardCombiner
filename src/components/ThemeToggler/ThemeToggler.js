@@ -132,7 +132,7 @@ function themePickerVisibility_toggle() {
 function ThemeToggler() {
     
 return <div className="ThemeToggler-Wrapper">
-  <h3 id="theme-text">Pick a theme<i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
+  <h3 id="theme-text">Theme Picker<i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
     <div id="themePickerVisibility" style={styleObject}>
       <button className="ThemeToggler_btn dark"   id="ThemeTogglerBtn--Dark"    onClick={changeTheme_Dark}></button>
       <button className="ThemeToggler_btn light"  id="ThemeTogglerBtn--Light"   onClick={changeTheme_Light}></button>
