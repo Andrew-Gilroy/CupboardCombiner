@@ -21,7 +21,7 @@
   height: 70px;
   width: 29%;
   margin: 4px;
-  background-color: white;
+  background-color: var(--item-bg);
   border: 3px solid var(--app-highlight); 
   border-radius: 5px;
   box-shadow: 0 2px 2px rgb(76, 88, 126);
@@ -47,7 +47,8 @@
   background-color: var(--bttn-remove-item-toggled);
 }
 .CupboardItem h1 {
-  color: rgb(49, 47, 32);
+  //color: rgb(49, 47, 32);
+  color: var(--item-text);
   margin: auto;
   text-align: center;
   vertical-align: middle;
@@ -62,7 +63,7 @@
   min-height: 60px;
   width: 170px;
   color: var(--bttn-remove-all);
-  background-color: none;
+  background: var(--item-bg);
   font-size: 1.6rem;
   border-radius: 5px;
   border: 3px solid var(--bttn-remove-all);

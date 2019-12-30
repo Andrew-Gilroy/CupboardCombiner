@@ -1,30 +1,28 @@
 :root {
   font-size: 62.5%;
+  --app-bg-color: rgb(187, 187, 187);
   --app-highlight:rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
   --app-body-color-light: rgb(215, 217, 219);
   --bttn-submit: rgb(97, 221, 255);
   --bttn-submit-toggled: rgb(59, 134, 155);
-
   --bttn-remove-item: rgb(219, 34, 1);
   --bttn-remove-item-toggled: rgb(167, 57, 27);
-
   --bttn-remove-all: rgb(219, 34, 1);
   --bttn-remove-all-toggled: rgb(167, 57, 27);
-
   --bttn-add-ingredients:rgb(97, 221, 255);
   --bttn-add-ingredients-toggled:rgb(59, 134, 155);
-
   --bttn-remove-ingredients: rgb(219, 34, 1);
   --bttn-remove-ingredients-toggled:rgb(167, 57, 27);
-  
-
-  --input-text: rgb(121, 121, 121);
+  --input-text: rgb(55, 55, 55);
   --counter-text: rgb(255, 255, 255);
-  --item-text: rgb(136, 136, 136);
-  --dark-text: rgb(66, 66, 66);
+  --item-bg: rgb(255,255,255);
+  --item-text: rgb(55, 55, 55);
+  --dark-text: rgb(55, 55, 55);
   --light-text: rgb(255, 255, 255);
-  --FinalMealsDisplay-text: rgb(68, 68, 68);
+  --finalMealsDisplay-text: rgb(68, 68, 68);
+  --finalMealsDisplay-text--p: rgb(68, 68, 68);
+  --finalMealsDisplay-text--p-bg: rgb(255, 255, 255);
   --footer-text: rgb(165, 201, 223);
 
   --rgb-test: rgb(059, 134, 155);
@@ -33,11 +31,12 @@ Usage - background-color: var(--app-body-color);
 */ 
 }
 body {
-  background: url('./assets/images/foodbg2.jpg');
+  /* background: url('./assets/images/foodbg2.jpg');
   background-repeat: repeat;
   background-position: 0px 0px;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
+  background-color: var(--app-bg-color);
 }
 
 .App {
@@ -48,7 +47,8 @@ body {
   flex-direction: column;
   background-color: var(--app-body-color-light);
   box-shadow: 0px 6px 5px #413e3e;
-  border-radius: 5px;
+  border: 5px solid var(--app-highlight);
+  border-radius: 12px;
 }
 
 textarea:focus, input:focus{
