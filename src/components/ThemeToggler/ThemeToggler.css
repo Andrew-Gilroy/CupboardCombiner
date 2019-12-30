@@ -1,6 +1,5 @@
 .ThemeToggler-Wrapper {
     height: fit-content;
-    //max-height: 100px;
     width: 8vw;
     position: fixed;
     top: 10px;
@@ -18,18 +17,13 @@
     display: block;
     line-height: 1px;
     height: auto;
-    //width: auto;
-    font-size: 1.1rem;
-
-    //margin-right: 14px;
-    //color: var(--app-highlight);
+    font-size: 1.8rem;
     color: rgb(59, 59, 59);
 }
 .themeChevron{
     display: block;
     font-size: 2rem;
     height: 5px;
-    //width: 100%;
     color: red;
     margin: 15px auto 0 auto;
     cursor: pointer;

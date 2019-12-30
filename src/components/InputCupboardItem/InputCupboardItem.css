@@ -21,7 +21,7 @@
     flex-grow: 2;
     color: var(--input-text);
     font-family: Roboto;
-    font-size: 14pt;
+    font-size: 1.8rem;
     line-height: 0px;
     border: none;
     border-radius: 5px;
@@ -35,9 +35,8 @@
   height: 48px;
   flex-grow: 1;
   width: 20%;
-  font-size: 13pt;
+  font-size: 1.6rem;
   font-weight: 700;
-  //letter-spacing: 0.5pt;
   border-radius: 5px;
   border: 3px solid var(--bttn-submit);
   vertical-align: middle;
@@ -46,10 +45,8 @@
   cursor: pointer;
   color: white;
   background-color:var(--bttn-submit);
-  //text-shadow: 1px 1px 0 rgb(54, 97, 161);
 }
 #cupboardSubmitBtn:hover {
-  //color: rgb(196, 253, 220);
   text-shadow: 1px 1px 0 rgb(54, 97, 161);
   color: white;
   background-color: var(--bttn-submit-toggled);
