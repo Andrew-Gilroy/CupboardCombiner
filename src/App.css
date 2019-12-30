@@ -5,13 +5,25 @@
   --app-body-color-light: rgb(215, 217, 219);
   --bttn-submit: rgb(97, 221, 255);
   --bttn-submit-toggled: rgb(59, 134, 155);
-  --bttn-remove: rgb(219, 34, 1);
-  --bttn-remove-toggled: rgb(167, 57, 27);
+
+  --bttn-remove-item: rgb(219, 34, 1);
+  --bttn-remove-item-toggled: rgb(167, 57, 27);
+
+  --bttn-remove-all: rgb(219, 34, 1);
+  --bttn-remove-all-toggled: rgb(167, 57, 27);
+
+  --bttn-add-ingredients:rgb(97, 221, 255);
+  --bttn-add-ingredients-toggled:rgb(59, 134, 155);
+
+  --bttn-remove-ingredients: rgb(219, 34, 1);
+  --bttn-remove-ingredients-toggled:rgb(167, 57, 27);
+  
+
   --input-text: rgb(121, 121, 121);
   --counter-text: rgb(255, 255, 255);
   --item-text: rgb(136, 136, 136);
   --dark-text: rgb(66, 66, 66);
-  --light-text: rgb(240, 233, 233);
+  --light-text: rgb(255, 255, 255);
   --FinalMealsDisplay-text: rgb(68, 68, 68);
   --footer-text: rgb(165, 201, 223);
 

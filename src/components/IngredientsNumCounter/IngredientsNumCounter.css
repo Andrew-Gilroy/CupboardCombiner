@@ -43,21 +43,23 @@
 #addIngredientsButton {
   color: white;
   border: none;
-  background-color: var(--bttn-submit);
+  background-color: var(--bttn-add-ingredients);
 }
 
 #addIngredientsButton:hover {
   color: white;
+  background-color: var(--bttn-add-ingredients-toggled);
 }
 
 #removeIngredientsButton {
   color: white;
   border: none;
-  background-color: var(--bttn-remove);
+  background-color: var(--bttn-remove-ingredients);
 }
 
 #removeIngredientsButton:hover {
   color: white;
+  background-color: var(--bttn-remove-ingredients-toggled);
 }
 
 #ingredientsNumCounterDisplay {
@@ -80,7 +82,7 @@
   font-weight: 700;
   border-radius: 5px;
   font-size: 1.6rem;
-  color: white;
+  color: var(--light-text);
   background-color: var(--bttn-submit);
   border: 3px solid var(--bttn-submit);
   cursor: pointer;

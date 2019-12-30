@@ -14,15 +14,33 @@ const changeTheme_Dark = () => {
 // done to here
   docRootStyle.setProperty('--bttn-submit', 'rgb(76, 167, 68)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 124, 65)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(219, 34, 001)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(97, 221, 255)');
 };
+
+/* 
+docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+docRootStyle.setProperty('--bttn-remove-ingredients', 'rgb(219, 34, 1)');
+docRootStyle.setProperty('--bttn-remove-ingredients-toggled', 'rgb(167, 57, 27)');
+
+
+*/
+
 
 const changeTheme_Light = () => {
   docRootStyle.setProperty('--app-highlight', 'rgb(130, 210, 220)');
@@ -30,12 +48,18 @@ const changeTheme_Light = () => {
   docRootStyle.setProperty('--app-body-color-light', 'rgb(232, 233, 232)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(96, 200, 220)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(46, 100, 120)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(229, 134, 231)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(229, 134, 231)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(229, 134, 231)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(190, 94, 181)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(66, 66, 66)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(54, 54, 63)');
   docRootStyle.setProperty('--footer-text', 'rgb(33, 63, 80)');
 };
@@ -46,12 +70,18 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--app-body-color-light', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(223, 55, 55)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(83, 00, 00)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(193, 35, 35)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(193, 35, 35)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(223, 55, 55)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(83, 00, 00)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(223, 55, 55)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(83, 00, 00)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(223, 55, 55)');
 };
@@ -62,12 +92,18 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--app-body-color-light', 'rgb(61, 85, 122)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(42, 78, 155)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(109, 123, 187)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(109, 123, 187)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(48, 73, 88)');
 };
@@ -78,7 +114,13 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--app-body-color-light', 'rgb(000, 083, 000)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(22, 219, 22)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(059, 134, 22)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(089, 134, 100)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
@@ -90,16 +132,23 @@ const changeTheme_Green = () => {
 
 const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--app-highlight', 'rgb(235, 220, 13)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(203, 183, 003)');
+  //docRootStyle.setProperty('--app-body-color', 'rgb(203, 183, 003)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(065, 020, 00)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(80, 80, 80)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(222, 219, 22)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(60, 60, 50)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(60, 60, 50)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
-  docRootStyle.setProperty('--counter-text', 'rgb(54, 54, 63)');
+  docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(66, 66, 66)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(66, 66, 66)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(33, 63, 80)');
 };
@@ -110,12 +159,18 @@ const changeTheme_Reset = () => {
   docRootStyle.setProperty('--app-body-color-light', 'rgb(215, 217, 219)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
-  docRootStyle.setProperty('--bttn-remove', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(121, 121, 121)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(136, 136, 136)');
   docRootStyle.setProperty('--dark-text', 'rgb(66, 66, 66)');
-  docRootStyle.setProperty('--light-text', 'rgb(240, 233, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(68, 68, 68)');
   docRootStyle.setProperty('--footer-text', 'rgb(165, 201, 223)');
 };

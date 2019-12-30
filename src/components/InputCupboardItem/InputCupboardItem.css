@@ -43,7 +43,7 @@
   text-align: center;
   margin: auto;
   cursor: pointer;
-  color: white;
+  color: var(--light-text);
   background-color:var(--bttn-submit);
 }
 #cupboardSubmitBtn:hover {
