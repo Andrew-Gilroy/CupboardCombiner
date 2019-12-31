@@ -1,6 +1,6 @@
 :root {
   font-size: 62.5%;
-  --app-bg-color: rgb(187, 187, 187);
+  --app-bg-color: rgb(34, 34, 34);
   --app-highlight:rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
   --app-body-color-light: rgb(215, 217, 219);
@@ -24,8 +24,8 @@
   --finalMealsDisplay-text--p: rgb(68, 68, 68);
   --finalMealsDisplay-text--p-bg: rgb(255, 255, 255);
   --footer-text: rgb(165, 201, 223);
-
-  --rgb-test: rgb(059, 134, 155);
+  --box-shadow: rgb(68, 68, 68);
+  --empty-cupboard-msg: rgb(55, 55, 55);
 /* 
 Usage - background-color: var(--app-body-color);
 */ 
@@ -46,7 +46,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--app-body-color-light);
-  box-shadow: 0px 6px 5px #413e3e;
+  //box-shadow: 0px 6px 5px #413e3e;
+  box-shadow: 0px 6px 5px  var(--box-shadow);
   border: 5px solid var(--app-highlight);
   border-radius: 12px;
 }

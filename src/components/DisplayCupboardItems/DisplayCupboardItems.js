@@ -2,17 +2,18 @@ import React from 'react';
 import '../DisplayCupboardItems/DisplayCupboardItems.css';
 
 function DisplayCupboardItems({items, removeItem, deleteAllItems}) {
-    
+  
 return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
-    <div className="CupboardDisplayItems-Wrapper">
-    { items.map((item, cats) => <div key={cats} className="CupboardItem">
-        <h1>{item}</h1>
-          <button  onClick={() => removeItem(cats)}>X</button>
-          </div>)
-      }
-      </div>
+          <div className="CupboardDisplayItems-Wrapper">
+            { items.map((item, cats) => <div key={cats} className="CupboardItem">
+              <h1>{item}</h1>
+              <button onClick={() => removeItem(cats)}>X</button>
+              </div>)
+            }
+          <p id="emptyCupboardMessage"></p>
+          </div>
       <button id="cupboardDeleteALLBtn" onClick={deleteAllItems}>REMOVE ALL</button>
-  </div>
+      </div>
 };
 export default DisplayCupboardItems;
 

@@ -2,7 +2,7 @@
     height: fit-content;
     width: 8vw;
     position: fixed;
-    top: 10px;
+    top: 70px;
     right: 30px;
     display: flex;
     flex-direction: column;
@@ -10,15 +10,16 @@
     justify-content: center;
     border-radius: 5px;
     border: 2px solid white;
-    background-color: rgb(220, 225, 235);
+    background-color: var(--app-bg-color);
     padding: 20px;
 }
 #theme-text {
     display: block;
-    line-height: 1px;
+    line-height: 0;
     height: auto;
     font-size: 1.8rem;
-    color: rgb(59, 59, 59);
+    color: rgb(255, 255, 255);
+    color: var(--app-highlight);
 }
 .themeChevron{
     display: block;

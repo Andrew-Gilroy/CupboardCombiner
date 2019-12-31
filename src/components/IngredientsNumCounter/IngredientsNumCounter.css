@@ -23,7 +23,8 @@
   border-radius: 10%;
   margin: 0 0 0 0;
   cursor: pointer;
-  box-shadow: 0 2px 2px rgb(36,36,36);
+  //box-shadow: 0 2px 2px rgb(36,36,36);
+  box-shadow: 0 2px 2px var(--box-shadow);
 
 }
 
@@ -70,7 +71,8 @@
   width: 16vw;
   color: white;
   display: inline-block;
-  text-shadow: 4px 4px 2px rgb(36, 36, 36);
+  //text-shadow: 4px 4px 2px rgb(36, 36, 36);
+  text-shadow: 4px 4px 2px var(--box-shadow);
 }
 
 #submitTotalIngredientsButton {
@@ -89,7 +91,8 @@
 }
 
 #submitTotalIngredientsButton:hover {
-  text-shadow: 1px 1px 0 rgb(54, 97, 161);
+  //text-shadow: 1px 1px 0 rgb(54, 97, 161);
+  text-shadow: 1px 1px 0 var(--box-shadow);
   color: white;
   background-color: var(--bttn-submit-toggled);
   cursor: pointer;

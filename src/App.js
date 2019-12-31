@@ -37,40 +37,41 @@ function App() {
     const termAddedToArray = [...items, term];
     updateTerm('');
     updateItems(termAddedToArray);
+    document.getElementById("emptyCupboardMessage").innerHTML = ""
   };
-
+  
 //Removes an item from the original array via splice. RemovedItems array is updated. User clicks X button to remove item
   const handleRemove = (cats) => {
     const itemRemove = items.splice(cats, 1);
     updateRemovedItems({removed: itemRemove});
-  }
+    if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;"}; 
+  };
 
 //Deletes all items in the cupboard   
   const deleteAllItems = () => { 
     updateItems([]);
+    document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;"
   };
-
+//handles increments/decrements onclicks from IngredientsNumCounter
   const handleIncrement = () => { if(counter <= 4)updateCounter(counter + 1); else(alert("5 ingredients maximum"))};
   const handleDecrement = () => { if(counter >= 2)updateCounter(counter - 1); };
 
 
 //Returns random final results based on number of ingredients selected  
   const finalResultsHandler = () => { 
-    
-    const copyArray = [...items];
-    if (copyArray.length === 0 || copyArray.length < counter) {return alert("Please add more cupboard items");}
-    const shuffled = copyArray.sort(() => 0.5 - Math.random());
-    const sliced = shuffled.slice(0, counter);
-    const poppedSingle = sliced.pop(0, 1);
-    const finaltems = sliced.join(", ") + " and " + poppedSingle;
-    counter === 1 ? updateResult(poppedSingle) : updateResult(finaltems);
-
-    // duplicate the items array. Shuffle new array then slice *(counter num) of items. 
-    // Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
-    // ternarary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
-    // Update the state via updateResult
+      const copyArray = [...items];
+      if (copyArray.length === 0 || copyArray.length < counter) {return alert("Please add more cupboard items");}
+      const shuffled = copyArray.sort(() => 0.5 - Math.random());
+      const sliced = shuffled.slice(0, counter);
+      const poppedSingle = sliced.pop(0, 1);
+      const finaltems = sliced.join(", ") + " and " + poppedSingle;
+      counter === 1 ? updateResult(poppedSingle) : updateResult(finaltems);
+      // duplicate the items array. Shuffle new array then slice *(counter num) of items. 
+      // Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
+      // ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
+      // Update the state via updateResult
   };
-  
+
 // return keyword with wrapper div on same line--important!
   return <div className="App">
             <ThemeToggler/>
@@ -84,6 +85,8 @@ function App() {
 };
 
 export default App;
+
+/* notes and scraps below */
 
 //const [objectstate, updateObjectState ] = useState({firstname: 'Andrew', lastname:'Gilroy'})
 //object hooks state example with access example,  objectstate.firstname = Andrew

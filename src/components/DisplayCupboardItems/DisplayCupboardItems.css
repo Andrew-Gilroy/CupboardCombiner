@@ -24,7 +24,8 @@
   background-color: var(--item-bg);
   border: 3px solid var(--app-highlight); 
   border-radius: 5px;
-  box-shadow: 0 2px 2px rgb(76, 88, 126);
+  //box-shadow: 0 2px 2px rgb(76, 88, 126);
+  box-shadow: 0 2px 2px var(--box-shadow);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -76,6 +77,11 @@
   background-color: var(--bttn-remove-all);
   border: 5px solid var(--bttn-remove-all);
   cursor: pointer;
+}
+
+#emptyCupboardMessage {
+  color: var(--empty-cupboard-msg);
+  font-size: 2rem;
 }
 
 //

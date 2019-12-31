@@ -47,7 +47,8 @@
   background-color:var(--bttn-submit);
 }
 #cupboardSubmitBtn:hover {
-  text-shadow: 1px 1px 0 rgb(54, 97, 161);
+  //text-shadow: 1px 1px 0 rgb(54, 97, 161);
+  text-shadow: 1px 1px 0 var(--box-shadow);
   color: white;
   background-color: var(--bttn-submit-toggled);
   cursor: pointer;

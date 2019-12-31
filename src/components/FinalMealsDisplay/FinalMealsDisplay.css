@@ -13,8 +13,8 @@
 }
 
 .FinalMealsDisplay p {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
   font-family: Roboto;
   display: block;
   min-height: 30px;
@@ -26,6 +26,21 @@
   color: var(--finalMealsDisplay-text--p);
   background: var(--finalMealsDisplay-text--p-bg);
   border-radius: 5px;
+
+/* font-size: 2rem;
+  line-height: 2rem;
+  font-family: Roboto;
+  display: block;
+  min-height: 30px;
+  width: 60%;
+  word-wrap: break-word;
+  margin: auto;
+  //margin-top: 30px;
+  padding: 30px 30px;
+  color: var(--finalMealsDisplay-text--p);
+  background: var(--finalMealsDisplay-text--p-bg);
+  border-radius: 5px; */
+
 }
 
 .FinalMealsDisplay h2 {

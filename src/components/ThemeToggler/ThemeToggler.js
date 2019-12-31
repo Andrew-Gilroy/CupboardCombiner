@@ -7,12 +7,10 @@ import '../ThemeToggler/ThemeToggler.css';
 const docRootStyle = document.documentElement.style;
 
 const changeTheme_Dark = () => {
-  docRootStyle.setProperty('--app-bg-color', 'rgb(37, 37, 47)');
+  docRootStyle.setProperty('--app-bg-color', 'rgb(23, 23, 23)');
   docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
-  //docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--app-body-color', 'rgb(23, 23, 23)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(62, 62, 62)');
-  // done to here
   docRootStyle.setProperty('--bttn-submit', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
@@ -24,7 +22,6 @@ const changeTheme_Dark = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
-  
   docRootStyle.setProperty('--item-bg', 'none');
   docRootStyle.setProperty('--item-bg-text', 'white');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
@@ -34,22 +31,12 @@ const changeTheme_Dark = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'none');
   docRootStyle.setProperty('--footer-text', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--box-shadow', 'none');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(97, 221, 255)');
 };
 
-/* 
-docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
-docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
-docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
-docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
-docRootStyle.setProperty('--bttn-remove-ingredients', 'rgb(219, 34, 1)');
-docRootStyle.setProperty('--bttn-remove-ingredients-toggled', 'rgb(167, 57, 27)');
-
-
-*/
-
-
 const changeTheme_Light = () => {
-  docRootStyle.setProperty('--app-bg-color', 'rgb(232, 233, 232)');
+  docRootStyle.setProperty('--app-bg-color', 'rgb(2, 2, 32)');
   docRootStyle.setProperty('--app-highlight', 'rgb(130, 210, 220)');
   docRootStyle.setProperty('--app-body-color', 'rgb(203, 203, 203)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(232, 233, 232)');
@@ -63,13 +50,19 @@ const changeTheme_Light = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients','rgb(229, 134, 231)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(190, 94, 181)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--counter-text', 'rgb(136, 136, 136)');
+  docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(54, 54, 63)');
-  docRootStyle.setProperty('--footer-text', 'rgb(33, 63, 80)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--footer-text', 'rgb(229, 134, 231)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(168, 168, 168)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(229, 134, 231)');
+
+
 };
 
 const changeTheme_Red = () => {
@@ -93,33 +86,14 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(223, 55, 55)');
-};
+  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(223, 55, 55)');
 
-const changeTheme_Blue = () => {
-  docRootStyle.setProperty('--app-bg-color', 'rgb(20, 20, 40)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(95, 194, 252)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(179, 202, 231)');
-  docRootStyle.setProperty('--app-body-color-light', 'rgb(21, 25, 52)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(61, 85, 122)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(21, 25, 82)');
-  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(235, 110, 13)');
-  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(125, 50, 13)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(95, 194, 252)');
-  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(21, 25, 82)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(235, 110, 13)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(125, 50, 13)');
-  docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
-  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--footer-text', 'rgb(48, 73, 88)');
-};
 
+};
 const changeTheme_Green = () => {
   docRootStyle.setProperty('--app-bg-color', 'rgb(00, 30, 00)');
   docRootStyle.setProperty('--app-highlight', 'rgb(55, 223, 055)');
@@ -140,12 +114,49 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--dark-text', 'rgb(140, 244, 140)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 223, 055)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(55, 223, 055)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 223, 055)');
+
+
+};
+const changeTheme_Blue = () => {
+  docRootStyle.setProperty('--app-bg-color', 'rgb(20, 20, 40)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(95, 194, 252)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(212, 232, 255)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(41, 45, 72)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(61, 85, 122)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(91, 125, 152)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(235, 110, 13)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(125, 50, 13)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(95, 194, 252)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(91, 125, 152)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(235, 110, 13)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(125, 50, 13)');
+  docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
+  docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(95, 194, 252)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--footer-text', 'rgb(21, 25, 82)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(78, 78, 78)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(95, 194, 252)');
+
+
 };
 
+
+
 const changeTheme_Yellow = () => {
-  docRootStyle.setProperty('--app-bg-color', 'rgb(230, 230, 200)');
+  docRootStyle.setProperty('--app-bg-color', 'rgb(127, 17, 7)');
   docRootStyle.setProperty('--app-highlight', 'rgb(235, 220, 13)');
   //docRootStyle.setProperty('--app-body-color', 'rgb(203, 183, 003)');
   docRootStyle.setProperty('--app-body-color', 'rgb(30, 30, 00)');
@@ -166,11 +177,17 @@ const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--footer-text', 'rgb(33, 63, 80)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--footer-text', 'rgb(203, 183, 003)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(235, 220, 13)');
+
+
 };
 
 const changeTheme_Reset = () => {
-  docRootStyle.setProperty('--app-bg-color', 'rgb(187, 187, 187)');
+  docRootStyle.setProperty('--app-bg-color', 'rgb(34, 34, 34)');
   docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--app-body-color', 'rgb(68, 68, 68)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(215, 217, 219)');
@@ -193,6 +210,8 @@ const changeTheme_Reset = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(165, 201, 223)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 55, 55)');
 };
 
 function themePickerVisibility_toggle() {
@@ -202,7 +221,7 @@ function themePickerVisibility_toggle() {
 //this is added as a prop to set initial style as "none", necessary for toggle to work!
   const styleObject = {
     display: "none",
-}
+};
 
 function ThemeToggler() {
     
@@ -212,8 +231,8 @@ return <div className="ThemeToggler-Wrapper">
       <button className="ThemeToggler_btn dark"   id="ThemeTogglerBtn--Dark"    onClick={changeTheme_Dark}></button>
       <button className="ThemeToggler_btn light"  id="ThemeTogglerBtn--Light"   onClick={changeTheme_Light}></button>
       <button className="ThemeToggler_btn red"    id="ThemeTogglerBtn--Red"     onClick={changeTheme_Red}></button>
-      <button className="ThemeToggler_btn blue"   id="ThemeTogglerBtn--Blue"    onClick={changeTheme_Blue}></button>
       <button className="ThemeToggler_btn green"  id="ThemeTogglerBtn--Green"   onClick={changeTheme_Green}></button>
+      <button className="ThemeToggler_btn blue"   id="ThemeTogglerBtn--Blue"    onClick={changeTheme_Blue}></button>
       <button className="ThemeToggler_btn yellow" id="ThemeTogglerBtn--Yellow"  onClick={changeTheme_Yellow}></button>
       <button className="ThemeToggler_btn reset"  id="ThemeTogglerBtn--Reset"   onClick={changeTheme_Reset}>reset</button>
     </div>
