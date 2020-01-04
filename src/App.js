@@ -51,21 +51,21 @@ const flickrImgUrlBuilder = () => {
     return alert("flickrImgUrlBuilder error")
   }
     };
-
 //I NEED - FARM ID - SERVER ID - ID - SECRET
 //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
 
-// use effect hook watches for changes in fetchResult(json returned) 
+
+// use effect hook should! watch for changes in fetchResult(json returned) 
 // it then runs flickrImgUrlBuilder() to create an image url from the fetched JSON
 useEffect(() => {
      if(fetchResult !== ""){flickrImgUrlBuilder()}// create image url from json data
 });
-// }, [fetchResult]);
-
+// }, [fetchResult]); // dependancy array it could be important here to stop crashes?
+// it seems like FLICKr api crashes on certain words... carrots...
 const fetchImageUrl = async () => {
 
 try { 
-  let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1`;
+  let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance`;
   const response = await fetch(apiSearchTerm);
   const json = await response.json();
   //state update function    
