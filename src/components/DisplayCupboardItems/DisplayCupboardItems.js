@@ -1,11 +1,12 @@
 import React from 'react';
 import '../DisplayCupboardItems/DisplayCupboardItems.css';
 
-function DisplayCupboardItems({items, removeItem, deleteAllItems}) {
+function DisplayCupboardItems({items, removeItem, deleteAllItems, imageURL}) {
   
 return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
           <div className="CupboardDisplayItems-Wrapper">
             { items.map((item, cats) => <div key={cats} className="CupboardItem">
+              <img src={imageURL} alt="" className="ingredients-image"></img>
               <h1>{item}</h1>
               <button onClick={() => removeItem(cats)}>X</button>
               </div>)

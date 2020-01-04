@@ -16,13 +16,17 @@ function App() {
 
   const [term, updateTerm] = useState('');
   const [items, updateItems] = useState(["Rice", "Pasta", "Curry Sauce", "Spinach", "Cilantro", "Tomatoes", "Chicken", "Beef", "Carrots", "Peppers"]);
+  /* const [items, updateItems] = useState({name: 'Bacon', url: 'https://farm66.staticflickr.com/65535/49285056768_de01247872.jpg'}, {name: 'Carrots', url: 'https://farm2.staticflickr.com/1496/24428604506_dfa351a5a7.jpg'}, {name: 'Eggs', url: 'https://farm4.staticflickr.com/3348/3514192452_2981b6e008.jpg'}); */
+  //const [objectstate, updateObjectState ] = useState({firstname: 'Andrew', lastname:'Gilroy'})
+//object hooks state example with access example,  objectstate.firstname = Andrew
+
   // eslint-disable-next-line
   const [removed, updateRemovedItems] = useState([]);
   const [counter, updateCounter] = useState(1);
   const [result, updateResult] = useState([]);
   //API search term states
   const [searchTerm, updateSearchTerm] = useState('');
-  const [fetchResult, updateFetchResult] = useState('');//
+  const [fetchResult, updateFetchResult] = useState('');//API JSON DATA
   //API image url
   const [imageURL, updateImageUrl] = useState('');
   
@@ -36,9 +40,9 @@ function App() {
     updateTerm(event.target.value);
   };
 
-
+// takes returned Flickr API data then converts it to a valid URL
 const flickrImgUrlBuilder = () => {
-  if (fetchResult !== "") {
+  if (fetchResult.photos.photo.length !== 0) {
     
     const farmId = fetchResult.photos.photo[0].farm;
     const serverId = fetchResult.photos.photo[0].server;
@@ -48,24 +52,22 @@ const flickrImgUrlBuilder = () => {
     updateImageUrl(imgUrl);
   }
   else {
-    return alert("flickrImgUrlBuilder error")
+    return console.log("flickrImgUrlBuilder error - Api Image not returned")
   }
     };
-//I NEED - FARM ID - SERVER ID - ID - SECRET
-//https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
 
+// use effect hook will run on every change to the app
+// it checks to see if fetchResult state has changed before
+// invoking flickrImgUrlBuilder() to create an image url from // the fetched JSON
 
-// use effect hook should! watch for changes in fetchResult(json returned) 
-// it then runs flickrImgUrlBuilder() to create an image url from the fetched JSON
 useEffect(() => {
-     if(fetchResult !== ""){flickrImgUrlBuilder()}// create image url from json data
+     if(fetchResult !== ""){flickrImgUrlBuilder();}
 });
-// }, [fetchResult]); // dependancy array it could be important here to stop crashes?
-// it seems like FLICKr api crashes on certain words... carrots...
+
 const fetchImageUrl = async () => {
 
 try { 
-  let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance`;
+  let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance&media=photos`;
   const response = await fetch(apiSearchTerm);
   const json = await response.json();
   //state update function    
@@ -79,13 +81,10 @@ catch(err) {
 //Items array is updated using updateItems function listed above in hooks  
   const onSubmitItemHandler = (event) => {
     event.preventDefault();
-    
     updateSearchTerm(term);// updates & stores the state of apisearchTerm with term. Term is cleared later
-    
-    fetchImageUrl(term);// runs a search for img urls from Flickr API
-
-  const termAddedToArray = [...items, term];// i need 
-    updateTerm('');
+    fetchImageUrl(term);// runs an async request for a single img. Json date is stored in state. This triggers image url builder function (flickrImgUrlBuilder).
+    const termAddedToArray = [...items, term];
+    updateTerm('');// term cleared after submit
     updateItems(termAddedToArray);
     document.getElementById("emptyCupboardMessage").innerHTML = "";
   };
@@ -126,9 +125,8 @@ catch(err) {
             <ThemeToggler/>
             <AppHeader/> 
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
-            <img src={imageURL} alt="" className="ingredients-image"></img>
             <p>{JSON.stringify(fetchResult.title)}</p>
-            <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>
+            <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} imageURL={imageURL} key={() => items.toString()}/>
             <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>
             <FinalMealsDisplay result={result}/> 
             <AppFooter/>

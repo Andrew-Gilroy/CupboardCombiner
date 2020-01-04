@@ -18,7 +18,10 @@
 
 .CupboardItem {
   flex: 1 1 auto;
-  height: 70px;
+  height: auto;
+  min-height: 170px;
+  //max-height: 270px;
+  //height: auto;
   width: 29%;
   margin: 4px;
   background-color: var(--item-bg);
@@ -86,7 +89,9 @@
 
 
 .ingredients-image {
-  max-height: 500px;
+  //float: left;
+  //max-height: 100%;
+  max-width: 100%;
 }
 //
 ///////////////////////////////////////
