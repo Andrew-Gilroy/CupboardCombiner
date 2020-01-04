@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import ThemeToggler from './components/ThemeToggler/ThemeToggler';
@@ -22,16 +22,10 @@ function App() {
   const [result, updateResult] = useState([]);
   //API search term states
   const [searchTerm, updateSearchTerm] = useState('');
-  const [fetchResult, updateFetchResult] = useState([]);
-
-/*   useEffect(() =>
-  fetch("BookApiUrl")
-    .then(res => res.json())
-    .then(setBook)
-) */
-
-
-
+  const [fetchResult, updateFetchResult] = useState('');//
+  //API image url
+  const [imageURL, updateImageUrl] = useState('');
+  
 
 /////////////////////////////// 
 ////// FUNCTIONS & LOGIC ////////////////////////////////////////////////////////////////////
@@ -43,49 +37,54 @@ function App() {
   };
 
 
-/*   async function fetchImageUrl() {
-
-  //await fetch('https://jsonplaceholder.typicode.com/todos/1' + term) //concats term onto fetch URL
-    try{ await fetch('https://jsonplaceholder.typicode.com/todos/1') //should concat term onto fetch URL
-        .then(response => response.json())
-        .then(json => updateFetchResult(json));
-         console.log(fetchResult);
-      } catch(err) {
-          console.log("Fetch Error");//fix this?
-      }
-    }; */
-  const fetchImageUrl = async () => {
-
-  //const response = await fetch('https://jsonplaceholder.typicode.com/todos/1' + term) //concats term onto fetch URL
-    try { 
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1') //this should concat term onto fetch URL
-        const json = await response.json();
-        updateFetchResult(json); //state update function    
-        console.log(fetchResult);
-      } catch(err) {
-          console.log("Fetch Error");
-      }
+const flickrImgUrlBuilder = () => {
+  if (fetchResult !== "") {
+    
+    const farmId = fetchResult.photos.photo[0].farm;
+    const serverId = fetchResult.photos.photo[0].server;
+    const id = fetchResult.photos.photo[0].id;
+    const secret = fetchResult.photos.photo[0].secret;  
+    const imgUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
+    updateImageUrl(imgUrl);
+  }
+  else {
+    return alert("flickrImgUrlBuilder error")
+  }
     };
 
+//I NEED - FARM ID - SERVER ID - ID - SECRET
+//https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
 
+// use effect hook watches for changes in fetchResult(json returned) 
+// it then runs flickrImgUrlBuilder() to create an image url from the fetched JSON
+useEffect(() => {
+     if(fetchResult !== ""){flickrImgUrlBuilder()}// create image url from json data
+});
+// }, [fetchResult]);
 
-/*
-  console.log(fetchResult.userId);
-  console.log(fetchResult.id);
-  console.log(fetchResult.title);
-  console.log(fetchResult.completed);
-  alert(fetchResult.title) */
+const fetchImageUrl = async () => {
+
+try { 
+  let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1`;
+  const response = await fetch(apiSearchTerm);
+  const json = await response.json();
+  //state update function    
+  updateFetchResult(json); //updates state with returned API data
+}
+catch(err) {
+  console.log("Fetch Error");
+}};
 
 //Adds user inputted term to the items array and updates the API searchTerm. Term is then updated to ''. 
 //Items array is updated using updateItems function listed above in hooks  
   const onSubmitItemHandler = (event) => {
     event.preventDefault();
-    updateSearchTerm(term);// updates & stores the state of searchTerm with term. Term is cleared later
     
-    fetchImageUrl();// runs a search for img urls from Flickr API
+    updateSearchTerm(term);// updates & stores the state of apisearchTerm with term. Term is cleared later
     
-// create an object to add to the array here. {foodName: Eggs, imageUrl: "https://etc}
-  const termAddedToArray = [...items, term];// i need to add objects to the array. {foodName: Eggs, imageUrl: "https://etc} , {foodName: Beans, imageUrl: "https://etc}"
+    fetchImageUrl(term);// runs a search for img urls from Flickr API
+
+  const termAddedToArray = [...items, term];// i need 
     updateTerm('');
     updateItems(termAddedToArray);
     document.getElementById("emptyCupboardMessage").innerHTML = "";
@@ -107,7 +106,6 @@ function App() {
   const handleIncrement = () => { if(counter <= 4)updateCounter(counter + 1); else(alert("5 ingredients maximum"));};
   const handleDecrement = () => { if(counter >= 2)updateCounter(counter - 1); };
 
-
 //Returns random final results based on number of ingredients selected  
   const finalResultsHandler = () => { 
       const copyArray = [...items];
@@ -128,6 +126,7 @@ function App() {
             <ThemeToggler/>
             <AppHeader/> 
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term}/>
+            <img src={imageURL} alt="" className="ingredients-image"></img>
             <p>{JSON.stringify(fetchResult.title)}</p>
             <DisplayCupboardItems items={items}  removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()}/>
             <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>
