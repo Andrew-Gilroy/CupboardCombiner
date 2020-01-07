@@ -1,13 +1,13 @@
 import React from 'react';
 import '../DisplayCupboardItems/DisplayCupboardItems.css';
 
-function DisplayCupboardItems({items, removeItem, deleteAllItems, imageURL}) {
-  
+function DisplayCupboardItems({items, removeItem, deleteAllItems, fetchResult, flickrImgUrlBuilder}) {
+
 return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
           <div className="CupboardDisplayItems-Wrapper">
             { items.map((item, cats) => <div key={cats} className="CupboardItem">
-              <img src={imageURL} alt="" className="ingredients-image"></img>
-              <h1>{item}</h1>
+              <img src={item.url} alt="" className="ingredients-image"></img>
+              <h1>{item.name}</h1>
               <button onClick={() => removeItem(cats)}>X</button>
               </div>)
             }
@@ -17,6 +17,3 @@ return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
       </div>
 };
 export default DisplayCupboardItems;
-
-//{deleteAllItems etc} is how i pass in props with hooks!!!
-//updateItems({ term: '', items: [...items, term,] })

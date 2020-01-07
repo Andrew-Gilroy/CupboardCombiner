@@ -16,6 +16,5 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
 };
 export default IngredientsNumCounter;
 
-//import React, { useState } ---- useState is required to enable hooks stateful components
 //{finalResultsHandler} is how i pass in props with functional components!!!
 
