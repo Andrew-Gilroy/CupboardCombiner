@@ -13,7 +13,8 @@ return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
             }
           <p id="emptyCupboardMessage"></p>
           </div>
-      <button id="cupboardDeleteALLBtn" onClick={deleteAllItems}>REMOVE ALL</button>
-      </div>
+        <button id="cupboardDeleteALLBtn" onClick={deleteAllItems}>REMOVE ALL</button>
+        </div>
 };
+
 export default DisplayCupboardItems;

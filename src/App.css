@@ -1,6 +1,9 @@
 :root {
   font-size: 62.5%;
-  --app-bg-color: rgb(34, 34, 34);
+  //--app-bg-color: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+  --app-bg-color: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+  
+  //--app-bg-color: rgb(34, 34, 34);
   --app-highlight:rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
   --app-body-color-light: rgb(215, 217, 219);
@@ -36,7 +39,7 @@ body {
   background-position: 0px 0px;
   background-attachment: fixed;
   background-size: cover; */
-  background-color: var(--app-bg-color);
+  background: var(--app-bg-color);
 }
 
 .App {

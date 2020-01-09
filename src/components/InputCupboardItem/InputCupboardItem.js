@@ -9,8 +9,8 @@ function InputCupboardItem({value, onChange, onSubmit}) {
             <button id="cupboardSubmitBtn">SUBMIT</button>
             </form>
         </div>
-  
 };
+
 export default InputCupboardItem;
 
 

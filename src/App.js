@@ -7,6 +7,7 @@ import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupbo
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
 import FinalMealsDisplay from './components/FinalMealsDisplay/FinalMealsDisplay';
 import AppFooter from './components/AppFooter/AppFooter';
+//import ProgressRing from './components/ProgressRing/ProgressRing';
 
 function App() {
 
@@ -20,6 +21,9 @@ function App() {
   // eslint-disable-next-line
   const [removed, updateRemovedItems] = useState([]);
   const [counter, updateCounter] = useState(1);
+  const [theme, updateThemeName] = useState("default");
+  const [circleStroke, updateCircleStroke] = useState("RGBA(185,185,185,0.29)");
+  
   const [result, updateResult] = useState([]);
   //API search term states
   const [searchTerm, updateSearchTerm] = useState('');
@@ -33,61 +37,156 @@ function App() {
 ///////////////////////////////
 
 //captures user input and updates the term to live reflect the current user input
-const inputOnChange = (event) => {
-      updateTerm(event.target.value);
+  const inputOnChange = (event) => {
+        updateTerm(event.target.value);
   };
 
 // chained useEffect hooks will watch for changes in state (fetchResult & imageURL)
 // when API data has returned flickrImgUrlBuilder() is invoked. The next useEffect
 // will invoke arrayBuilder() to update the items object array with a name and valid image URL.
 
-//investigate here for possible infinite loops...
   useEffect(() => {
     if(fetchResult !== ""){
       flickrImgUrlBuilder();
-      ;}
-    },[fetchResult]);
-
+    }
+  },[fetchResult]);
+      
   useEffect(() => {
     if(imageURL !== ""){
       arrayBuilder(); 
-      ;}
-    },[imageURL]);
+    }
+  },[imageURL]);
+
+  //monitors counter state value - updates numCounter circle stroke color
+  useEffect(() => {
+    if (theme === "default") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(015,145,165, 1)"); break;
+        case 2: updateCircleStroke("RGBA(035,165,185, 1)"); break;
+        case 3: updateCircleStroke("RGBA(055,185,205, 1)"); break;
+        case 4: updateCircleStroke("RGBA(075,205,225, 1)"); break;
+        case 5: updateCircleStroke("RGBA(097,221,255, 1)"); break;
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(105,105,105,0.2)"); break;
+        case 2: updateCircleStroke("RGBA(125,125,125,0.4)"); break;
+        case 3: updateCircleStroke("RGBA(165,165,165,0.6)"); break;
+        case 4: updateCircleStroke("RGBA(205,205,205,0.7)"); break;
+        case 5: updateCircleStroke("RGBA(245,245,245,1)"); break;
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
   
+  useEffect(() => {
+    if (theme === "light") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(149,094,171, 1)"); break;
+        case 2: updateCircleStroke("RGBA(159,104,181, 1)"); break;
+        case 3: updateCircleStroke("RGBA(169,114,191, 1)"); break;
+        case 4: updateCircleStroke("RGBA(189,124,211, 1)"); break;
+        case 5: updateCircleStroke("RGBA(229,134,231, 1)"); break;
+        default: updateCircleStroke("RGBA(255,000, 0, 0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
+  
+  useEffect(() => {
+    if (theme === "red") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(165,035,035,0.4)"); break;
+        case 2: updateCircleStroke("RGBA(185,035,035,0.6)"); break;
+        case 3: updateCircleStroke("RGBA(205,035,035,0.8)"); break;
+        case 4: updateCircleStroke("RGBA(225,035,035,0.9)"); break;
+        case 5: updateCircleStroke("RGBA(245,035,035,1.0)"); break;
+        /* case 1: updateCircleStroke("RGBA(145,065,065,0.2)"); break;
+        case 2: updateCircleStroke("RGBA(165,085,085,0.4)"); break;
+        case 3: updateCircleStroke("RGBA(185,105,105,0.6)"); break;
+        case 4: updateCircleStroke("RGBA(205,125,125,0.7)"); break;
+        case 5: updateCircleStroke("RGBA(225,145,145,1)"); break; */
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
+  
+  useEffect(() => {
+    if (theme === "green") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(005,205,005,0.2)"); break;
+        case 2: updateCircleStroke("RGBA(025,205,025,0.4)"); break;
+        case 3: updateCircleStroke("RGBA(045,205,045,0.6)"); break;
+        case 4: updateCircleStroke("RGBA(065,205,065,0.7)"); break;
+        case 5: updateCircleStroke("RGBA(085,205,085,1.0)"); break;
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
+
+  useEffect(() => {
+    if (theme === "blue") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(15, 104, 252, 0.2)"); break;
+        case 2: updateCircleStroke("RGBA(25, 124, 252, 0.4)"); break;
+        case 3: updateCircleStroke("RGBA(45, 144, 252, 0.6)"); break;
+        case 4: updateCircleStroke("RGBA(65, 164, 252, 0.7)"); break;
+        case 5: updateCircleStroke("RGBA(95, 194, 252, 1.0)"); break;
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }      
+  },[theme, counter]);
+  
+  useEffect(() => {
+    if (theme === "yellow") {
+      switch (counter) {
+        case 1: updateCircleStroke("RGBA(235, 220, 013, 0.2)"); break;
+        case 2: updateCircleStroke("RGBA(235, 220, 013, 0.4)"); break;
+        case 3: updateCircleStroke("RGBA(235, 220, 013, 0.6)"); break;
+        case 4: updateCircleStroke("RGBA(235, 220, 013, 0.7)"); break;
+        case 5: updateCircleStroke("RGBA(235, 220, 013, 1.0)"); break;
+        default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
+      }
+    }
+  },[theme, counter]);
+
+
 //updates the items state array with user inputted item and fetched Flickr image url
   function arrayBuilder() {
     const termAddedToArray = [...items, {name: searchTerm, url: imageURL}];  
-  updateItems(termAddedToArray);}
-
+    updateItems(termAddedToArray)
+  ;}
 
 // takes returned Flickr API data then converts it to a valid image URL
-const flickrImgUrlBuilder = () => {
-    if (fetchResult.photos.photo.length !== 0) {
-        const farmId = fetchResult.photos.photo[0].farm;
-        const serverId = fetchResult.photos.photo[0].server;
-        const id = fetchResult.photos.photo[0].id;
-        const secret = fetchResult.photos.photo[0].secret;  
-        const imgUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
-        updateImageUrl(imgUrl);
-    }
-    else {
-        return alert("Item image not found - please try another search term");
-    }
+  const flickrImgUrlBuilder = () => {
+      if (fetchResult.photos.photo.length !== 0) {
+          const farmId = fetchResult.photos.photo[0].farm;
+          const serverId = fetchResult.photos.photo[0].server;
+          const id = fetchResult.photos.photo[0].id;
+          const secret = fetchResult.photos.photo[0].secret;  
+          const imgUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
+          updateImageUrl(imgUrl);
+      }
+      else {
+          return alert("Item image not found - please try another search term");
+      }
   };
   
-
   //Adds user inputted term to the items array and updates the API searchTerm. Term is then updated to ''. 
   //Items array is updated using updateItems function listed above in hooks  
-    const onSubmitItemHandler = (event) => {
+  const onSubmitItemHandler = (event) => {
       event.preventDefault();
       updateSearchTerm(term);// updates & stores the state of apisearchTerm with term. Term is cleared later
       fetchImageUrl(searchTerm);// runs an async request for a single img. Json data is stored in state. This triggers image url builder function (flickrImgUrlBuilder).
       updateTerm('');// term cleared after submit
       document.getElementById("emptyCupboardMessage").innerHTML = "";
-    };
+  };
 
-
-const fetchImageUrl = async () => {
+  const fetchImageUrl = async () => {
     try { 
       let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance&media=photos`;
       const response = await fetch(apiSearchTerm);
@@ -104,7 +203,7 @@ const fetchImageUrl = async () => {
   const handleRemove = (cats) => {
     const itemRemove = items.splice(cats, 1);
     updateRemovedItems({removed: itemRemove});
-    if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;"}; 
+    if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;";} 
   };
 
 //Deletes all items in the cupboard   
@@ -112,9 +211,16 @@ const fetchImageUrl = async () => {
     updateItems([]);
     document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;";
   };
+
 //handles increments/decrements onclicks from IngredientsNumCounter
-  const handleIncrement = () => { if(counter <= 4)updateCounter(counter + 1); else(alert("5 ingredients maximum"));};
-  const handleDecrement = () => { if(counter >= 2)updateCounter(counter - 1); };
+  const handleIncrement = () => { 
+    if(counter <= 4) { updateCounter(counter + 1); } 
+    else(alert("5 ingredients maximum"));
+  };
+ 
+  const handleDecrement = () => { 
+    if(counter >= 2) { updateCounter(counter - 1); }
+  };
 
 //Returns random final results based on number of ingredients selected  
   const finalResultsHandler = () => { 
@@ -141,13 +247,16 @@ const fetchImageUrl = async () => {
 
 // return keyword with wrapper div on same line--important!
   return <div className="App">
-            <ThemeToggler/>
+            <ThemeToggler updateThemeName={updateThemeName}/>
             <AppHeader/> 
             {/* <button onClick={arrayBuilder}>make array</button> */}
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term} fetchResult={fetchResult} flickrImgUrlBuilder={flickrImgUrlBuilder}/>
             <DisplayCupboardItems items={items} removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()} imageURL={imageURL} />
-            <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter}/>
-            <FinalMealsDisplay result={result}/> 
+            <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter} circleStroke={circleStroke}
+            radius={ 160 }
+            stroke={ 20 }
+            progress={ counter * 20}/>
+            <FinalMealsDisplay result={result}/>
             <AppFooter/>
           </div>
 };
