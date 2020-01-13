@@ -82,15 +82,7 @@ textarea:focus, input:focus{
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  
-}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-  /* .CupboardItem {
-    width: 10%;
-  } */
+@media only screen and (min-width: 0px) and (max-width: 858px) {
   :root {
     font-size: 42.5%;}
     
@@ -98,5 +90,15 @@ textarea:focus, input:focus{
     width: 95%;
     margin: 10px auto;
   }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* .CupboardItem {
+    width: 10%;
+  } */
+
+  
+
 }
 

@@ -1,29 +1,33 @@
 import React from 'react';
 import './IngredientsNumCounter.css';
 
-function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecrement, counter, radius, stroke, progress, circleStroke}) {
-  
+function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecrement, counter, circleStrokeColor}) {
+
+  const radius = 160;
+  const stroke = 20;
+  const progress = counter * 20;
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - progress / 100 * circumference;
-
+  
   return <div className="IngredientsNumCounter">
     <h2>How many ingredients would you like to use?</h2>
       <div className="buttons-wrapper">
         <button id="removeIngredientsButton" onClick={handleDecrement} >-</button>
-        <svg height={radius * 2} width={radius * 2}>
+        
+        <svg>
           <circle
-              stroke={circleStroke}
+              stroke={circleStrokeColor}
               fill="transparent"
               strokeWidth={ stroke }
               strokeDasharray={ circumference + ' ' + circumference }
               style={ { strokeDashoffset } }
               r={ normalizedRadius }
-              cx={ radius }
-              cy={ radius }
+              cx={ "50%" }
+              cy={ "50%" }
               id="numCircle"
           />
-          <text x="50%" y="42%" textAnchor="middle"
+          <text x="50%" y="32%" textAnchor="middle"
               id="ingredientsNumCounterDisplay" fill="#fff"
               dy=".3em" 
               alignmentBaseline="middle"
@@ -31,6 +35,7 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
           {counter}
           </text>
         </svg>
+        
         <button id="addIngredientsButton" onClick={handleIncrement}>+</button>
       </div>
     <button type="submit" id="submitTotalIngredientsButton" onClick={finalResultsHandler}>SUBMIT</button>

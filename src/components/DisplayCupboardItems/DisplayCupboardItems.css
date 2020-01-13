@@ -19,10 +19,10 @@
 .CupboardItem {
   flex: 1 1 auto;
   height: auto;
-  min-height: 220px;
-  overflow: hidden;
+  //min-height: 220px;
+  //overflow: hidden;
   width: 29%;
-  max-width: 420px;
+  max-width: 330px;
   margin: 4px;
   background-color: var(--item-bg);
   border: 3px solid var(--app-highlight); 
@@ -36,13 +36,14 @@
 .CupboardItem button {
   background-color: var(--bttn-remove-item);
   color: white;
-  height: 70px;
-  width: 36%;
+  height: 7rem;
+  width: 7rem;
   max-width: 60px;
   border: none;
   border-radius: 2px;
+  text-align: center;
   font-size: 1.6rem;
-  line-height: 70px;
+  line-height: 7rem;
   font-weight: 600;
   float: right;
   cursor: pointer;
@@ -54,17 +55,23 @@
 
 .CupboardItem h1 {
   //color: rgb(49, 47, 32);
+  flex-grow: 2;
   color: var(--item-text);
   margin: auto;
   text-align: center;
-  vertical-align: middle;
-  display: inline;
+  //vertical-align: middle;
+  display: inline-block;
+  height: 7rem;
+  width: auto;
+  min-width: 55%;
   font-size: 1.8rem;
-  line-height: 70px;
+  line-height: 7rem;
   font-weight: 600;
+  //outline: 2px solid red
 }
 
 #cupboardDeleteALLBtn {
+  flex-grow: 1;
   display: inline-block;
   min-height: 60px;
   width: 170px;
@@ -73,8 +80,7 @@
   font-size: 1.6rem;
   border-radius: 5px;
   border: 3px solid var(--bttn-remove-all);
-  margin: 0 auto 20px auto;
-
+  margin: 0 auto 10px auto;
 }
 
 #cupboardDeleteALLBtn:hover {
@@ -93,8 +99,9 @@
   //float: left;
   //max-height: 100%;
   width: 100%;
-  height: 242px;
+  height: 142px;
   margin-bottom: -2px;
+  object-fit: cover; /*important for aspect ratio */
 }
 //
 ///////////////////////////////////////
@@ -139,5 +146,106 @@
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+//
+////////////////////////////////////////////////
+///////          MEDIA QUERIES        //////////
+////////////////////////////////////////////////
+//
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 900px) {
+  .CupboardItem {
+    
+    width: 39%;
+    max-width: 330px;
+    
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+ 
+  .CupboardDisplayItems-Wrapper {
+    width: 95%;
+    padding: 10px 0px;
+    min-height: 120px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--app-body-color-light);
+    justify-content: center;
+  }
+
+  .CupboardItem {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: auto;
+    overflow: hidden;
+    width: 35%;
+    margin: 4px;
+    background-color: var(--item-bg);
+    border: 3px solid var(--app-highlight); 
+    border-radius: 5px;
+    //box-shadow: 0 2px 2px rgb(76, 88, 126);
+    box-shadow: 0 2px 2px var(--box-shadow);
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  .CupboardItem h1 {
+    //color: rgb(49, 47, 32);
+    flex-grow: 2;
+    color: var(--item-text);
+    margin: auto;
+    text-align: center;
+    //vertical-align: middle;
+    display: inline-block;
+    height: 7rem;
+    width: auto;
+    font-size: 1.8rem;
+    line-height: 7rem;
+    font-weight: 600;
+    //outline: 2px solid red
+  }
+  .CupboardItem button {
+    flex-grow: 1;
+    background-color: var(--bttn-remove-item);
+    color: white;
+    height: 7rem;
+    width: 7rem;
+    max-width: 60px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 7rem;
+    font-weight: 600;
+    float: right;
+    cursor: pointer;
+  }
+  .ingredients-image {
+    //float: left;
+    //max-height: 100%;
+    width: 100%;
+    height: 160px;
+    margin-bottom: -2px;
   }
 }

@@ -7,7 +7,6 @@ import DisplayCupboardItems from './components/DisplayCupboardItems/DisplayCupbo
 import IngredientsNumCounter from './components/IngredientsNumCounter/IngredientsNumCounter';
 import FinalMealsDisplay from './components/FinalMealsDisplay/FinalMealsDisplay';
 import AppFooter from './components/AppFooter/AppFooter';
-//import ProgressRing from './components/ProgressRing/ProgressRing';
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
   const [removed, updateRemovedItems] = useState([]);
   const [counter, updateCounter] = useState(1);
   const [theme, updateThemeName] = useState("default");
-  const [circleStroke, updateCircleStroke] = useState("RGBA(185,185,185,0.29)");
+  const [circleStrokeColor, updateCircleStroke] = useState("RGBA(185,185,185,0.29)");
   
   const [result, updateResult] = useState([]);
   //API search term states
@@ -244,18 +243,15 @@ function App() {
       // ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
       // Update the state via updateResult with only one item if counter === 1
   };
-
-// return keyword with wrapper div on same line--important!
+   
+  // return keyword with wrapper div on same line--important!
   return <div className="App">
-            <ThemeToggler updateThemeName={updateThemeName}/>
             <AppHeader/> 
+            <ThemeToggler updateThemeName={updateThemeName}/>
             {/* <button onClick={arrayBuilder}>make array</button> */}
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term} fetchResult={fetchResult} flickrImgUrlBuilder={flickrImgUrlBuilder}/>
             <DisplayCupboardItems items={items} removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()} imageURL={imageURL} />
-            <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter} circleStroke={circleStroke}
-            radius={ 160 }
-            stroke={ 20 }
-            progress={ counter * 20}/>
+            <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter} circleStrokeColor={circleStrokeColor}/>
             <FinalMealsDisplay result={result}/>
             <AppFooter/>
           </div>
@@ -266,3 +262,8 @@ export default App;
 ///////////////////////////////  
 /// NOTES AND CODE SCRAPS //////////////////////////////////////////////////////////////////
 ///////////////////////////////
+
+/*
+let windowWidth = window.innerWidth;
+  console.log(windowWidth);
+*/

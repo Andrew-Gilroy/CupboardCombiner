@@ -9,21 +9,35 @@
   margin: auto;
   height: 200px;
   width: 90%;
+  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  //outline: 2px solid teal;
+}
+
+.buttons-wrapper svg {
+  margin: auto;
+  height: auto;
+  overflow: visible;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  //outline: 2px solid green;
 }
 
 .IngredientsNumCounter button {
-  display: inline-block;
+  display: block;
   height: 7.5rem;
   width: 7.5rem;
   color: white;
+  text-shadow: 0 1px #222;
   font-size: 2.8rem;
   border-radius: 10%;
   margin: 0 2%;
   cursor: pointer;
   box-shadow: 0 2px 2px var(--box-shadow);
+  z-index: 1;
 }
 
 /*removes blue outline when activated */
@@ -46,12 +60,12 @@
   vertical-align: middle;
   font-family: Roboto;
   font-weight: 900;
-  width: 16vw;
+  width: auto;
   color: white;
   display: inline-block;
   //text-shadow: 4px 4px 2px rgb(36, 36, 36);
   text-shadow: 4px 4px 2px var(--box-shadow);
-  
+  //outline: 1px solid yellow;
 }
 
 #addIngredientsButton {
@@ -75,8 +89,6 @@
   color: white;
   background-color: var(--bttn-remove-ingredients-toggled);
 }
-
-
 
 #submitTotalIngredientsButton {
   display: block;
@@ -103,3 +115,36 @@
 
 #numCircle {
 transition: 0.3s ease-in-out all;};
+
+
+//
+////////////////////////////////////////////////
+///////          MEDIA QUERIES        //////////
+////////////////////////////////////////////////
+//
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+
+}

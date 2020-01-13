@@ -1,40 +1,69 @@
 .ThemeToggler-Wrapper {
     height: fit-content;
-    width: 8vw;
+    width: 10vw;
     position: fixed;
     top: 70px;
-    right: 30px;
+    right: 35px;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
     border-radius: 5px;
     border: 2px solid white;
-    background: var(--app-bg-color);
+    background-color: var(--app-body-color-light);
     padding: 20px;
+    
+}
+#themePickerVisibility {
+    display: none ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    transition: 0.9s ease-in-out all;
     
 }
 #theme-text {
     display: block;
-    line-height: 0;
+    line-height: 1.8rem;
+    width: 100%;
     height: auto;
-    font-size: 1.8rem;
-    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    //color: rgb(255, 255, 255);
     color: var(--app-highlight);
 }
 .themeChevron{
     display: block;
     font-size: 2rem;
     height: 5px;
+    width: 100%;
     color: red;
     margin: 15px auto 0 auto;
     cursor: pointer;
 }
 
-#themePickerVisibility {
-    display: none ;
-}
-
+  .themeChevron:link { /* Essentially means a[href], or that the link actually goes somewhere */
+    
+  }
+  .themeChevron:visited {
+    
+  }
+  .themeChevron:hover {
+    
+  }
+  .themeChevron:active {
+    //background-color: rgba(255, 255, 255,1);
+    outline: 0;
+    border: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -42,11 +71,11 @@
 
 .ThemeToggler_btn {
     margin: 4px;
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 5px; 
     border: none;
-    box-shadow: 0 2px 2px rgb(76, 88, 126);
+    //box-shadow: 0 2px 2px rgb(76, 88, 126);
     cursor: pointer;
 }
 .ThemeToggler_btn:focus {
@@ -71,9 +100,16 @@
     background-color: rgb(235, 220, 13);
 }
 .reset {
-    background-color: rgb(97, 221, 255);
+    //background-color: rgb(97, 221, 255);
+    background: none;
+    border: 2px solid var(--app-highlight);
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
-
+.reset:hover{
+    background: var(--app-body-color-light);
+    color: white;
+}
 .ThemeToggler_btn:hover {
     filter: brightness(0.7);
 }
@@ -82,4 +118,124 @@
   }
 .ThemeToggler_btn:last-of-type {
    width: 105px;
+}
+  
+//
+////////////////////////////////////////////////
+///////          MEDIA QUERIES        //////////
+////////////////////////////////////////////////
+//
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+    .ThemeToggler-Wrapper {
+        width: 100%;
+        position: static;
+        border-radius: 5px 5px 0 0;
+        border: none;
+        background-color: var(--app-body-color-light);
+        padding: 0;
+        
+    }
+    #themePickerVisibility {
+        display: none ;
+        height: auto;
+        width: 100%;
+        margin-bottom: 8px;
+        transition: 0.9s ease-in-out all;
+    }
+    #theme-text {
+        margin: 18px 0 10px 0;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: var(--dark-text);
+        //color: var(--app-highlight);
+    }
+    .ThemeToggler_btn {
+        margin: 4px;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 5px; 
+        border: none;
+        //box-shadow: 0 2px 2px rgb(76, 88, 126);
+        cursor: pointer;
+    }
+    .themeChevron{
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        height: 15px;
+        color: red;
+        //margin: 15px auto 0 auto;
+        cursor: pointer;
+    }
+    
+        
+    .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    
+    
+    .ThemeToggler_btn:focus {
+        outline: none;
+    }
+    .dark {
+        background-color: rgb(133, 135, 136);
+    }
+    .light {
+        background-color: rgb(130, 210, 220);
+    }
+    .red {
+        background-color: rgb(223, 55, 55);
+    }
+    .blue {
+        background-color: rgb(95, 194, 252);
+    }
+    .green {
+        background-color: rgb(55, 223, 055);
+    }
+    .yellow {
+        background-color: rgb(235, 220, 13);
+    }
+    .reset {
+        //background-color: rgb(97, 221, 255);
+        background-color: none;
+        border: 2px solid var(--app-highlight);
+        border-radius: 5px;
+        color: var(--app-highlight);
+    }
+    
+    .ThemeToggler_btn:hover {
+        filter: brightness(0.7);
+    }
+    .ThemeToggler_btn:focus {
+        background-color: var(--app-highlight);
+      }
+    .ThemeToggler_btn:last-of-type {
+        height: 3rem;
+        width: 10rem;
+        line-height: 0px;
+        margin-left: 4px;
+    }
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    
 }

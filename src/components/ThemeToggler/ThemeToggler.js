@@ -158,7 +158,7 @@ const changeTheme_Blue = () => {
 };
 
 const changeTheme_Yellow = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #22c1c3, #fdbb2d)');
   //docRootStyle.setProperty('--app-bg-color', 'rgb(37, 27, 27)');
   docRootStyle.setProperty('--app-highlight', 'rgb(235, 220, 13)');
   docRootStyle.setProperty('--app-body-color', 'rgb(30, 30, 00)');
@@ -216,19 +216,23 @@ const changeTheme_Reset = () => {
   updateThemeName("default");
 };
 
+// Toggles the theme picker drop down menu visibility.  
+// Also toggles font awesome class to flip chevron
 function themePickerVisibility_toggle() {
   const element = document.getElementById("themePickerVisibility");
-  element.style.display === "none" ? element.style.display = "block" : element.style.display = "none";
+  const fasClasses = document.getElementsByClassName("fas fa-chevron-down themeChevron")
+  element.style.display === "none" ? element.style.display = "flex" : element.style.display = "none";
+  fasClasses[0].classList.toggle("fa-chevron-up");
 }
+
 
 //this is added as a prop to set initial style as "none", necessary for toggle to work!
 const styleObject = {
     display: "none",
 };
-
    
     return <div className="ThemeToggler-Wrapper">
-      <h3 id="theme-text">Theme Picker<i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
+      <h3 id="theme-text">CHOOSE A THEME<i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
         <div id="themePickerVisibility" style={styleObject}>
           <button className="ThemeToggler_btn dark"   id="ThemeTogglerBtn--Dark"    onClick={changeTheme_Dark}></button>
           <button className="ThemeToggler_btn light"  id="ThemeTogglerBtn--Light"   onClick={changeTheme_Light}></button>
@@ -236,7 +240,7 @@ const styleObject = {
           <button className="ThemeToggler_btn green"  id="ThemeTogglerBtn--Green"   onClick={changeTheme_Green}></button>
           <button className="ThemeToggler_btn blue"   id="ThemeTogglerBtn--Blue"    onClick={changeTheme_Blue}></button>
           <button className="ThemeToggler_btn yellow" id="ThemeTogglerBtn--Yellow"  onClick={changeTheme_Yellow}></button>
-          <button className="ThemeToggler_btn reset"  id="ThemeTogglerBtn--Reset"   onClick={changeTheme_Reset}>reset</button>
+          <button className="ThemeToggler_btn reset"  id="ThemeTogglerBtn--Reset"   onClick={changeTheme_Reset}>RESET</button>
         </div>
       </div>
 };

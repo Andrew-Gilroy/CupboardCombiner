@@ -6,10 +6,6 @@
   background-color: var(--app-body-color-light);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  background-image: url(../../assets/images/chef2.svg);
-  background-repeat: no-repeat;
-  background-position: 98% bottom;
-  background-size: 20%;
 }
 
 .FinalMealsDisplay p {
