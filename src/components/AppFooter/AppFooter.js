@@ -7,7 +7,7 @@ function AppFooter() {
     <div className="AppFooter">
       <img src={require('../../assets/images/reactLogo.svg')} alt="React Logo" id="footerReactLogo"/>
       <p id="smallFooterText">built with React</p>
-      <p id="medFooterText">Andrew Gilroy 2019</p>
+      <p id="medFooterText">Andrew Gilroy 2020</p>
     </div>
     );
   }

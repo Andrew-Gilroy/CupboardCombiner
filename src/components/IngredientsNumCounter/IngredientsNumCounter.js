@@ -11,7 +11,7 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
   const strokeDashoffset = circumference - progress / 100 * circumference;
   
   return <div className="IngredientsNumCounter">
-    <h2>How many ingredients would you like to use?</h2>
+    <h2>Select total number of ingredients</h2>
       <div className="buttons-wrapper">
         <button id="removeIngredientsButton" onClick={handleDecrement} >-</button>
         

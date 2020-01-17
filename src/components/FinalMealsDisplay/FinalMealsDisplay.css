@@ -17,26 +17,10 @@
   width: 60%;
   word-wrap: break-word;
   margin: auto;
-  //margin-top: 30px;
   padding: 30px 30px;
   color: var(--finalMealsDisplay-text--p);
   background: var(--finalMealsDisplay-text--p-bg);
   border-radius: 5px;
-
-/* font-size: 2rem;
-  line-height: 2rem;
-  font-family: Roboto;
-  display: block;
-  min-height: 30px;
-  width: 60%;
-  word-wrap: break-word;
-  margin: auto;
-  //margin-top: 30px;
-  padding: 30px 30px;
-  color: var(--finalMealsDisplay-text--p);
-  background: var(--finalMealsDisplay-text--p-bg);
-  border-radius: 5px; */
-
 }
 
 .FinalMealsDisplay h2 {
@@ -44,4 +28,36 @@
   font-family: Roboto;
   font-weight: 700;
   color: var(--finalMealsDisplay-text);
+}
+
+//
+////////////////////////////////////////////////
+///////          MEDIA QUERIES        //////////
+////////////////////////////////////////////////
+//
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+
 }

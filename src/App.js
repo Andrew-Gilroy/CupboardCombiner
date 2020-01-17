@@ -202,13 +202,13 @@ function App() {
   const handleRemove = (cats) => {
     const itemRemove = items.splice(cats, 1);
     updateRemovedItems({removed: itemRemove});
-    if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;";} 
+    if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";} 
   };
 
 //Deletes all items in the cupboard   
   const deleteAllItems = () => { 
     updateItems([]);
-    document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is bare... &#128532;";
+    document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";
   };
 
 //handles increments/decrements onclicks from IngredientsNumCounter

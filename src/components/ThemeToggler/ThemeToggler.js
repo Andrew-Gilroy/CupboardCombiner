@@ -8,7 +8,6 @@ const docRootStyle = document.documentElement.style;
 
 const changeTheme_Dark = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #000000, #232526)');
-  //docRootStyle.setProperty('--app-bg-color', 'rgb(23, 23, 23)');
   docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--app-body-color', 'rgb(23, 23, 23)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(62, 62, 62)');
@@ -32,16 +31,16 @@ const changeTheme_Dark = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'none');
   docRootStyle.setProperty('--footer-text', 'rgb(97, 221, 255)');
-  docRootStyle.setProperty('--box-shadow', 'none');
+  docRootStyle.setProperty('--box-shadow', 'rgb(145, 145, 145)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("dark");
 };
 
 const changeTheme_Light = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9)');
-  // docRootStyle.setProperty('--app-bg-color', 'rgb(2, 2, 32)');
   docRootStyle.setProperty('--app-highlight', 'rgb(130, 210, 220)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(203, 203, 203)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(226, 226, 226)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(232, 233, 232)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(96, 200, 220)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(46, 100, 120)');
@@ -53,24 +52,24 @@ const changeTheme_Light = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients','rgb(229, 134, 231)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(190, 94, 181)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(135, 135, 135)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(135, 135, 135)');
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(135, 135, 135)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(135, 135, 135)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(229, 134, 231)');
   docRootStyle.setProperty('--box-shadow', 'rgb(168, 168, 168)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(229, 134, 231)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
   updateThemeName("light");
 };
 
 const changeTheme_Red = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD)');
-  //docRootStyle.setProperty('--app-bg-color', 'rgb(255, 200, 200)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(223, 55, 55)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(233, 55, 55)');
   docRootStyle.setProperty('--app-body-color', 'rgb(133, 003, 003)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(223, 55, 55)');
@@ -92,14 +91,14 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(223, 55, 55)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(148, 38, 38)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(223, 55, 55)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("red");
 };
 
 const changeTheme_Green = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #000000, #0f9b0f)');
-  //docRootStyle.setProperty('--app-bg-color', 'rgb(00, 30, 00)');
   docRootStyle.setProperty('--app-highlight', 'rgb(55, 223, 055)');
   docRootStyle.setProperty('--app-body-color', 'rgb(003, 133, 003)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(000, 083, 000)');
@@ -122,14 +121,14 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(55, 223, 055)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(38, 168, 38)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 223, 055)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("green");
 };
 
 const changeTheme_Blue = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #24243e, #302b63, #0f0c29)');
-  //docRootStyle.setProperty('--app-bg-color', 'rgb(20, 20, 40)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #4b6cb7, #182848)');
   docRootStyle.setProperty('--app-highlight', 'rgb(95, 194, 252)');
   docRootStyle.setProperty('--app-body-color', 'rgb(212, 232, 255)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(41, 45, 72)');
@@ -152,14 +151,14 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(21, 25, 82)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(78, 78, 78)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(159, 176, 233)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(95, 194, 252)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("blue");
 };
 
 const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #22c1c3, #fdbb2d)');
-  //docRootStyle.setProperty('--app-bg-color', 'rgb(37, 27, 27)');
   docRootStyle.setProperty('--app-highlight', 'rgb(235, 220, 13)');
   docRootStyle.setProperty('--app-body-color', 'rgb(30, 30, 00)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(67, 57, 57)');
@@ -176,14 +175,15 @@ const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--dark-text', 'rgb(195, 195, 195)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(203, 183, 003)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(183, 163, 003)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(235, 220, 13)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("yellow");
 };
 
@@ -213,6 +213,7 @@ const changeTheme_Reset = () => {
   docRootStyle.setProperty('--footer-text', 'rgb(165, 201, 223)');
   docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   updateThemeName("default");
 };
 
@@ -230,7 +231,6 @@ function themePickerVisibility_toggle() {
 const styleObject = {
     display: "none",
 };
-   
     return <div className="ThemeToggler-Wrapper">
       <h3 id="theme-text">CHOOSE A THEME<i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
         <div id="themePickerVisibility" style={styleObject}>

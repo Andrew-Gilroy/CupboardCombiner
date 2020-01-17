@@ -1,7 +1,7 @@
 .ThemeToggler-Wrapper {
     height: fit-content;
     width: 10vw;
-    position: fixed;
+    position: absolute;
     top: 70px;
     right: 35px;
     display: flex;
@@ -9,11 +9,11 @@
     align-items:center;
     justify-content: center;
     border-radius: 5px;
-    border: 2px solid white;
-    background-color: var(--app-body-color-light);
+    border: 2px solid var(--app-highlight);
+    background-color: var(--app-body-color);
     padding: 20px;
-    
 }
+
 #themePickerVisibility {
     display: none ;
     flex-wrap: wrap;
@@ -21,18 +21,19 @@
     align-items: center;
     width: 90%;
     height: auto;
-    transition: 0.9s ease-in-out all;
-    
+    transition: 0.9s ease-in-out all;    
 }
+
 #theme-text {
     display: block;
     line-height: 1.8rem;
     width: 100%;
     height: auto;
-    font-size: 1.2rem;
-    //color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: 800;
     color: var(--app-highlight);
 }
+
 .themeChevron{
     display: block;
     font-size: 2rem;
@@ -43,17 +44,7 @@
     cursor: pointer;
 }
 
-  .themeChevron:link { /* Essentially means a[href], or that the link actually goes somewhere */
-    
-  }
-  .themeChevron:visited {
-    
-  }
-  .themeChevron:hover {
-    
-  }
-  .themeChevron:active {
-    //background-color: rgba(255, 255, 255,1);
+.themeChevron:active {
     outline: 0;
     border: 0;
     -webkit-touch-callout: none;
@@ -63,11 +54,12 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-  }
+    /* hides mobile click banded */
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
 .ThemeToggler_btn {
     margin: 4px;
@@ -75,50 +67,65 @@
     height: 3rem;
     border-radius: 5px; 
     border: none;
-    //box-shadow: 0 2px 2px rgb(76, 88, 126);
+    box-shadow: 0 2px 2px var(--item-text);
     cursor: pointer;
 }
-.ThemeToggler_btn:focus {
-    outline: none;
-}
+
 .dark {
-    background-color: rgb(133, 135, 136);
+    background-color: rgb(75, 75, 75);
+}
+.dark:hover {
+    background-color: rgb(135, 135, 135);
 }
 .light {
     background-color: rgb(130, 210, 220);
 }
+.light:hover {
+    background-color: rgb(165, 245, 255);
+}
 .red {
     background-color: rgb(223, 55, 55);
+}
+.red:hover {
+    background-color: rgb(243, 75, 75);
 }
 .blue {
     background-color: rgb(95, 194, 252);
 }
+.blue:hover {
+    background-color: rgb(125, 224, 252);
+}
 .green {
     background-color: rgb(55, 223, 055);
+}
+.green:hover {
+    background-color: rgb(95, 253, 095);
 }
 .yellow {
     background-color: rgb(235, 220, 13);
 }
+.yellow:hover {
+    background-color: rgb(255, 240, 43);
+}
 .reset {
-    //background-color: rgb(97, 221, 255);
+    background-color: var(--app-body-color);
     background: none;
+    color: var(--theme-reset-text);
     border: 2px solid var(--app-highlight);
     border-radius: 5px;
     font-size: 1.2rem;
+    width: 105px;
 }
-.reset:hover{
-    background: var(--app-body-color-light);
-    color: white;
+.reset:hover {
+    background: var(--app-highlight);
+    color: var(--theme-reset-text);
+    //color: white;
 }
-.ThemeToggler_btn:hover {
-    filter: brightness(0.7);
-}
+
 .ThemeToggler_btn:focus {
-    background-color: var(--app-highlight);
-  }
-.ThemeToggler_btn:last-of-type {
-   width: 105px;
+    outline: none; /*removes chrome blue outline*/
 }
+
   
 //
 ////////////////////////////////////////////////
@@ -150,89 +157,22 @@
         border: none;
         background-color: var(--app-body-color-light);
         padding: 0;
-        
-    }
-    #themePickerVisibility {
-        display: none ;
-        height: auto;
-        width: 100%;
-        margin-bottom: 8px;
-        transition: 0.9s ease-in-out all;
-    }
-    #theme-text {
-        margin: 18px 0 10px 0;
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        color: var(--dark-text);
-        //color: var(--app-highlight);
+        margin-bottom: 1rem;
     }
     .ThemeToggler_btn {
         margin: 4px;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 5px; 
-        border: none;
-        //box-shadow: 0 2px 2px rgb(76, 88, 126);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px var(--item-text);
         cursor: pointer;
-    }
-    .themeChevron{
-        display: block;
-        width: 100%;
-        font-size: 2rem;
-        height: 15px;
-        color: red;
-        //margin: 15px auto 0 auto;
-        cursor: pointer;
-    }
-    
-        
-    .dropdown:hover .dropdown-content {
-        display: block;
-      }
-    
-    
-    .ThemeToggler_btn:focus {
-        outline: none;
-    }
-    .dark {
-        background-color: rgb(133, 135, 136);
-    }
-    .light {
-        background-color: rgb(130, 210, 220);
-    }
-    .red {
-        background-color: rgb(223, 55, 55);
-    }
-    .blue {
-        background-color: rgb(95, 194, 252);
-    }
-    .green {
-        background-color: rgb(55, 223, 055);
-    }
-    .yellow {
-        background-color: rgb(235, 220, 13);
     }
     .reset {
-        //background-color: rgb(97, 221, 255);
-        background-color: none;
-        border: 2px solid var(--app-highlight);
-        border-radius: 5px;
-        color: var(--app-highlight);
+        
+        font-size: 1.2rem;
+        //width: 105px;
+        width: 155px;
     }
-    
-    .ThemeToggler_btn:hover {
-        filter: brightness(0.7);
-    }
-    .ThemeToggler_btn:focus {
-        background-color: var(--app-highlight);
-      }
-    .ThemeToggler_btn:last-of-type {
-        height: 3rem;
-        width: 10rem;
-        line-height: 0px;
-        margin-left: 4px;
-    }
-
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */

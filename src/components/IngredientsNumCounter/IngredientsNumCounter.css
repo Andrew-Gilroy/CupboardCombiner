@@ -13,7 +13,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //outline: 2px solid teal;
 }
 
 .buttons-wrapper svg {
@@ -23,25 +22,23 @@
   width: 40%;
   align-items: center;
   justify-content: center;
-  //outline: 2px solid green;
 }
 
 .IngredientsNumCounter button {
   display: block;
-  height: 7.5rem;
-  width: 7.5rem;
+  height: 6rem;
+  width: 6rem;
   color: white;
   text-shadow: 0 1px #222;
   font-size: 2.8rem;
   border-radius: 10%;
   margin: 0 2%;
   cursor: pointer;
-  box-shadow: 0 2px 2px var(--box-shadow);
   z-index: 1;
 }
 
-/*removes blue outline when activated */
 .IngredientsNumCounter button:focus {
+  /*removes blue outline when activated */
   outline: none;
 }
 
@@ -50,22 +47,20 @@
   font-family: Roboto;
   font-weight: 700;
   color: var(--counter-text);
-  margin-top: 70px;
-  margin-bottom: 80px;
+  margin: 7rem 0;
+  padding: 0 10px;
+  text-transform: uppercase;
 }
 
 #ingredientsNumCounterDisplay {
   font-size: 14rem;
-  //line-height: 18rem;
   vertical-align: middle;
   font-family: Roboto;
   font-weight: 900;
   width: auto;
   color: white;
   display: inline-block;
-  //text-shadow: 4px 4px 2px rgb(36, 36, 36);
-  text-shadow: 4px 4px 2px var(--box-shadow);
-  //outline: 1px solid yellow;
+  text-shadow: 2px 4px 2px var(--box-shadow);
 }
 
 #addIngredientsButton {
@@ -100,13 +95,13 @@
   border-radius: 5px;
   font-size: 1.6rem;
   color: var(--light-text);
+  text-shadow: none;
   background-color: var(--bttn-submit);
   border: 3px solid var(--bttn-submit);
   cursor: pointer;
 }
 
 #submitTotalIngredientsButton:hover {
-  //text-shadow: 1px 1px 0 rgb(54, 97, 161);
   text-shadow: 1px 1px 0 var(--box-shadow);
   color: white;
   background-color: var(--bttn-submit-toggled);
@@ -114,8 +109,8 @@
 }
 
 #numCircle {
-transition: 0.3s ease-in-out all;};
-
+  transition: 0.3s ease-in-out all;
+}
 
 //
 ////////////////////////////////////////////////

@@ -5,7 +5,7 @@ function InputCupboardItem({value, onChange, onSubmit}) {
   
   return <div className="AddCupboardItem">
             <form onSubmit={onSubmit}>
-            <input value={value} onChange={onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input" required/>
+            <input value={value} onChange={onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input" required maxlength="19"/>
             <button id="cupboardSubmitBtn">SUBMIT</button>
             </form>
         </div>
