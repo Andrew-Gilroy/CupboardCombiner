@@ -4,7 +4,7 @@ CupboardCombiner is JS React project that creates random meal suggestions using 
 
 This is my first react App.
 
-![App screenshot](.\readmeimages\appscreenshot.png)
+![App screenshot](https://github.com/Andrew-Gilroy/CupboardCombiner/readmeimages/appscreenshot.png)
 
 ## Built With
 
