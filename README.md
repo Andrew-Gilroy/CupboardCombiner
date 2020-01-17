@@ -1,4 +1,5 @@
-# CupboardCombiner
+![App screenshot](.\src\assets\images\logo.svg)
+
 
 CupboardCombiner is JS React project that creates random meal suggestions using whats left in the cupboard.
 
