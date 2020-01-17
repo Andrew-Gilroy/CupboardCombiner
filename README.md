@@ -4,15 +4,15 @@ CupboardCombiner is JS React project that creates random meal suggestions using 
 
 This is my first react App.
 
-![App screenshot](readmeimages\appscreenshot.png)
+![App screenshot](.\readmeimages\appscreenshot.png)
 
 ## Built With
 
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-* [Javascript](http://www.dropwizard.io/1.0.2/docs/) - JavaScript is the programming language of HTML and the Web.
+* [Javascript](https://www.w3schools.com/js/) - JavaScript is the programming language of HTML and the Web.
 * [FlickrAPI](https://www.flickr.com/services/api/) - Flickr Image API that returns images based on user entry .
-* [Css](http://www.dropwizard.io/1.0.2/docs/) - Cascading Style Sheet language used for describing the presentation of a document. 
-* [Html](http://www.dropwizard.io/1.0.2/docs/) - The most basic building block of the Web.
+* [CSS](https://www.w3schools.com/css/default.asp) - Cascading Style Sheet language used for describing the presentation of a document. 
+* [Html](https://www.w3schools.com/html/default.asp) - The most basic building block of the Web.
 * [Tea](https://www.pgtips.co.uk/) - Nectar of the gods. ☕
 
 
