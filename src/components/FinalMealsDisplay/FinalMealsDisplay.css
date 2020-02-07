@@ -11,7 +11,7 @@
 .FinalMealsDisplay p {
   font-size: 2.4rem;
   line-height: 2.4rem;
-  font-family: Roboto;
+  font-family: 'Roboto' , sans-serif;
   display: block;
   min-height: 30px;
   width: 60%;
@@ -25,7 +25,7 @@
 
 .FinalMealsDisplay h2 {
   font-size: 2.2rem;
-  font-family: Roboto;
+  font-family: 'Roboto' , sans-serif;
   font-weight: 700;
   color: var(--finalMealsDisplay-text);
 }

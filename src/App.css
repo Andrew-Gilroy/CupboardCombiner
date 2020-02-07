@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
+
 :root {
   font-size: 62.5%;
   //--app-bg-color: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
@@ -20,7 +23,7 @@
   --input-text: rgb(55, 55, 55);
   --counter-text: rgb(255, 255, 255);
   --item-bg: rgb(255,255,255);
-  --item-text: rgb(55, 55, 55);
+  --item-text: rgb(95, 95, 95);
   --dark-text: rgb(55, 55, 55);
   --light-text: rgb(255, 255, 255);
   --finalMealsDisplay-text: rgb(68, 68, 68);

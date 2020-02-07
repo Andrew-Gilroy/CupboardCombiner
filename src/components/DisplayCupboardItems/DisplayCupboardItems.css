@@ -67,8 +67,10 @@
   display: inline-block;
   height: auto;
   width: 100%;
-  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
   font-weight: 600;
+  text-transform: uppercase;
   text-overflow: clip;
 }
 

@@ -44,7 +44,7 @@
 
 .IngredientsNumCounter h2 {
   font-size: 2.5rem;
-  font-family: Roboto;
+  font-family: 'Roboto' , sans-serif;
   font-weight: 700;
   color: var(--counter-text);
   margin: 7rem 0;
@@ -55,7 +55,7 @@
 #ingredientsNumCounterDisplay {
   font-size: 14rem;
   vertical-align: middle;
-  font-family: Roboto;
+  font-family: 'Roboto' , sans-serif;
   font-weight: 900;
   width: auto;
   color: white;

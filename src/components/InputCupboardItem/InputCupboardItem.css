@@ -1,3 +1,5 @@
+
+  
   .AddCupboardItem {
     position: sticky;
     top: 0;
@@ -24,7 +26,7 @@
     width: 68%;
     flex-grow: 2;
     color: var(--input-text);
-    font-family: Roboto;
+    font-family: 'Roboto' , sans-serif;
     font-size: 1.8rem;
     line-height: 0px;
     border: none;

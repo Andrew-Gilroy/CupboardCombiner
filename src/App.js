@@ -1,5 +1,5 @@
 import React, { useState , useEffect } from 'react';
-import './App.css';
+import './app.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import ThemeToggler from './components/ThemeToggler/ThemeToggler';
 import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
