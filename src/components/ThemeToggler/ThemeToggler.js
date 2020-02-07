@@ -84,7 +84,7 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(95, 95, 95)');
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
@@ -114,7 +114,7 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(95, 95, 95)');
   docRootStyle.setProperty('--dark-text', 'rgb(140, 244, 140)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 223, 055)');
@@ -144,7 +144,7 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(95, 95, 95)');
   docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(95, 194, 252)');
@@ -174,7 +174,7 @@ const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(95, 95, 95)');
   docRootStyle.setProperty('--dark-text', 'rgb(195, 195, 195)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
@@ -204,7 +204,7 @@ const changeTheme_Reset = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--item-text', 'rgb(95, 95, 95)');
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 55, 55)');
