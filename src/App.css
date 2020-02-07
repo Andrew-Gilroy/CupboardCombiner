@@ -44,6 +44,7 @@ body {
   background-attachment: fixed;
   background-size: cover; */
   background: var(--app-bg-color);
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {

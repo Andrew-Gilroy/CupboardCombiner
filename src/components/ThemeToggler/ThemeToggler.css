@@ -26,11 +26,12 @@
 
 #theme-text {
     display: block;
-    line-height: 1.8rem;
     width: 100%;
     height: auto;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 500;
+    line-height: 1.8rem;
     color: var(--app-highlight);
 }
 
