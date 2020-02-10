@@ -28,15 +28,24 @@
   display: block;
   height: 6rem;
   width: 6rem;
-  color: white;
-  text-shadow: 0 1px #222;
-  font-size: 2.8rem;
   border-radius: 10%;
   margin: 0 2%;
+  padding: 0px;
   cursor: pointer;
   z-index: 1;
 }
 
+#addIngredientsButton {
+  color: white;
+  text-align:center; 
+  vertical-align:middle;
+  color: white;
+  text-shadow: 0 1px #222;
+  font-size: 2.8rem;
+  
+  border: none;
+  background-color: var(--bttn-add-ingredients);
+}
 .IngredientsNumCounter button:focus {
   /*removes blue outline when activated */
   outline: none;
@@ -50,6 +59,7 @@
   margin: 7rem 0;
   padding: 0 10px;
   text-transform: uppercase;
+  
 }
 
 #ingredientsNumCounterDisplay {
@@ -63,11 +73,6 @@
   text-shadow: 2px 4px 2px var(--box-shadow);
 }
 
-#addIngredientsButton {
-  color: white;
-  border: none;
-  background-color: var(--bttn-add-ingredients);
-}
 
 #addIngredientsButton:hover {
   color: white;

@@ -70,8 +70,8 @@ textarea:focus, input:focus{
 ////////////////////////////////////////////////
 //
 
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
+/* Smaller than standard 1400 (devices and browsers) */
+@media only screen and (max-width: 1400px) {
   .App{
     width: 90%;
     margin: 10px auto;
