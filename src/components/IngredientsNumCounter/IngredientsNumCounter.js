@@ -13,7 +13,7 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
   return <div className="IngredientsNumCounter">
     <h2>Select total number of ingredients</h2>
       <div className="buttons-wrapper">
-        <button id="removeIngredientsButton" onClick={handleDecrement} >-</button>
+        <button id="removeIngredientsButton" onClick={handleDecrement}>&#45;</button>
         
         <svg>
           <circle
@@ -36,7 +36,7 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
           </text>
         </svg>
         
-        <button id="addIngredientsButton" onClick={handleIncrement}>+</button>
+        <button id="addIngredientsButton" onClick={handleIncrement}>&#43;</button>
       </div>
     <button type="submit" id="submitTotalIngredientsButton" onClick={finalResultsHandler}>SUBMIT</button>
   </div>

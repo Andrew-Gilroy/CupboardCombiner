@@ -39,10 +39,10 @@
   color: white;
   text-align:center; 
   vertical-align:middle;
+  line-height: 6rem;
   color: white;
   text-shadow: 0 1px #222;
   font-size: 2.8rem;
-  
   border: none;
   background-color: var(--bttn-add-ingredients);
 }
