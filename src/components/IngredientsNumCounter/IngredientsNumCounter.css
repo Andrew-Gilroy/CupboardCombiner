@@ -26,25 +26,45 @@
 
 .IngredientsNumCounter button {
   display: inline-block;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 10%;
-  margin: 0 2%;
-  padding: 0px;
+  color: white;
   cursor: pointer;
   z-index: 1;
 }
 
 #addIngredientsButton {
-  color: white;
-  text-align:center; 
-  vertical-align:middle;
-  line-height: 6rem;
-  color: white;
-  text-shadow: 0 1px #222;
-  font-size: 2.8rem;
-  border: none;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 10%;
   background-color: var(--bttn-add-ingredients);
+  //line-height: 6rem;
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 2.8rem;
+  text-shadow: 0 1px #222;
+  border: none;
+  margin: 0 2%;
+}
+
+#addIngredientsButton:hover {
+  background-color: var(--bttn-add-ingredients-toggled);
+}
+
+#removeIngredientsButton {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 10%;
+  background-color: var(--bttn-remove-ingredients);  
+  //line-height: 6rem;
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 2.8rem;
+  text-shadow: 0 1px #222;
+  border: none;
+  margin: 0 2%;
+}
+
+#removeIngredientsButton:hover {
+  background-color: var(--bttn-remove-ingredients-toggled);
 }
 .IngredientsNumCounter button:focus {
   /*removes blue outline when activated */
@@ -59,7 +79,6 @@
   margin: 7rem 0;
   padding: 0 10px;
   text-transform: uppercase;
-  
 }
 
 #ingredientsNumCounterDisplay {
@@ -73,31 +92,16 @@
   text-shadow: 2px 4px 2px var(--box-shadow);
 }
 
-
-#addIngredientsButton:hover {
-  color: white;
-  background-color: var(--bttn-add-ingredients-toggled);
-}
-
-#removeIngredientsButton {
-  color: white;
-  border: none;
-  background-color: var(--bttn-remove-ingredients);
-}
-
-#removeIngredientsButton:hover {
-  color: white;
-  background-color: var(--bttn-remove-ingredients-toggled);
-}
-
 #submitTotalIngredientsButton {
   display: block;
   width: 50%;
-  max-width: 390px;
-  height: 50px;
-  margin: 70px auto 30px auto;
+  max-width: 39rem;
+  height: 5rem;
+  //line-height: 5rem;
+  vertical-align: middle;
+  margin: 7rem auto 3rem auto;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   font-size: 1.6rem;
   color: var(--light-text);
   text-shadow: none;
@@ -108,7 +112,6 @@
 
 #submitTotalIngredientsButton:hover {
   text-shadow: 1px 1px 0 var(--box-shadow);
-  color: white;
   background-color: var(--bttn-submit-toggled);
   cursor: pointer;
 }
