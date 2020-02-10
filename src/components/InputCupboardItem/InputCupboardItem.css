@@ -23,12 +23,12 @@
   #AddCupboardItem-input {
     display: inline-block;
     height: 48px;
+    font-size: 1.8rem;
+    line-height: 48px;
     width: 68%;
     flex-grow: 2;
     color: var(--input-text);
     font-family: 'Roboto' , sans-serif;
-    font-size: 1.8rem;
-    line-height: 0px;
     border: none;
     border-radius: 5px;
     margin: auto 15px auto auto;
