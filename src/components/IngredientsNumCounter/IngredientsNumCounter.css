@@ -36,13 +36,13 @@
   width: 6rem;
   border-radius: 10%;
   background-color: var(--bttn-add-ingredients);
-  //line-height: 6rem;
   text-align: center; 
   vertical-align: middle;
   font-size: 2.8rem;
   text-shadow: 0 1px #222;
   border: none;
-  margin: 0 2%;
+  //line-height: 6rem;
+  //margin: 0 2%;
 }
 
 #addIngredientsButton:hover {
@@ -54,13 +54,13 @@
   width: 6rem;
   border-radius: 10%;
   background-color: var(--bttn-remove-ingredients);  
-  //line-height: 6rem;
   text-align: center; 
   vertical-align: middle;
   font-size: 2.8rem;
   text-shadow: 0 1px #222;
   border: none;
-  margin: 0 2%;
+  //line-height: 6rem;
+  //margin: 0 2%;
 }
 
 #removeIngredientsButton:hover {
