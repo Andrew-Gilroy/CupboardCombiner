@@ -9,6 +9,7 @@ This is my first react App.
 ![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/appscreenshot.png)
 
 ---
+
 ## Built With
 
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
@@ -18,12 +19,10 @@ This is my first react App.
 * [Html](https://www.w3schools.com/html/default.asp) - The most basic building block of the Web.
 * [Tea](https://www.pgtips.co.uk/) - Nectar of the gods. ☕
 
-
 ## Author
 
 * **Andrew Gilroy** - [Portfolio Website](https://andrew-gilroy.design)
 
 ## Acknowledgments
 
-* Thanks to my girlfriend Ana's unique cooking style for inspiration! 
-* The many helpful Medium article writers for passing on their wisdom 😊
+* The many helpful Medium article writers for passing on their react wisdom 😊

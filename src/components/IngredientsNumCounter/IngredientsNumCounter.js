@@ -11,7 +11,7 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
   const strokeDashoffset = circumference - progress / 100 * circumference;
   
   return <div className="IngredientsNumCounter">
-    <h2>Select total number of ingredients</h2>
+    <h2>Select the total number of ingredients<br></br> for your next meal</h2>
       <div className="buttons-wrapper">
         <button id="removeIngredientsButton" onClick={handleDecrement}>&#45;</button>
         
@@ -43,6 +43,3 @@ function IngredientsNumCounter({finalResultsHandler, handleIncrement, handleDecr
 };
 
 export default IngredientsNumCounter;
-
-//{finalResultsHandler} is how i pass in props with functional components!!!
-

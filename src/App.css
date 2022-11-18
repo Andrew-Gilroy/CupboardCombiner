@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 
-
 :root {
   font-size: 62.5%;
-  //--app-bg-color: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
   --app-bg-color: linear-gradient(to top, #2C5364, #203A43, #0F2027);
-  
-  //--app-bg-color: rgb(34, 34, 34);
   --app-highlight:rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
-  --app-body-color-light: rgb(215, 217, 219);
+  --app-body-color-light: rgb(240, 240, 243);
   --bttn-submit: rgb(97, 221, 255);
   --bttn-submit-toggled: rgb(59, 134, 155);
   --bttn-remove-item: rgb(219, 34, 1);
@@ -22,8 +18,11 @@
   --bttn-remove-ingredients-toggled:rgb(167, 57, 27);
   --input-text: rgb(55, 55, 55);
   --counter-text: rgb(255, 255, 255);
-  --item-bg: rgb(255,255,255);
-  --item-text: rgb(95, 95, 95);
+
+  --item-bg-color: rgb(240, 240, 245);
+  --item-text: rgb(58, 58, 93);
+  --item-box-shadow: rgb(58, 58, 93, 1);
+  
   --dark-text: rgb(55, 55, 55);
   --light-text: rgb(255, 255, 255);
   --finalMealsDisplay-text: rgb(68, 68, 68);
@@ -31,32 +30,27 @@
   --finalMealsDisplay-text--p-bg: rgb(255, 255, 255);
   --footer-text: rgb(165, 201, 223);
   --box-shadow: rgb(68, 68, 68);
+  --ThemeToggler_btn-shadow: rgb(55, 55, 55);
   --empty-cupboard-msg: rgb(55, 55, 55);
   --theme-reset-text: rgb(255, 255 ,255);
-/* 
-Usage - background-color: var(--app-body-color);
-*/ 
+  
+/* Usage - background-color: var(--app-body-color); */
 }
 body {
-  /* background: url('./assets/images/foodbg2.jpg');
-  background-repeat: repeat;
-  background-position: 0px 0px;
-  background-attachment: fixed;
-  background-size: cover; */
   background: var(--app-bg-color);
   font-family: 'Roboto', sans-serif;
 }
 
-.App {
+#App {
   text-align: center;
   margin: 70px auto;
   width: 60vw;
   display: flex;
   flex-direction: column;
   background-color: var(--app-body-color-light);
-  //box-shadow: 0px 6px 5px #413e3e;
   box-shadow: 0px 2px 4px  var(--box-shadow);
-  border: 5px solid var(--app-highlight);
+  outline:5px solid var(--app-highlight);
+  //border: 5px solid var(--app-highlight);
   border-radius: 12px;
 }
 
@@ -64,11 +58,7 @@ textarea:focus, input:focus{
   outline: none;
 }
 
-//
-////////////////////////////////////////////////
-///////          MEDIA QUERIES        //////////
-////////////////////////////////////////////////
-//
+/* MEDIA QUERIES */
 
 /* Smaller than standard 1400 (devices and browsers) */
 @media only screen and (max-width: 1400px) {
@@ -99,11 +89,7 @@ textarea:focus, input:focus{
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-  /* .CupboardItem {
-    width: 10%;
-  } */
-
-  
+ 
 
 }
 

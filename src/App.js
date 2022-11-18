@@ -1,5 +1,5 @@
 import React, { useState , useEffect } from 'react';
-import './app.css';
+import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import ThemeToggler from './components/ThemeToggler/ThemeToggler';
 import InputCupboardItem from './components/InputCupboardItem/InputCupboardItem';
@@ -10,12 +10,19 @@ import AppFooter from './components/AppFooter/AppFooter';
 
 function App() {
 
-///////////////////////////////  
-/// HOOKS STATE MANAGEMENT //////////////////////////////////////////////////////////////////
-///////////////////////////////
+/*  
+HOOKS STATE MANAGEMENT
+*/
 
-  const [term, updateTerm] = useState('');
-  const [items, updateItems] = useState([{name: 'Bacon', url: 'https://farm66.staticflickr.com/65535/49285056768_de01247872.jpg'}, {name: 'Carrots', url: 'https://farm2.staticflickr.com/1496/24428604506_dfa351a5a7.jpg'}, {name: 'Eggs', url: 'https://farm4.staticflickr.com/3348/3514192452_2981b6e008.jpg'}, {name: 'Noodles', url: 'https://farm8.staticflickr.com/7858/31620262177_8678387c2c.jpg'}, {name: 'Rice', url: ' https://farm5.staticflickr.com/4063/4513240600_a9df7d1739.jpg'}]);
+const [term, updateTerm] = useState('');
+const [items, updateItems] = useState(
+  [
+    {name: 'Bacon', url: 'https://farm66.staticflickr.com/65535/49285056768_de01247872.jpg'}, 
+    {name: 'Eggs', url: 'https://farm4.staticflickr.com/3348/3514192452_2981b6e008.jpg'},
+    {name: 'Beans', url: 'https://farm5.staticflickr.com/4005/4300636744_3dcb938a25.jpg'}
+  ]
+  
+  );
 
   // eslint-disable-next-line
   const [removed, updateRemovedItems] = useState([]);
@@ -24,6 +31,9 @@ function App() {
   const [circleStrokeColor, updateCircleStroke] = useState("RGBA(185,185,185,0.29)");
   
   const [result, updateResult] = useState([]);
+  /*testing*/
+  const [urlArray, updateUrlArray] = useState([]);
+  
   //API search term states
   const [searchTerm, updateSearchTerm] = useState('');
   const [fetchResult, updateFetchResult] = useState('');//API JSON DATA
@@ -31,9 +41,24 @@ function App() {
   const [imageURL, updateImageUrl] = useState('');
   
   
-/////////////////////////////// 
-////// FUNCTIONS & LOGIC ////////////////////////////////////////////////////////////////////
-///////////////////////////////
+  /*////////////////////////////// 
+  ////// FUNCTIONS & LOGIC ////////////////////////////////////////////////////////////////////
+  //////////////////////////////*/
+  
+  //check this syntax, is useEffect the best method here? I could improve the logic here but it works for now!
+
+  //on page load, useffect checks localStorage for an array of previously saved cupboard items
+  //if nothing is detected then the default array "items" with placeholder images is returned
+ useEffect(() => {
+
+    if (localStorage.getItem("locallySavedItemsArray")) {
+      const parsedlocalArray = JSON.parse(localStorage.getItem("locallySavedItemsArray") || items);
+      
+      return updateItems(parsedlocalArray)
+    }
+  },[]);
+  //if I add items to the empty dependency array this causes an infinite loop....
+  //React Hook useEffect has a missing dependency: 'items'. Either include it or remove the dependency array.
 
 //captures user input and updates the term to live reflect the current user input
   const inputOnChange = (event) => {
@@ -41,22 +66,85 @@ function App() {
   };
 
 // chained useEffect hooks will watch for changes in state (fetchResult & imageURL)
-// when API data has returned flickrImgUrlBuilder() is invoked. The next useEffect
+// when API data has returned, flickrImgUrlBuilder() is invoked. The next useEffect
 // will invoke arrayBuilder() to update the items object array with a name and valid image URL.
 
   useEffect(() => {
     if(fetchResult !== ""){
       flickrImgUrlBuilder();
     }
+    // eslint-disable-next-line
   },[fetchResult]);
-      
+  
   useEffect(() => {
     if(imageURL !== ""){
       arrayBuilder(); 
     }
+    // eslint-disable-next-line
   },[imageURL]);
 
-  //monitors counter state value - updates numCounter circle stroke color
+  //Monitors the ingredients total value then enables food Icons
+  useEffect(() => {
+    
+    const getIcon1 = document.getElementById("foodIcon1");  
+    const getIcon2 = document.getElementById("foodIcon2");
+    const getIcon3 = document.getElementById("foodIcon3");
+    const getIcon4 = document.getElementById("foodIcon4");
+    const getIcon5 = document.getElementById("foodIcon5");
+    
+    switch(counter) {
+        
+      case 1:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "none";
+        getIcon3.style.display = "none";
+        getIcon4.style.display = "none";
+        getIcon5.style.display = "none";
+        break;
+        
+      case 2:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "inline-block";
+        getIcon3.style.display = "none";
+        getIcon4.style.display = "none";
+        getIcon5.style.display = "none";
+        break;
+    
+      case 3:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "inline-block";
+        getIcon3.style.display = "inline-block";
+        getIcon4.style.display = "none";
+        getIcon5.style.display = "none";
+        break;
+  
+      case 4:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "inline-block";
+        getIcon3.style.display = "inline-block";
+        getIcon4.style.display = "inline-block";
+        getIcon5.style.display = "none";
+        break;
+  
+      case 5:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "inline-block";
+        getIcon3.style.display = "inline-block";
+        getIcon4.style.display = "inline-block";
+        getIcon5.style.display = "inline-block";
+        break;
+          
+      default:
+        getIcon1.style.display = "inline-block";
+        getIcon2.style.display = "none";
+        getIcon3.style.display = "none";
+        getIcon4.style.display = "none";
+        getIcon5.style.display = "none";
+        break;
+      }
+  },[counter]);
+    
+  // monitors counter state value - updates numCounter circle stroke color as the value increases
   useEffect(() => {
     if (theme === "default") {
       switch (counter) {
@@ -104,11 +192,6 @@ function App() {
         case 3: updateCircleStroke("RGBA(205,035,035,0.8)"); break;
         case 4: updateCircleStroke("RGBA(225,035,035,0.9)"); break;
         case 5: updateCircleStroke("RGBA(245,035,035,1.0)"); break;
-        /* case 1: updateCircleStroke("RGBA(145,065,065,0.2)"); break;
-        case 2: updateCircleStroke("RGBA(165,085,085,0.4)"); break;
-        case 3: updateCircleStroke("RGBA(185,105,105,0.6)"); break;
-        case 4: updateCircleStroke("RGBA(205,125,125,0.7)"); break;
-        case 5: updateCircleStroke("RGBA(225,145,145,1)"); break; */
         default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
       }
     }
@@ -153,11 +236,13 @@ function App() {
     }
   },[theme, counter]);
 
-
+  
 //updates the items state array with user inputted item and fetched Flickr image url
+//then converts the array to json before saving it into localStorage as "locallySavedItemsArray"
   function arrayBuilder() {
     const termAddedToArray = [...items, {name: searchTerm, url: imageURL}];  
     updateItems(termAddedToArray)
+    localStorage.setItem("locallySavedItemsArray", JSON.stringify(termAddedToArray));
   ;}
 
 // takes returned Flickr API data then converts it to a valid image URL
@@ -175,7 +260,7 @@ function App() {
       }
   };
   
-  //Adds user inputted term to the items array and updates the API searchTerm. Term is then updated to ''. 
+  //Adds user inputted term to the items array then updates the API searchTerm. Term is then updated to ''. 
   //Items array is updated using updateItems function listed above in hooks  
   const onSubmitItemHandler = (event) => {
       event.preventDefault();
@@ -187,11 +272,12 @@ function App() {
 
   const fetchImageUrl = async () => {
     try { 
-      let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance&media=photos`;
+      let apiSearchTerm = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=52236809d65bcba6dfb096fa57043737&text=${term}&per_page=1&format=json&nojsoncallback=1&sort=relevance&media=photos&tags=meal%2C+cooking%2C+food&tag_mode=any`;
       const response = await fetch(apiSearchTerm);
       const json = await response.json();
       //state update function    
-      updateFetchResult(json); //updates state with returned API data
+      updateFetchResult(json);
+      //console.log(json); //updates state with returned API data
     }
     catch(err) {
       console.log("Fetch Error");
@@ -199,19 +285,22 @@ function App() {
   };
 
 //Removes an item from the original array via splice. RemovedItems array is updated. User clicks X button to remove item
+//Saves a copy of the array into localStorage as JSON "locallySavedItemsArray"
   const handleRemove = (cats) => {
     const itemRemove = items.splice(cats, 1);
     updateRemovedItems({removed: itemRemove});
+    localStorage.setItem("locallySavedItemsArray", JSON.stringify(items));
     if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";} 
   };
 
-//Deletes all items in the cupboard   
+//Deletes all items in the cupboard and in localStorage  
   const deleteAllItems = () => { 
     updateItems([]);
+    localStorage.clear();
     document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";
   };
 
-//handles increments/decrements onclicks from IngredientsNumCounter
+//handles increment/decrement onclicks from IngredientsNumCounter
   const handleIncrement = () => { 
     if(counter <= 4) { updateCounter(counter + 1); } 
     else(alert("5 ingredients maximum"));
@@ -222,48 +311,56 @@ function App() {
   };
 
 //Returns random final results based on number of ingredients selected  
-  const finalResultsHandler = () => { 
+  const finalResultsHandler = () => {
+
       const copyArray = [...items];
       const nameArray = [];
+      console.log(copyArray);
+      const urlArray = [];
+
+      copyArray.sort(() => 0.5 - Math.random()); //shuffled at beginning
+
       copyArray.forEach((element) => {
         nameArray.push(element.name);
-      }); // extracts names from object array
-
+        urlArray.push(element.url);
+        updateUrlArray(urlArray);
+        // extracts names from object array, also adds image urls to urlArray
+      });
+      
+      
       if (nameArray.length === 0 || nameArray.length < counter) {return alert("Please add more cupboard items");}
-      const shuffled = nameArray.sort(() => 0.5 - Math.random());    
+      const shuffled = nameArray;    
       const sliced = shuffled.slice(0, counter);
       const poppedSingle = sliced.pop(0, 1);
-      const singleName = poppedSingle.name;
-      const finaltems = sliced.join(", ") + " and " + poppedSingle;
+      const finaltems = sliced.join(", ") + " & " + poppedSingle + " 🍴";
+      //
+      // const shuffled = nameArray.sort(() => 0.5 - Math.random());    
+      // const sliced = shuffled.slice(0, counter);
+      // const poppedSingle = sliced.pop(0, 1);
+      // const finaltems = sliced.join(", ") + " & " + poppedSingle + " 🍴"; 
 
       counter === 1 ? updateResult(poppedSingle) : updateResult(finaltems);
-
-      // duplicate the items array. Shuffle new array then slice *(counter num) of items. 
-      // Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
-      // ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
-      // Update the state via updateResult with only one item if counter === 1
+      counter === 1 ? updateUrlArray(urlArray.slice(0,1)) : console.log("counter 1");
+      counter === 2 ? updateUrlArray(urlArray.slice(0,2)) : console.log("counter 2");
+      counter === 3 ? updateUrlArray(urlArray.slice(0,3)) : console.log("counter 3");
+      counter === 4 ? updateUrlArray(urlArray.slice(0,4)) : console.log("counter 4");
+      counter === 5 ? updateUrlArray(urlArray.slice(0,5)) : console.log("counter 5");
+      /* duplicate the items array. Shuffle new array then slice *(counter num) of items. 
+      Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
+      ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
+      Update the state via updateResult with only one item if counter === 1 */
   };
    
   // return keyword with wrapper div on same line--important!
-  return <div className="App">
+  return <div id="App">
             <AppHeader/> 
             <ThemeToggler updateThemeName={updateThemeName}/>
-            {/* <button onClick={arrayBuilder}>make array</button> */}
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term} fetchResult={fetchResult} flickrImgUrlBuilder={flickrImgUrlBuilder}/>
             <DisplayCupboardItems items={items} removeItem={handleRemove} deleteAllItems={deleteAllItems} key={() => items.toString()} imageURL={imageURL} />
             <IngredientsNumCounter finalResultsHandler={finalResultsHandler} handleIncrement={handleIncrement} handleDecrement={handleDecrement} counter={counter} circleStrokeColor={circleStrokeColor}/>
-            <FinalMealsDisplay result={result}/>
+            <FinalMealsDisplay items={items} numberOfIngredientsIcons={counter} urlArray={urlArray} result={result}/>
             <AppFooter/>
           </div>
 };
 
 export default App;
-
-///////////////////////////////  
-/// NOTES AND CODE SCRAPS //////////////////////////////////////////////////////////////////
-///////////////////////////////
-
-/*
-let windowWidth = window.innerWidth;
-  console.log(windowWidth);
-*/

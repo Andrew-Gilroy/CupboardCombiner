@@ -8,20 +8,98 @@
   border-bottom-left-radius: 5px;
 }
 
-.FinalMealsDisplay p {
+#FinalMealsDisplay-p {
   font-size: 2.4rem;
-  line-height: 2.4rem;
+  line-height: 3.4rem;
   font-family: 'Roboto' , sans-serif;
   display: block;
-  min-height: 30px;
+  min-height: 3rem;
   width: 60%;
   word-wrap: break-word;
   margin: auto;
-  padding: 30px 30px;
+  padding: 3rem 3rem;
   color: var(--finalMealsDisplay-text--p);
   background: var(--finalMealsDisplay-text--p-bg);
   border-radius: 5px;
+  text-transform: capitalize;
 }
+
+.finalMealsDisplay-imageWrapper {
+  //width: 3fr;
+  height: auto;
+  display: inline-block;
+  width: 16%;
+  min-height: 5rem;
+  max-height: 10rem;
+  margin: 1.4rem 0.9vw;
+  
+  //border: 0.3rem solid var(--app-highlight); /*border causing 0.2 pixel gap issue*/
+  -webkit-box-shadow: 0 2px 2px var(--box-shadow);
+  box-shadow: 0 2px 2px var(--box-shadow);
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  
+  /*testing below*/
+  
+  
+  
+  //align-items:stretch ;
+  //background-color: var(--app-highlight);
+  //background-color:red;
+  //z-index: 100;
+  /* OLD CODE
+  border-radius: 0.5rem;
+  outline: 0.3rem solid var(--app-highlight);
+  outline: 0.3rem solid var(--app-highlight);
+  */
+}
+
+.finalMealsDisplay-image {
+  
+  box-shadow: 0 2px 10px var(--item-box-shadow);
+  width: 100%;
+  height: 6rem;
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+  object-fit: cover;
+  //overflow: hidden;
+  /* important for aspect ratio */
+  /*testing*/
+  -webkit-transition: all 1.2s 0s ease-in-out;
+  -moz-transition: all 1.2s 0s ease-in-out;
+  -o-transition: all 1.2s 0s ease-in-out;
+  transition: all 0.5s 0s ease-in-out;
+  border-radius: 0.5rem;
+  outline: 0.3rem solid var(--app-highlight);
+  box-shadow: 0 2px 10px var(--item-box-shadow);
+}
+
+.finalMealsDisplay-image:hover {
+  scale: 4;
+  position:relative;
+  //z-index: calc(+1);
+}
+
+.foodIcon {
+  margin: 0 1%;
+  animation: pulseAnimation 4.5s alternate infinite ease-in-out;
+  //transition: transform 0.5s ease;
+}
+@keyframes pulseAnimation {
+	0%   {
+    transform: scale(0.9);
+    rotate: 0deg;
+  }
+  50% {
+    transform: scale(1);
+    rotate: -12deg;
+  }
+  100%   {
+    transform: scale(0.9);
+    rotate: 24deg;
+  }
+}
+
 
 .FinalMealsDisplay h2 {
   font-size: 2.2rem;
@@ -30,11 +108,7 @@
   color: var(--finalMealsDisplay-text);
 }
 
-//
-////////////////////////////////////////////////
-///////          MEDIA QUERIES        //////////
-////////////////////////////////////////////////
-//
+/* MEDIA QUERIES */
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {

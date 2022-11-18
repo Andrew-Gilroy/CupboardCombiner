@@ -5,14 +5,10 @@ function InputCupboardItem({value, onChange, onSubmit}) {
   
   return <div className="AddCupboardItem">
             <form onSubmit={onSubmit}>
-            <input value={value} onChange={onChange} placeholder="What's in the cupboard?" id="AddCupboardItem-input" required maxlength="19"/>
+            <input value={value} onChange={onChange} placeholder="What is inside your cupboard?" id="AddCupboardItem-input" required maxLength="19"/>
             <button id="cupboardSubmitBtn">SUBMIT</button>
             </form>
         </div>
 };
 
 export default InputCupboardItem;
-
-
-//{value, onChange, onSubmit} is how i pass in props with hooks!!!
-//function IngredientsNumCounterHOOKS({finalResultsHandler}) {

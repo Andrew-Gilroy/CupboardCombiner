@@ -42,7 +42,6 @@
   font-size: 2.8rem;
   text-shadow: 0 1px #222;
   border: none;
-  //line-height: 6rem;
   margin: 0 2%;
   padding: 0;
 }
@@ -62,7 +61,6 @@
   text-shadow: 0 1px #222;
   border: none;
   padding: 0;
-  //line-height: 6rem;
   margin: 0 2%;
 }
 
@@ -81,7 +79,6 @@
   color: var(--counter-text);
   margin: 7rem 0;
   padding: 0 10px;
-  text-transform: uppercase;
 }
 
 #ingredientsNumCounterDisplay {
@@ -100,8 +97,6 @@
   width: 50%;
   max-width: 39rem;
   height: 5rem;
-  //line-height: 5rem;
-  vertical-align: middle;
   margin: 7rem auto 3rem auto;
   font-weight: 700;
   border-radius: 0.5rem;
@@ -123,11 +118,7 @@
   transition: 0.3s ease-in-out all;
 }
 
-//
-////////////////////////////////////////////////
-///////          MEDIA QUERIES        //////////
-////////////////////////////////////////////////
-//
+/* MEDIA QUERIES */
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
