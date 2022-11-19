@@ -24,12 +24,14 @@ This is my first react App.
 * #v2
 * +Added localStorage support to persistently save cupboard items between app use.
 * +Improved image search results by adding more food focused parameters.
+* +Fixed border 0.5px gap issue.
 * +Final results now have their own images.
 * +Added food counter icons.
 * +New items appear first in the list.
-* +Added zoom on hover for images
-* +Edited themes and general css tweaks
-* +Fixed border 0.5px gap issue
+* +Added zoom on hover for images.
+* +Added a scroll to top button.
+* +Cupboard items list visibility can now be toggled.
+* +Edited themes and general css tweaks.
 
 ## Author
 
