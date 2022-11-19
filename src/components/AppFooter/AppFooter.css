@@ -16,7 +16,7 @@
     margin: 16px auto -10px auto;
     filter: contrast(200%);
     
-    //animation: rotate-center 12s linear infinite both;
+    animation: rotate-center 12s linear infinite both;
   }
 
   #FooterText--small {

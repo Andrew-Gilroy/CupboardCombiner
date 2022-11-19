@@ -2,6 +2,7 @@
 
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   --app-bg-color: linear-gradient(to top, #2C5364, #203A43, #0F2027);
   --app-highlight:rgb(97, 221, 255);
   --app-body-color: rgb(68, 68, 68);
@@ -36,6 +37,33 @@
   
 /* Usage - background-color: var(--app-body-color); */
 }
+
+#toTopBtn {
+
+  display: none; /* none/Hidden by default */
+  height: 5rem;
+  width: 5rem;
+  padding: 0.6rem 0 0 0; /* Some padding */
+  text-align: center;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 2rem; /* Place the button at the bottom of the page */
+  right: 3rem; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: solid 0.5rem var(--app-body-color-light);
+  outline: none; /* Remove outline */
+  background: none;
+  color: var(--app-body-color-light); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 1rem; /* Rounded corners */
+  font-size: 3rem; /* Increase font size */
+  transition: all 0.5s 0s ease-in-out;
+}
+
+#toTopBtn:hover {
+  background-color: var(--app-highlight); /* Set a background color */
+  padding: 0rem 0 0 0;
+
+}
 body {
   background: var(--app-bg-color);
   font-family: 'Roboto', sans-serif;
@@ -50,7 +78,6 @@ body {
   background-color: var(--app-body-color-light);
   box-shadow: 0px 2px 4px  var(--box-shadow);
   outline:5px solid var(--app-highlight);
-  //border: 5px solid var(--app-highlight);
   border-radius: 12px;
 }
 

@@ -8,10 +8,6 @@ import foodIcon3 from '../../assets/images/icons8-heinz-beans-48.png';
 import foodIcon4 from '../../assets/images/icons8-watermelon-48.png';
 import foodIcon5 from '../../assets/images/icons8-dessert-48.png';
 
-
-
-
-
 function FinalMealsDisplay({result, items, urlArray}) {
   
   return (

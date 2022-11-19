@@ -26,7 +26,7 @@ const changeTheme_Dark = () => {
   
   docRootStyle.setProperty('--item-bg-color', 'rgb(23,23,23)');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-box-shadow', 'rgb(255, 255, 255, 1)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(255, 255, 255, 0.7)');
   
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
@@ -38,7 +38,6 @@ const changeTheme_Dark = () => {
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(38, 238, 238)');
-
   updateThemeName("dark");
 };
 
@@ -59,8 +58,8 @@ const changeTheme_Light = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(135, 135, 135)');
 
-  docRootStyle.setProperty('--item-bg-color', 'rgb(219, 250, 249)');
-  docRootStyle.setProperty('--item-text', 'rgb(190, 94, 181)');
+  docRootStyle.setProperty('--item-bg-color', 'rgb(247, 248, 248)');
+  docRootStyle.setProperty('--item-text', 'rgb(135, 135, 135)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(190, 94, 181, 0.5)');
 
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
@@ -95,7 +94,7 @@ const changeTheme_Red = () => {
 
   docRootStyle.setProperty('--item-bg-color', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-box-shadow', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(248, 124, 124)');
   
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
@@ -113,8 +112,8 @@ const changeTheme_Red = () => {
 const changeTheme_Green = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #000000, #781212)');
   docRootStyle.setProperty('--app-highlight', 'rgb(55, 223, 055)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(28, 59, 28)');
-  docRootStyle.setProperty('--app-body-color-light', 'rgb(75, 134, 75)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(8, 99, 8)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 248, 180)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(22, 219, 22)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(059, 134, 22)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
@@ -127,9 +126,9 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   
-  docRootStyle.setProperty('--item-bg-color', 'rgb(28, 59, 28)');
-  docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-box-shadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--item-bg-color', 'rgb(180, 248, 180)');
+  docRootStyle.setProperty('--item-text', 'rgb(8, 99, 8)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(059, 134, 22)');
 
   docRootStyle.setProperty('--dark-text', 'rgb(140, 244, 140)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
@@ -148,7 +147,7 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #4b6cb7, #182848)');
   docRootStyle.setProperty('--app-highlight', 'rgb(95, 194, 252)');
   docRootStyle.setProperty('--app-body-color', 'rgb(212, 232, 255)');
-  docRootStyle.setProperty('--app-body-color-light', 'rgb(41, 45, 72)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 226, 253)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(61, 85, 122)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(91, 125, 152)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
@@ -161,9 +160,9 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
   
-  docRootStyle.setProperty('--item-bg-color', 'rgb(41, 45, 72)');
-  docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-box-shadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--item-bg-color', 'rgb(212, 232, 255)');
+  docRootStyle.setProperty('--item-text', 'rgb(61, 85, 122)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(61, 85, 122)');
 
   docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
@@ -181,12 +180,12 @@ const changeTheme_Blue = () => {
 const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #22c1c3, #fdbb2d)');
   docRootStyle.setProperty('--app-highlight', 'rgb(255, 240, 31)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(30, 30, 00)');
-  docRootStyle.setProperty('--app-body-color-light', 'rgb(67, 57, 57)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(76, 63, 90)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(255, 253, 209)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(255, 240, 31)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(205, 180, 0)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(250, 97, 15)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(203, 183, 003)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(250, 226, 10)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(235, 220, 13)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(203, 183, 003)');
@@ -195,13 +194,13 @@ const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
 
-  docRootStyle.setProperty('--item-bg-color', 'rgb(30, 30, 00)');
-  docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--item-box-shadow', 'rgb(235, 220, 13)');
+  docRootStyle.setProperty('--item-bg-color', 'rgb(255, 248, 148)');
+  docRootStyle.setProperty('--item-text', 'rgb(78, 69, 79)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(67, 34, 83, 0.7)');
 
   docRootStyle.setProperty('--dark-text', 'rgb(195, 195, 195)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(205, 180, 0)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(203, 183, 003)');
@@ -260,16 +259,14 @@ function themePickerVisibility_toggle() {
   
   element.style.display === "none" ? element.style.display = "flex" : element.style.display = "none";
   fasClasses[0].classList.toggle("fa-chevron-up");
-  //fasClasses[0].style.transform = "rotate(180deg)";
-
-  
-}
+};
 
 
 /* this is added as a prop to set initial style as "none", necessary for toggle to work!*/
 const styleObject = {
     display: "none",
 };
+
     return <div className="ThemeToggler-Wrapper">
       <h3 id="theme-text"><span>PICK A THEME</span><i className="fas fa-chevron-down themeChevron" onClick={themePickerVisibility_toggle}></i></h3>
         <div id="themePickerVisibility" style={styleObject}>

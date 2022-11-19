@@ -1,6 +1,4 @@
-
-  
-  .AddCupboardItem {
+.AddCupboardItem {
     position: sticky;
     top: 0;
     z-index: 2;
@@ -15,12 +13,12 @@
     box-shadow: 0px 3px 7px 0px var(--box-shadow);
   }
 
-  form {
+form {
     width: 100%;
     margin: auto;
   }
 
-  #AddCupboardItem-input {
+#AddCupboardItem-input {
     display: inline-block;
     height: 4.8rem;
     font-size: 1.8rem;
@@ -36,7 +34,7 @@
     vertical-align: middle;
   }
 
-  #cupboardSubmitBtn {
+#cupboardSubmitBtn {
     display: inline-block;
     height: 4.8rem;
     flex-grow: 1;
@@ -51,40 +49,39 @@
     cursor: pointer;
     color: var(--light-text);
     background-color: var(--bttn-submit);
-  }
+}
 
-  #cupboardSubmitBtn:hover {
-    //text-shadow: 1px 1px 0 var(--box-shadow);
+#cupboardSubmitBtn:hover {
     color: white;
     background-color: var(--bttn-submit-toggled);
     cursor: pointer;
-  }
+}
 
   /* MEDIA QUERIES */
 
   /* Smaller than standard 960 (devices and browsers) */
-  @media only screen and (max-width: 959px) {}
+@media only screen and (max-width: 959px) {}
 
   /* Tablet Portrait size to standard 960 (devices and browsers) */
-  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
   /* All Mobile Sizes (devices and browser) */
-  @media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {}
 
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {
-    .AddCupboardItem {
-      
-      height: 9rem;
-    }
-    #AddCupboardItem-input { 
-      height: 4.2rem;
-    }
-    #cupboardSubmitBtn {
-      height: 4.2rem;
-    }
-
+@media only screen and (max-width: 479px) {
+  .AddCupboardItem {
+    
+    height: 9rem;
   }
+  #AddCupboardItem-input { 
+    height: 4.2rem;
+  }
+  #cupboardSubmitBtn {
+    height: 4.2rem;
+  }
+
+}

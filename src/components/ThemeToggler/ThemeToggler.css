@@ -42,11 +42,8 @@
     width: 100%;
     color: red;
     margin: 15px auto 0 auto;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
-
-
 
 .themeChevron:active {
     outline: 0;
@@ -60,6 +57,7 @@
     -webkit-tap-highlight-color: transparent;
     /* hides mobile click banded */
 }
+
 @keyframes myAnim {
 	0%,
 	50%,

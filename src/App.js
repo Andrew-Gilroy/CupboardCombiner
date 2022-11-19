@@ -17,9 +17,9 @@ HOOKS STATE MANAGEMENT
 const [term, updateTerm] = useState('');
 const [items, updateItems] = useState(
   [
-    {name: 'Bacon', url: 'https://farm66.staticflickr.com/65535/49285056768_de01247872.jpg'}, 
-    {name: 'Eggs', url: 'https://farm4.staticflickr.com/3348/3514192452_2981b6e008.jpg'},
-    {name: 'Beans', url: 'https://farm5.staticflickr.com/4005/4300636744_3dcb938a25.jpg'}
+    {name: 'Hamburger', url: 'https://farm2.staticflickr.com/1256/847548367_09142ee453.jpg'}, 
+    {name: 'Chicken Salad', url: 'https://farm1.staticflickr.com/62/179151582_a62d0d8cde.jpg'},
+    {name: 'Almonds', url: 'https://farm6.staticflickr.com/5102/5605239684_ee76ba7f79.jpg'}
   ]
   
   );
@@ -49,7 +49,32 @@ const [items, updateItems] = useState(
 
   //on page load, useffect checks localStorage for an array of previously saved cupboard items
   //if nothing is detected then the default array "items" with placeholder images is returned
- useEffect(() => {
+ 
+  
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+   // Get the button:
+   let mybutton = document.getElementById("toTopBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        console.log("visible")
+      } else {
+        mybutton.style.display = "none";
+        console.log("hidden")
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+ 
+ 
+  useEffect(() => {
 
     if (localStorage.getItem("locallySavedItemsArray")) {
       const parsedlocalArray = JSON.parse(localStorage.getItem("locallySavedItemsArray") || items);
@@ -165,7 +190,7 @@ const [items, updateItems] = useState(
         case 2: updateCircleStroke("RGBA(125,125,125,0.4)"); break;
         case 3: updateCircleStroke("RGBA(165,165,165,0.6)"); break;
         case 4: updateCircleStroke("RGBA(205,205,205,0.7)"); break;
-        case 5: updateCircleStroke("RGBA(245,245,245,1)"); break;
+        case 5: updateCircleStroke("RGBA(255,255,255,1)"); break;
         default: updateCircleStroke("RGBA(255,0,0,0.29)"); break;      
       }
     }
@@ -295,9 +320,15 @@ const [items, updateItems] = useState(
 
 //Deletes all items in the cupboard and in localStorage  
   const deleteAllItems = () => { 
-    updateItems([]);
-    localStorage.clear();
-    document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";
+    if (window.confirm("Are you sure you want to remove all cupboard items?") === true) {
+      //text = "You pressed OK!";
+      updateItems([]);
+      localStorage.clear();
+      document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";
+    } else {
+      //alert("carry on!");
+    }
+    
   };
 
 //handles increment/decrement onclicks from IngredientsNumCounter
@@ -332,7 +363,7 @@ const [items, updateItems] = useState(
       const shuffled = nameArray;    
       const sliced = shuffled.slice(0, counter);
       const poppedSingle = sliced.pop(0, 1);
-      const finaltems = sliced.join(", ") + " & " + poppedSingle + " 🍴";
+      const finaltems = sliced.join(", ") + " & " + poppedSingle;
       //
       // const shuffled = nameArray.sort(() => 0.5 - Math.random());    
       // const sliced = shuffled.slice(0, counter);
@@ -353,6 +384,7 @@ const [items, updateItems] = useState(
    
   // return keyword with wrapper div on same line--important!
   return <div id="App">
+            <button onClick={topFunction} id="toTopBtn">^</button>
             <AppHeader/> 
             <ThemeToggler updateThemeName={updateThemeName}/>
             <InputCupboardItem onSubmit={onSubmitItemHandler} value={term} onChange={inputOnChange} term={term} fetchResult={fetchResult} flickrImgUrlBuilder={flickrImgUrlBuilder}/>

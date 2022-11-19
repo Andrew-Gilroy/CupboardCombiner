@@ -2,7 +2,7 @@
   display: block;
   min-height: 240px;
   width: 100%;
-  margin: 30px 0 40px 0;
+  margin: 3rem 0 4rem 0;
   background-color: var(--app-body-color-light);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -22,6 +22,7 @@
   background: var(--finalMealsDisplay-text--p-bg);
   border-radius: 5px;
   text-transform: capitalize;
+  outline: 0.3rem solid var(--app-highlight);
 }
 
 .finalMealsDisplay-imageWrapper {
@@ -31,27 +32,15 @@
   width: 16%;
   min-height: 5rem;
   max-height: 10rem;
-  margin: 1.4rem 0.9vw;
+  margin: 2.4rem 0.9vw 0 0.9vw;
   
-  //border: 0.3rem solid var(--app-highlight); /*border causing 0.2 pixel gap issue*/
   -webkit-box-shadow: 0 2px 2px var(--box-shadow);
   box-shadow: 0 2px 2px var(--box-shadow);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   
   /*testing below*/
-  
-  
-  
-  //align-items:stretch ;
-  //background-color: var(--app-highlight);
-  //background-color:red;
-  //z-index: 100;
-  /* OLD CODE
-  border-radius: 0.5rem;
-  outline: 0.3rem solid var(--app-highlight);
-  outline: 0.3rem solid var(--app-highlight);
-  */
+    
 }
 
 .finalMealsDisplay-image {
@@ -62,8 +51,8 @@
   border-top-right-radius: 0.2rem;
   border-top-left-radius: 0.2rem;
   object-fit: cover;
-  //overflow: hidden;
   /* important for aspect ratio */
+  
   /*testing*/
   -webkit-transition: all 1.2s 0s ease-in-out;
   -moz-transition: all 1.2s 0s ease-in-out;
@@ -72,18 +61,17 @@
   border-radius: 0.5rem;
   outline: 0.3rem solid var(--app-highlight);
   box-shadow: 0 2px 10px var(--item-box-shadow);
+
 }
 
 .finalMealsDisplay-image:hover {
-  scale: 4;
-  position:relative;
-  //z-index: calc(+1);
+  scale: 1.6;
+  z-index: 100;
 }
 
 .foodIcon {
   margin: 0 1%;
   animation: pulseAnimation 4.5s alternate infinite ease-in-out;
-  //transition: transform 0.5s ease;
 }
 @keyframes pulseAnimation {
 	0%   {
@@ -99,7 +87,6 @@
     rotate: 24deg;
   }
 }
-
 
 .FinalMealsDisplay h2 {
   font-size: 2.2rem;

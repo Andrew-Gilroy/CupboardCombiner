@@ -1,10 +1,26 @@
 import React from 'react';
 import '../DisplayCupboardItems/DisplayCupboardItems.css';
 
+function cupboardItemHidden () {
+  const element = document.getElementById("CupboardDisplayItems");
+  const chevron = document.getElementById("toggleCupboardItems");
+  if (element.style.display === "none") {
+    element.style.display = "flex";
+    chevron.classList.toggle("fa-chevron-up");
+  } else {
+    element.style.display = "none";
+    chevron.classList.toggle("fa-chevron-up");
+  }
+}
+
 function DisplayCupboardItems({items, removeItem, deleteAllItems, fetchResult, flickrImgUrlBuilder}) {
 
-return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
-          <div className="CupboardDisplayItems-Wrapper" >
+return <div className="CupboardDisplayItems-Wrapper--paddingWrapper" >
+          <div>
+            <p id="toggle-item-view-p">TOGGLE CUPBOARD VIEW</p>
+            <i className="fas fa-chevron-down themeChevron" id="toggleCupboardItems" onClick={cupboardItemHidden}></i>
+          </div>
+          <div className="CupboardDisplayItems-Wrapper" id="CupboardDisplayItems">
             { items.map((item, cats) => <div key={cats} className="CupboardItem">
               <img src={item.url} alt="" className="CupboardItem_image"></img>
               <div className='CupboardDisplayItems-h1-wrapper'>
@@ -20,25 +36,3 @@ return <div className="CupboardDisplayItems-Wrapper--paddingWrapper">
 };
 
 export default DisplayCupboardItems;
-
-
-// function allowDrop(ev) {
-//   ev.preventDefault();
-// }
-
-// function drag(ev) {
-//   ev.dataTransfer.setData("text", ev.target.id);
-// }
-
-// function drop(ev) {
-//   ev.preventDefault();
-//   var data = ev.dataTransfer.getData("text");
-//   ev.target.appendChild(document.getElementById(data));
-// }
-// </script>
-// </head>
-// <body>
-
-// <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-// <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"></img>
