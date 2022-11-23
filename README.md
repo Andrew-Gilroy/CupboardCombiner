@@ -23,7 +23,7 @@ This is my first ReactJS App.
 
 * #v2
 * +Added localStorage support to persistently save cupboard items between app use.
-* +Improved image search results by adding more food focused parameters.
+* +Improved image search results by using food focused parameters.
 * +Fixed border 0.5px gap issue.
 * +Final results now have their own images.
 * +Added food counter icons.
@@ -34,7 +34,13 @@ This is my first ReactJS App.
 * +Items images visibility can now be toggled.
 * +Edited/Added themes and general css tweaks.
 * +Added Random theme generator.
-* +Migrated logic from app.js to specific components
+* +Migrated logic from app.js to specific components.
+
+## Todo
+
+* #v2
+* +Update app dependencies and react version.
+
 
 ## Author
 

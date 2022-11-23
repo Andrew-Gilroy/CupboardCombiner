@@ -9,12 +9,15 @@ function DisplayCupboardItems({items, fetchResult, flickrImgUrlBuilder, updateIt
   
   function cupboardItemHidden () {
     const element = document.getElementById("CupboardDisplayItems");
+    const cupboardDeleteALLBtn = document.getElementById("cupboardDeleteALLBtn");
     const chevron = document.getElementById("toggleCupboardItems");
     if (element.style.display === "none") {
       element.style.display = "flex";
+      cupboardDeleteALLBtn.style.display = "block";
       chevron.classList.toggle("fa-chevron-up");
     } else {
       element.style.display = "none";
+      cupboardDeleteALLBtn.style.display = "none";
       chevron.classList.toggle("fa-chevron-up");
     }
   }
