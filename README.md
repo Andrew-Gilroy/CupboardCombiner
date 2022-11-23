@@ -6,7 +6,7 @@ This is my first ReactJS App.
 
 [LIVE DEMO](https://andrew-gilroy.github.io/CupboardCombiner/ "CupboardCombiner live demo")
 
-![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/appscreenshot.png)
+![App screenshot](https://user-images.githubusercontent.com/55792206/203605933-bc586651-bf14-4772-96ad-49f6ab7d6849.png)
 
 ---
 
