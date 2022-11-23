@@ -10,8 +10,8 @@
     justify-content: center;
     border-radius: 5px;
     border: 2px solid var(--app-highlight);
-    background-color: var(--app-body-color);
-    padding: 20px;
+    background-color: var(--app-body-color-light);
+    padding: 2rem;
 }
 
 #themePickerVisibility {
@@ -28,11 +28,11 @@
     display: block;
     width: 60%;  
     font-family: 'Roboto', sans-serif;
-    text-shadow: 0px 0.8px 0.5px #4e5973c9;
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
+    font-size: 1rem;
     line-height: 1.8rem;
-    color: var(--app-highlight);
+    color: var(--item-text);
+    //text-shadow: 0px 0.8px 0.5px #4e5973c9;
+    //letter-spacing: 0.1rem;
 }
 
 .themeChevron{
@@ -41,7 +41,7 @@
     height: 5px;
     width: 100%;
     color: red;
-    margin: 15px auto 0 auto;
+    margin: 0.1rem auto 0 auto;
     cursor: pointer;    
 }
 
@@ -120,13 +120,38 @@
 .yellow:hover {
     background-color: rgb(255, 240, 43);
 }
+.purple {
+    background-color: rgb(105, 0, 204);
+}
+.purple:hover {
+    background-color: rgb(137, 10, 255);
+}
+.orange {
+    background-color: rgb(230, 92, 0);
+}
+.orange:hover {
+    background-color: rgb(255, 142, 66);
+}
+.pink {
+    background-color: rgb(212, 119, 243);
+}
+.pink:hover {
+    background-color: rgb(232, 179, 249);
+}
+.random {
+    background-color: none;
+    background: none;
+}
+.random:hover {
+    background-color: #2e2e2e;
+}
 .reset {
-    background-color: rgb(55, 55, 55);
-    //background: none;
-    color: white;
+    //background-color: rgb(55, 55, 55);
+    background: none;
+    color: var(--item-text);
     border: 2px solid var(--app-highlight);
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-weight: 600;
     width: 105px;
 }
 .reset:hover {

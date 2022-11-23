@@ -29,8 +29,8 @@
   --finalMealsDisplay-text: rgb(68, 68, 68);
   --finalMealsDisplay-text--p: rgb(68, 68, 68);
   --finalMealsDisplay-text--p-bg: rgb(255, 255, 255);
-  --footer-text: rgb(165, 201, 223);
-  --box-shadow: rgb(68, 68, 68);
+  --footer-text: rgb(255, 255, 255);
+  --box-shadow: rgb(22, 22, 44);
   --ThemeToggler_btn-shadow: rgb(55, 55, 55);
   --empty-cupboard-msg: rgb(55, 55, 55);
   --theme-reset-text: rgb(255, 255 ,255);
@@ -46,8 +46,8 @@
   padding: 0.6rem 0 0 0; /* Some padding */
   text-align: center;
   position: fixed; /* Fixed/sticky position */
-  bottom: 2rem; /* Place the button at the bottom of the page */
-  right: 3rem; /* Place the button 30px from the right */
+  bottom: 6.2vh; /* Place the button at the bottom of the page */
+  right: 8vw; /* Place the button X from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: solid 0.5rem var(--app-body-color-light);
   outline: none; /* Remove outline */
@@ -79,6 +79,10 @@ body {
   box-shadow: 0px 2px 4px  var(--box-shadow);
   outline:5px solid var(--app-highlight);
   border-radius: 12px;
+  -webkit-transition: all 1.2s 0s ease-in-out;
+  -moz-transition: all 1.2s 0s ease-in-out;
+  -o-transition: all 1.2s 0s ease-in-out;
+  transition: all 0.5s 0s ease-in-out;
 }
 
 textarea:focus, input:focus{

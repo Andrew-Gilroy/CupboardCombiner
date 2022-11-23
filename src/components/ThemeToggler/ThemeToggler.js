@@ -34,7 +34,7 @@ const changeTheme_Dark = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--footer-text', 'rgb(97, 221, 255)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(145, 145, 145)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(97, 221, 255, 0.6)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(38, 238, 238)');
@@ -78,7 +78,7 @@ const changeTheme_Light = () => {
 const changeTheme_Red = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD)');
   docRootStyle.setProperty('--app-highlight', 'rgb(233, 55, 55)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(133, 003, 003)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(251, 203, 203)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(223, 55, 55)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(83, 00, 00)');
@@ -90,7 +90,7 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients','rgb(83, 00, 00)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--counter-text', 'rgb(83, 00, 00)');
 
   docRootStyle.setProperty('--item-bg-color', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
@@ -102,7 +102,7 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(223, 55, 55)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(148, 38, 38)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(83, 0, 0)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(223, 55, 55)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(255, 55, 55)');
@@ -110,19 +110,19 @@ const changeTheme_Red = () => {
 };
 
 const changeTheme_Green = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #000000, #781212)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(55, 223, 055)');
-  docRootStyle.setProperty('--app-body-color', 'rgb(8, 99, 8)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #4e0e0e, #a00808)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(110, 231, 110)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(1, 35, 1)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 248, 180)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(22, 219, 22)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(110, 231, 110)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(059, 134, 22)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(55, 223, 055)');
+  docRootStyle.setProperty('--bttn-remove-item', '#9b3636');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', '#702929');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(110, 231, 110)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(059, 134, 22)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','#9b3636');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','#702929');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
   
@@ -132,7 +132,7 @@ const changeTheme_Green = () => {
 
   docRootStyle.setProperty('--dark-text', 'rgb(140, 244, 140)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 223, 055)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(8, 99, 8)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(55, 223, 055)');
@@ -144,7 +144,8 @@ const changeTheme_Green = () => {
 };
 
 const changeTheme_Blue = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #4b6cb7, #182848)');
+  // docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #4b6cb7, #182848)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #f26f18, #dcee1b)');
   docRootStyle.setProperty('--app-highlight', 'rgb(95, 194, 252)');
   docRootStyle.setProperty('--app-body-color', 'rgb(212, 232, 255)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 226, 253)');
@@ -158,7 +159,7 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients','rgb(235, 110, 13)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(125, 50, 13)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--counter-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(21, 25, 82)');
   
   docRootStyle.setProperty('--item-bg-color', 'rgb(212, 232, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(61, 85, 122)');
@@ -166,7 +167,7 @@ const changeTheme_Blue = () => {
 
   docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(95, 194, 252)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(21, 25, 82)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(21, 25, 82)');
@@ -200,11 +201,11 @@ const changeTheme_Yellow = () => {
 
   docRootStyle.setProperty('--dark-text', 'rgb(195, 195, 195)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(205, 180, 0)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(250, 97, 15)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(203, 183, 003)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(183, 163, 003)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(67, 34, 83)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(235, 220, 13)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
@@ -213,11 +214,203 @@ const changeTheme_Yellow = () => {
   updateThemeName("yellow");
 };
 
+const changeTheme_Purple = () => {
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #fbcd13, #34d50b)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(105, 0, 204)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(76, 63, 90)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(241, 207, 252)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(241, 207, 252)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(76, 63, 90)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(254, 153, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(173, 78, 0)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(241, 207, 252)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(211, 106, 246)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(218, 124, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(178, 51, 16)');
+  docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
+
+  docRootStyle.setProperty('--item-bg-color', 'rgb(247, 225, 254)');
+  docRootStyle.setProperty('--item-text', 'rgb(78, 69, 79)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(67, 34, 83, 0.7)');
+
+  docRootStyle.setProperty('--dark-text', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--light-text', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--footer-text', 'rgb(211, 106, 246)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(67, 34, 83)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--dark-boxShadow', 'rgb(25, 25, 25)');
+  docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(125, 42, 167)');
+  updateThemeName("purple");
+};
+const changeTheme_Orange = () => {
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #d913fb, #34d50b)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(230, 92, 0)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(252, 237, 212)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(253, 213, 150)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(253, 213, 150)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(173, 78, 0)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(254, 153, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(178, 51, 16)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(230, 92, 0)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(178, 51, 16)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(218, 124, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(178, 51, 16)');
+  docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(178, 51, 16)');
+
+  docRootStyle.setProperty('--item-bg-color', 'rgb(252, 237, 212)');
+  docRootStyle.setProperty('--item-text', 'rgb(79, 73, 69)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(173, 78, 0, 0.7)');
+
+  docRootStyle.setProperty('--dark-text', 'rgb(77, 34, 0)');
+  docRootStyle.setProperty('--light-text', 'rgb(245, 106, 0)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(178, 51, 16)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(77, 34, 0)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 249, 240)');
+  docRootStyle.setProperty('--footer-text', 'rgb(230, 92, 0)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(173, 78, 0, 0.7)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(77, 34, 0)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--dark-boxShadow', 'rgb(25, 25, 25)');
+  docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(173, 78, 0, 0.7)');
+  updateThemeName("orange");
+};
+const changeTheme_Pink = () => {
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #001866, #01b3f9)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(230, 0, 203)');
+  docRootStyle.setProperty('--app-body-color', 'rgb(247, 212, 252)');
+  docRootStyle.setProperty('--app-body-color-light', 'rgb(252, 230, 254)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(239, 108, 223)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(216, 75, 199)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(239, 108, 223)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(239, 108, 223)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(216, 75, 199)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(113, 129, 208)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(25, 42, 128)');
+  docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--counter-text', 'rgb(127, 21, 115)');
+
+  docRootStyle.setProperty('--item-bg-color', 'rgb(252, 230, 254)');
+  docRootStyle.setProperty('--item-text', 'rgb(79, 73, 69)');
+  docRootStyle.setProperty('--item-box-shadow', 'rgb(127, 21, 115)');
+
+  docRootStyle.setProperty('--dark-text', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--light-text', 'rgb(253, 221, 249)');
+  docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(252, 230, 254)');
+  docRootStyle.setProperty('--footer-text', 'rgb(216, 75, 199)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(216, 75, 199, 0.7)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(127, 21, 115)');
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--dark-boxShadow', 'rgb(25, 25, 25)');
+  docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(216, 75, 199, 0.7)');
+  updateThemeName("pink");
+};
+const changeTheme_Random = () => {
+    
+  function random_rgb_bright() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(60, 255);
+    const g = randomBetween(60, 255);
+    const b = randomBetween(60, 255);
+    //const a = randomBetween(0, 1);
+    const rgb = `rgb(${r},${g},${b})`;
+    return rgb;
+  };
+  function random_rgb_dark() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 99);
+    const g = randomBetween(0, 99);
+    const b = randomBetween(0, 99);
+    //const a = randomBetween(0, 1);
+    const rgb = `rgb(${r},${g},${b})`;
+    return rgb;
+  };
+  function random_rgb_bright_whites() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(230, 255);
+    const g = randomBetween(230, 255);
+    const b = randomBetween(230, 255);
+    //const a = randomBetween(0, 1);
+    const rgb = `rgb(${r},${g},${b})`;
+    return rgb;
+  };
+  function random_linear_gradient() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    //const a = randomBetween(0, 1);
+    const rgb = `rgb(${r},${g},${b})`;
+    
+    const rr = randomBetween(0, 255);
+    const gg = randomBetween(0, 255);
+    const bb = randomBetween(0, 255);
+    const rrggbb = `rgb(${rr},${gg},${bb})`;
+
+    const linear = `linear-gradient(to bottom, ${rgb}, ${rrggbb})`
+    
+    return linear;
+  };
+  
+  let random_rgb_bright_VAR = random_rgb_bright();
+  let random_rgb_dark_VAR = random_rgb_dark();
+  let random_rgb_dark_VAR2 = random_rgb_dark();
+  let random_rgb_bright_whites_VAR = random_rgb_bright_whites();
+  let random_linear_gradient_VAR = random_linear_gradient();
+    
+  docRootStyle.setProperty('--app-bg-color', random_linear_gradient_VAR);
+  docRootStyle.setProperty('--app-highlight', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--app-body-color', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--app-body-color-light', random_rgb_bright_whites_VAR);
+  docRootStyle.setProperty('--bttn-submit', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--bttn-submit-toggled', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--bttn-remove-all', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--bttn-remove-item', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--bttn-remove-item-toggled', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--bttn-add-ingredients', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', random_rgb_dark_VAR2);
+  docRootStyle.setProperty('--bttn-remove-ingredients',random_rgb_bright_VAR);
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled', random_rgb_dark_VAR2);
+  docRootStyle.setProperty('--input-text', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--counter-text', random_rgb_bright_whites_VAR);
+
+  docRootStyle.setProperty('--item-bg-color', random_rgb_bright_whites_VAR);
+  docRootStyle.setProperty('--item-text', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--item-box-shadow', random_rgb_dark_VAR);
+
+  docRootStyle.setProperty('--dark-text', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--light-text', random_rgb_bright_whites_VAR);
+  docRootStyle.setProperty('--finalMealsDisplay-text', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--finalMealsDisplay-text--p', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--finalMealsDisplay-text--p-bg','#fafafa');
+  docRootStyle.setProperty('--footer-text', random_rgb_bright_VAR);
+  docRootStyle.setProperty('--box-shadow', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--empty-cupboard-msg', random_rgb_dark_VAR);
+  docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
+  docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
+  docRootStyle.setProperty('--dark-boxShadow', 'rgb(25, 25, 25)');
+  docRootStyle.setProperty('--ThemeToggler_btn-shadow', random_rgb_bright_VAR);
+  updateThemeName("random");
+};
+
 const changeTheme_Reset = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #2C5364, #203A43, #0F2027)');
   docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--app-body-color', 'rgb(68, 68, 68)');
-  //docRootStyle.setProperty('--app-body-color-light', 'rgb(215, 217, 219)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(240, 240, 243)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(97, 221, 255)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
@@ -241,11 +434,12 @@ const changeTheme_Reset = () => {
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--footer-text', 'rgb(165, 201, 223)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(68, 68, 68)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(22, 22, 44)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(55, 55, 55)');
   updateThemeName("default");
+  
   
 };
 
@@ -276,6 +470,10 @@ const styleObject = {
           <button className="ThemeToggler_btn green"  id="ThemeTogglerBtn--Green"   onClick={changeTheme_Green}></button>
           <button className="ThemeToggler_btn blue"   id="ThemeTogglerBtn--Blue"    onClick={changeTheme_Blue}></button>
           <button className="ThemeToggler_btn yellow" id="ThemeTogglerBtn--Yellow"  onClick={changeTheme_Yellow}></button>
+          <button className="ThemeToggler_btn purple"  id="ThemeTogglerBtn--Purple"   onClick={changeTheme_Purple}></button>
+          <button className="ThemeToggler_btn orange"  id="ThemeTogglerBtn--Orange"   onClick={changeTheme_Orange}></button>
+          <button className="ThemeToggler_btn pink"  id="ThemeTogglerBtn--Pink"   onClick={changeTheme_Pink}></button>
+          <button className="ThemeToggler_btn random"  id="ThemeTogglerBtn--Random"   onClick={changeTheme_Random}>🎲</button>
           <button className="ThemeToggler_btn reset"  id="ThemeTogglerBtn--Reset"   onClick={changeTheme_Reset}>RESET</button>
         </div>
       </div>

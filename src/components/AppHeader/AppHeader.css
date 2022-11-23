@@ -8,6 +8,10 @@
     padding: 25px 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    -webkit-transition: all 1.2s 0s ease-in-out;
+  -moz-transition: all 1.2s 0s ease-in-out;
+  -o-transition: all 1.2s 0s ease-in-out;
+  transition: all 0.5s 0s ease-in-out;
   }
 
 #AppLogo {

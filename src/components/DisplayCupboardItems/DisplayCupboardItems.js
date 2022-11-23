@@ -1,19 +1,43 @@
 import React from 'react';
 import '../DisplayCupboardItems/DisplayCupboardItems.css';
 
-function cupboardItemHidden () {
-  const element = document.getElementById("CupboardDisplayItems");
-  const chevron = document.getElementById("toggleCupboardItems");
-  if (element.style.display === "none") {
-    element.style.display = "flex";
-    chevron.classList.toggle("fa-chevron-up");
-  } else {
-    element.style.display = "none";
-    chevron.classList.toggle("fa-chevron-up");
-  }
-}
 
-function DisplayCupboardItems({items, removeItem, deleteAllItems, fetchResult, flickrImgUrlBuilder}) {
+//Deletes all items in the cupboard and in localStorage  
+
+
+function DisplayCupboardItems({items, fetchResult, flickrImgUrlBuilder, updateItems, updateRemovedItems}) {
+  
+  function cupboardItemHidden () {
+    const element = document.getElementById("CupboardDisplayItems");
+    const chevron = document.getElementById("toggleCupboardItems");
+    if (element.style.display === "none") {
+      element.style.display = "flex";
+      chevron.classList.toggle("fa-chevron-up");
+    } else {
+      element.style.display = "none";
+      chevron.classList.toggle("fa-chevron-up");
+    }
+  }
+  
+  const deleteAllItems = () => { 
+    if (window.confirm("Are you sure you want to remove all cupboard items?") === true) {
+      //text = "You pressed OK!";
+      updateItems([]);
+      localStorage.clear();
+      document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";
+    } else {
+      //alert("carry on!");
+    }
+    
+  };
+//Removes an item from the original array via splice. RemovedItems array is updated. User clicks X button to remove item
+//Saves a copy of the array into localStorage as JSON "locallySavedItemsArray"
+const removeItem = (foods) => {
+  const itemRemove = items.splice(foods, 1);
+  updateRemovedItems({removed: itemRemove});
+  localStorage.setItem("locallySavedItemsArray", JSON.stringify(items));
+  if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";} 
+};
 
 return <div className="CupboardDisplayItems-Wrapper--paddingWrapper" >
           <div>
@@ -21,12 +45,12 @@ return <div className="CupboardDisplayItems-Wrapper--paddingWrapper" >
             <i className="fas fa-chevron-down themeChevron" id="toggleCupboardItems" onClick={cupboardItemHidden}></i>
           </div>
           <div className="CupboardDisplayItems-Wrapper" id="CupboardDisplayItems">
-            { items.map((item, cats) => <div key={cats} className="CupboardItem">
+            { items.map((item, foods) => <div key={foods} className="CupboardItem">
               <img src={item.url} alt="" className="CupboardItem_image"></img>
               <div className='CupboardDisplayItems-h1-wrapper'>
               <h1>{item.name}</h1>
               </div>
-              <button onClick={() => removeItem(cats)}>X</button>
+              <button onClick={() => removeItem(foods)}>X</button>
               </div>)
             }
           <p id="emptyCupboardMessage"></p>

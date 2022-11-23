@@ -1,8 +1,8 @@
 # CupboardCombiner
 
-CupboardCombiner is JS React project that creates random meal suggestions using whats left in the cupboard.
+CupboardCombiner is a ReactJS webapp which combines inputted ingredients to generate random meal suggestions.
 
-This is my first react App.
+This is my first ReactJS App.
 
 [LIVE DEMO](https://andrew-gilroy.github.io/CupboardCombiner/ "CupboardCombiner live demo")
 
@@ -27,11 +27,14 @@ This is my first react App.
 * +Fixed border 0.5px gap issue.
 * +Final results now have their own images.
 * +Added food counter icons.
+* +Added confirm prompt when deleting all items.
 * +New items appear first in the list.
 * +Added zoom on hover for images.
 * +Added a scroll to top button.
-* +Cupboard items list visibility can now be toggled.
-* +Edited themes and general css tweaks.
+* +Items images visibility can now be toggled.
+* +Edited/Added themes and general css tweaks.
+* +Added Random theme generator.
+* +Migrated logic from app.js to specific components
 
 ## Author
 
