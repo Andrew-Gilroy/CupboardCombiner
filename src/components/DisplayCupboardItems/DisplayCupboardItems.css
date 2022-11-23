@@ -7,7 +7,7 @@
 .CupboardDisplayItems-Wrapper {
   width: 96%;
   min-height: 12rem;
-  margin: 1rem auto 0 auto;
+  margin: -1rem auto 0 auto;
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: center;

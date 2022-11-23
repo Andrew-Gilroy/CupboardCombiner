@@ -38,15 +38,10 @@
 }
 .finalMealsDisplay-imageWrapper {
   height: auto;
-  //margin: 0 3rem;
 
-  
-  -webkit-box-shadow: 0 2px 2px var(--box-shadow);
-  box-shadow: 0 2px 2px var(--box-shadow);
+  border-radius: 5px;
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  
-  /*testing below*/
     
 }
 
@@ -66,7 +61,7 @@
   transition: all 0.5s 0s ease-in-out;
   border-radius: 0.5rem;
   outline: 0.3rem solid var(--app-highlight);
-  box-shadow: 0 2px 10px var(--item-box-shadow);
+  box-shadow: 0 2px 7px var(--item-box-shadow);
 
 }
 
