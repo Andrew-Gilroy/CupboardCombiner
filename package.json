@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "eslint": "^8.16.0",
+    "gh-pages": "^4.0.0",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
@@ -19,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "homepage": "https://andrew-gilroy.github.io/CupboardCombiner/",
   "eslintConfig": {
