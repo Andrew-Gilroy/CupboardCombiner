@@ -42,6 +42,8 @@ const removeItem = (foods) => {
   if(items.length === 0){document.getElementById("emptyCupboardMessage").innerHTML = "The cupboard is empty... &#128532;";} 
 };
 
+
+
 return <div className="CupboardDisplayItems-Wrapper--paddingWrapper" >
           <div>
             <p id="toggle-item-view-p">TOGGLE CUPBOARD VIEW</p>
@@ -49,7 +51,14 @@ return <div className="CupboardDisplayItems-Wrapper--paddingWrapper" >
           </div>
           <div className="CupboardDisplayItems-Wrapper" id="CupboardDisplayItems">
             { items.map((item, foods) => <div key={foods} className="CupboardItem">
-              <img src={item.url} alt="" className="CupboardItem_image"></img>
+              <img src={item.url} 
+                title={item.name.replace(/\w\S*/g, function (txt) {
+                  return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}
+                )} 
+                alt={item.name.replace(/\w\S*/g, function (txt) {
+                  return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}
+                )}
+                className="CupboardItem_image"></img>
               <div className='CupboardDisplayItems-h1-wrapper'>
               <h1>{item.name}</h1>
               </div>

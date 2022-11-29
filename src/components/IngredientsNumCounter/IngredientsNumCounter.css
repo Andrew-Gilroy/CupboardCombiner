@@ -118,6 +118,13 @@
 
 #numCircle {
   transition: 0.3s ease-in-out all;
+  /*testing below*/ 
+  //max-width: 40px;
+  //border: 3px solid var(--bttn-submit);
+  //text-shadow: 1px 3px 2px var(--box-shadow);
+  //background-color: var(--app-body-color-light);
+  //box-shadow: 0px 2px 4px  var(--box-shadow);
+  //outline:5px solid var(--app-highlight);
 }
 
 /* MEDIA QUERIES */

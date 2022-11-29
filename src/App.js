@@ -52,29 +52,10 @@ function App() {
     }
   },[]);
   
-  // When the user scrolls down 20px from the top of the document, show the button
-  function scrollFunction() {
-   // Get the button:
-   let mybutton = document.getElementById("toTopBtn");
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-        console.log("visible")
-      } else {
-        mybutton.style.display = "none";
-        console.log("hidden")
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-  window.onscroll = function() {scrollFunction()};
   
   // return keyword with wrapper div on same line--important!
   return <div id="App">
-            <button onClick={topFunction} id="toTopBtn">^</button>
+            
             <AppHeader/> 
             <ThemeToggler updateThemeName={updateThemeName}/>
             <InputCupboardItem updateTerm={updateTerm} value={term} term={term} fetchResult={fetchResult} imageURL={imageURL} updateImageUrl={updateImageUrl} searchTerm={searchTerm} updateSearchTerm={updateSearchTerm} items={items} updateItems={updateItems} updateFetchResult={updateFetchResult}/>

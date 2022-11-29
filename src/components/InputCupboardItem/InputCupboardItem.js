@@ -72,11 +72,32 @@ function InputCupboardItem({value, term, updateTerm, imageURL, updateImageUrl,se
       console.log("Fetch Error");
     }
   };
+  // When the user scrolls down 20px from the top of the document, show the button
+  function scrollFunction() {
+    // Get the button:
+    let mybutton = document.getElementById("toTopBtn");
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+         console.log("visible")
+       } else {
+         mybutton.style.display = "none";
+         console.log("hidden")
+       }
+     }
+ 
+     // When the user clicks on the button, scroll to the top of the document
+     function topFunction() {
+       document.body.scrollTop = 0; // For Safari
+       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+     }
+   window.onscroll = function() {scrollFunction()};
+   
 
   return <div className="AddCupboardItem">
             <form onSubmit={onSubmitItemHandler}>
               <input value={value} onChange={inputOnChange} placeholder="What is inside your cupboard?" id="AddCupboardItem-input" required maxLength="19"/>
               <button id="cupboardSubmitBtn">SUBMIT</button>
+              <button onClick={topFunction} style={{}} id="toTopBtn">&#8657;</button>
             </form>
         </div>
 };

@@ -200,8 +200,7 @@ function IngredientsNumCounter({items, theme, counter, updateCounter, updateCirc
       behavior: 'smooth'
     });
 };
-
-  const radius = 195;
+  const radius =  195;
   const stroke = 30;
   const progress = counter * 20;
   const normalizedRadius = radius - stroke * 2;

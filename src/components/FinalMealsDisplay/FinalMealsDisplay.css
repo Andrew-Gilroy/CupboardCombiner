@@ -28,18 +28,23 @@
 }
 .finalMealsDisplay-image-row {
   //margin: auto;
-  margin: 6rem 2rem 0 2rem;
+  margin: 2rem 0rem 0 0rem;
+  padding: 1.6vw;
   display: flex;
+  //border-top: 0.2rem solid var(--app-highlight);
+  
   flex-direction: row;
   flex-grow: 1;
-  justify-content: center;
+  //flex-wrap: wrap;
   align-items: center;
-  column-gap: 2.6rem;
+  column-gap: 1.6vw;
+  background-color: var(--finalMealsDisplay-text--p-bg);
+  justify-content: space-evenly;
 }
 .finalMealsDisplay-imageWrapper {
   height: auto;
-
   border-radius: 5px;
+
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     
@@ -106,30 +111,18 @@
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
-  .finalMealsDisplay-image-row {
-    //margin: auto;
-    margin: 6rem 0 0 0;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    
-    //column-gap: 4.6rem;
-  }
-  .finalMealsDisplay-imageWrapper {
-    height: auto;
-    margin: 0 .8rem;
-    
-    /*testing below*/
-      
-  }
-  
-  .finalMealsDisplay-image {
-    
-    width: 100%;
-    height: 12rem;
-    
-  }
 }
+/*
+//.finalMealsDisplay-image-row
+//margin: 6rem 1.6vw;
+//
+//.finalMealsDisplay-imageWrapper
+//height: auto;
+//
+//.finalMealsDisplay-image
+//width: 100%;
+//height: 12rem;
+*/
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -147,7 +140,16 @@
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 550px) {
 
+
+  .finalMealsDisplay-image {
+    
+    width: 100%;
+    height: 12rem;
+    margin: 0;
+    //padding: 0;
+    //column-gap: 0.6rem;
+  }
 
 }

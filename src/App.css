@@ -38,32 +38,7 @@
 /* Usage - background-color: var(--app-body-color); */
 }
 
-#toTopBtn {
 
-  display: none; /* none/Hidden by default */
-  height: 5rem;
-  width: 5rem;
-  padding: 0.6rem 0 0 0; /* Some padding */
-  text-align: center;
-  position: fixed; /* Fixed/sticky position */
-  bottom: 6.2vh; /* Place the button at the bottom of the page */
-  right: 8vw; /* Place the button X from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: solid 0.5rem var(--app-body-color-light);
-  outline: none; /* Remove outline */
-  background: none;
-  color: var(--app-body-color-light); /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: 1rem; /* Rounded corners */
-  font-size: 3rem; /* Increase font size */
-  transition: all 0.5s 0s ease-in-out;
-}
-
-#toTopBtn:hover {
-  background-color: var(--app-highlight); /* Set a background color */
-  padding: 0rem 0 0 0;
-
-}
 body {
   background: var(--app-bg-color);
   font-family: 'Roboto', sans-serif;
@@ -93,14 +68,16 @@ textarea:focus, input:focus{
 
 /* Smaller than standard 1400 (devices and browsers) */
 @media only screen and (max-width: 1400px) {
-  .App{
-    width: 90%;
-    margin: 10px auto;
+  #App {
+    margin: 1rem auto;
+    width: 95vw;
   }
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
@@ -112,15 +89,18 @@ textarea:focus, input:focus{
   :root {
     font-size: 52.5%;}
     
-  .App{
-    width: 95%;
-    margin: 10px auto;
-  }
+    #App {
+      margin: 2rem auto;
+      width: 86vw;
+    }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
- 
+    #App {
+          margin: 1rem auto;
+          width: 92vw;
+        }
 
 }
 
