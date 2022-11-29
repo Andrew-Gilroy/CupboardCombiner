@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src"
   },
-  "homepage": ".",
+  "homepage": "https://andrew-gilroy.github.io/CupboardCombiner/",
   "eslintConfig": {
     "extends": "react-app"
   },
