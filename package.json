@@ -24,7 +24,7 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
-  "homepage": "https://andrew-gilroy.github.io/CupboardCombiner/",
+  "homepage": "https://andrew-gilroy.github.io/CupboardCombiner",
   "eslintConfig": {
     "extends": "react-app"
   },
