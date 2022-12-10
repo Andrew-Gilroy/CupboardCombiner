@@ -4,16 +4,17 @@
   "private": true,
   "dependencies": {
     "babel": "^6.23.0",
-    "node": "^17.7.2",
+    "node": "^19.2.0",
     "normalize.css": "^8.0.1",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "react-dom": "^18.1.0",
     "webpack": "^5.72.1"
   },
   "devDependencies": {
     "eslint": "^8.16.0",
     "gh-pages": "^4.0.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "@svgr/webpack": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,8 +22,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "overrides": {
+    "@svgr/webpack": "$@svgr/webpack",
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://andrew-gilroy.github.io/CupboardCombiner",
   "eslintConfig": {
