@@ -8,11 +8,11 @@ This is my first ReactJS App.
 
 ![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2.png)
 
-![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20light.png)
+![App screenshot - Light](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20light.png> "Light theme" =30%x)
 
-![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20orange.png)
+![App screenshot - Orange](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20orange.png> "Orange theme" =30%x)
 
-![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20purple.png)
+![App screenshot - Purple](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20purple.png> "Purple theme" =20%x)
 
 ---
 
