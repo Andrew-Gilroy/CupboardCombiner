@@ -7,7 +7,6 @@
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
 #FinalMealsDisplay-p {
   margin: auto;
   padding: 3rem;
@@ -21,35 +20,24 @@
   text-transform: capitalize;
   border-radius: 5px;
   outline: 0.3rem solid var(--app-highlight);
-  //display: block;
-  //line-height: 1.8rem;
-  //word-spacing: 0.2rem;
-  //vertical-align: middle;
 }
 .finalMealsDisplay-image-row {
-  //margin: auto;
   margin: 2rem 0rem 0 0rem;
   padding: 1.6vw;
-  display: flex;
-  //border-top: 0.2rem solid var(--app-highlight);
-  
+  display: flex;  
   flex-direction: row;
   flex-grow: 1;
-  //flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   column-gap: 1.6vw;
   background-color: var(--finalMealsDisplay-text--p-bg);
-  justify-content: space-evenly;
 }
 .finalMealsDisplay-imageWrapper {
   height: auto;
   border-radius: 5px;
-
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    
 }
-
 .finalMealsDisplay-image {
   
   width: 100%;
@@ -57,8 +45,7 @@
   border-top-right-radius: 0.2rem;
   border-top-left-radius: 0.2rem;
   object-fit: cover;
-  /* important for aspect ratio */
-  
+  /* important for aspect ratio */ 
   /*testing*/
   -webkit-transition: all 1.2s 0s ease-in-out;
   -moz-transition: all 1.2s 0s ease-in-out;
@@ -67,19 +54,13 @@
   border-radius: 0.5rem;
   outline: 0.3rem solid var(--app-highlight);
   box-shadow: 0 2px 7px var(--item-box-shadow);
-
 }
-
 .finalMealsDisplay-image:hover {
   scale: 1.3;
-  z-index: 2;
-  //height: max-content;
-  //height: fit-content;
 }
 .foodIcon-wrapper {
   margin: 2rem 0 1rem 0%;
 }
-
 .foodIcon {
   margin: 0 1%;
   animation: pulseAnimation 4.5s alternate infinite ease-in-out;
