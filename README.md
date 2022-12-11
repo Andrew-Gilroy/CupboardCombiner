@@ -7,9 +7,9 @@ This is my first ReactJS App.
 [LIVE DEMO](https://andrew-gilroy.github.io/CupboardCombiner/ "CupboardCombiner live demo")
 ![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2.png)
 
-| Light Theme | Orange Theme | Purple Theme |
+| Blue Theme | Dark Theme | Pink Theme |
 | ------------- | ------------- | ------------- |
-| ![App screenshot - Light](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20light.png>) | ![App screenshot - Orange](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20orange.png>) | ![App screenshot - Purple](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20purple.png>) |
+| ![App screenshot - Blue](<https://github.com/Andrew-Gilroy/CupboardCombiner/blob/master/readmeimages/Cupboard%20Combiner%20V2%20blue.png>) | ![App screenshot - Dark](<https://github.com/Andrew-Gilroy/CupboardCombiner/blob/master/readmeimages/Cupboard%20Combiner%20V2%20dark.png>) | ![App screenshot - Pink](<https://github.com/Andrew-Gilroy/CupboardCombiner/blob/master/readmeimages/Cupboard%20Combiner%20V2%20pink.png>) |
 
 ---
 
