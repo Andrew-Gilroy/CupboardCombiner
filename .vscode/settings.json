@@ -8,7 +8,9 @@
         "mybutton",
         "onclicks",
         "parsedlocal",
-        "rrggbb"
+        "predeploy",
+        "rrggbb",
+        "svgr"
     ],
     "files.exclude": {
         "**/.git": true,

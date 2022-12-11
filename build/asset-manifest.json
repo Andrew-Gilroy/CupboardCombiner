@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CupboardCombiner/static/css/main.52da806a.css",
+    "main.js": "/CupboardCombiner/static/js/main.14ff1227.js",
+    "static/media/reactLogo.svg": "/CupboardCombiner/static/media/reactLogo.db9578370615a6052cac46fb609d1ba9.svg",
+    "static/media/logo.svg": "/CupboardCombiner/static/media/logo.02260616eb0044c62e3973187da3b56b.svg",
+    "index.html": "/CupboardCombiner/index.html",
+    "main.52da806a.css.map": "/CupboardCombiner/static/css/main.52da806a.css.map",
+    "main.14ff1227.js.map": "/CupboardCombiner/static/js/main.14ff1227.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52da806a.css",
+    "static/js/main.14ff1227.js"
+  ]
+}
