@@ -27,23 +27,26 @@
 .IngredientsNumCounter button {
   display: inline-block;
   color: white;
+  //color: var(--app-highlight);
   cursor: pointer;
   z-index: 1;
+  height: 6rem;
+  width: 6rem;
   padding: 0;
+  margin: 0 2%;
+  border-radius: 100%;
+  text-align: center; 
+  vertical-align: middle;
+  border: none ;
+  //text-shadow: 0 1px #222;
+  font-size: 4rem;
+  outline: 2px solid white;
+
 }
 
 #addIngredientsButton {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 10%;
   background-color: var(--bttn-add-ingredients);
-  text-align: center; 
-  vertical-align: middle;
-  font-size: 2.8rem;
-  text-shadow: 0 1px #222;
-  border: none;
-  margin: 0 2%;
-  padding: 0;
+  //background-color: none;
 }
 
 #addIngredientsButton:hover {
@@ -52,22 +55,21 @@
   cursor: pointer;
 }
 
+#addIngredientsButton:focus {
+  outline: 2px solid white;
+}
+
 #removeIngredientsButton {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 10%;
   background-color: var(--bttn-remove-ingredients);  
-  text-align: center; 
-  vertical-align: middle;
-  font-size: 2.8rem;
-  text-shadow: 0 1px #222;
-  border: none;
-  padding: 0;
-  margin: 0 2%;
+  //background-color: var(--app-body-color);  
 }
 
 #removeIngredientsButton:hover {
+  color: white;
   background-color: var(--bttn-remove-ingredients-toggled);
+}
+#removeIngredientsButton:focus {  
+  outline: 2px solid white;
 }
 .IngredientsNumCounter button:focus {
   /*removes blue outline when activated */
@@ -106,7 +108,8 @@
   color: var(--light-text);
   text-shadow: none;
   background-color: var(--bttn-submit);
-  border: 3px solid var(--bttn-submit);
+  border: 0.2rem solid var(--bttn-submit);
+  outline: 0.2rem solid white;
   cursor: pointer;
 }
 

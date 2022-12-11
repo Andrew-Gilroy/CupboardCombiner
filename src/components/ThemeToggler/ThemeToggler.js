@@ -8,60 +8,55 @@ const docRootStyle = document.documentElement.style;
 
 const changeTheme_Dark = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #000000, #232526)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--app-body-color', 'rgb(23, 23, 23)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(62, 62, 62)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 39, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(37, 195, 239)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(59, 134, 155)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
-  //docRootStyle.setProperty('--item-bg', 'none');
-  
   docRootStyle.setProperty('--item-bg-color', 'rgb(23,23,23)');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(255, 255, 255, 0.7)');
-  
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(55, 55, 55)');
-  docRootStyle.setProperty('--footer-text', 'rgb(97, 221, 255)');
-  docRootStyle.setProperty('--box-shadow', 'rgb(97, 221, 255, 0.6)');
-  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--footer-text', 'rgb(37, 195, 239)');
+  docRootStyle.setProperty('--box-shadow', 'rgb(37, 195, 239, 0.6)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--ThemeToggler_btn-shadow', 'rgb(38, 238, 238)');
   updateThemeName("dark");
 };
 
 const changeTheme_Light = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #102838, #6DD5FA, #ffffff)');
   docRootStyle.setProperty('--app-highlight', 'rgb(130, 210, 220)');
   docRootStyle.setProperty('--app-body-color', 'rgb(226, 226, 226)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(240, 240, 243)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(96, 200, 220)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(46, 100, 120)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(130, 210, 220)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(229, 134, 231)');
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(229, 134, 231)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(190, 94, 181)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(130, 210, 220)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(229, 134, 231)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(190, 94, 181)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(130, 210, 220)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(59, 134, 155)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(135, 135, 135)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(247, 248, 248)');
   docRootStyle.setProperty('--item-text', 'rgb(135, 135, 135)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(190, 94, 181, 0.5)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(135, 135, 135)');
@@ -86,16 +81,14 @@ const changeTheme_Red = () => {
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(223, 55, 55)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(223, 55, 55)');
-  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(167, 57, 27)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(83, 00, 00)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(83, 00, 00)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(223, 55, 55)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(83, 00, 00)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(83, 00, 00)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(83, 00, 00)');
   docRootStyle.setProperty('--item-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(248, 124, 124)');
-  
   docRootStyle.setProperty('--dark-text', 'rgb(166, 166, 166)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(255, 255, 255)');
@@ -110,7 +103,7 @@ const changeTheme_Red = () => {
 };
 
 const changeTheme_Green = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #4e0e0e, #a00808)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #1a0a0a, #a00808)');
   docRootStyle.setProperty('--app-highlight', 'rgb(110, 231, 110)');
   docRootStyle.setProperty('--app-body-color', 'rgb(1, 35, 1)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 248, 180)');
@@ -121,15 +114,13 @@ const changeTheme_Green = () => {
   docRootStyle.setProperty('--bttn-remove-item-toggled', '#702929');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(110, 231, 110)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(059, 134, 22)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','#9b3636');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','#702929');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(110, 231, 110)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(059, 134, 22)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
-  
   docRootStyle.setProperty('--item-bg-color', 'rgb(180, 248, 180)');
   docRootStyle.setProperty('--item-text', 'rgb(8, 99, 8)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(059, 134, 22)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(140, 244, 140)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(8, 99, 8)');
@@ -150,21 +141,19 @@ const changeTheme_Blue = () => {
   docRootStyle.setProperty('--app-body-color', 'rgb(212, 232, 255)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(180, 226, 253)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(61, 85, 122)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(91, 125, 152)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(21, 25, 82)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(235, 110, 13)');
-  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(125, 50, 13)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(61, 85, 122)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(21, 25, 82)');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(95, 194, 252)');
-  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(91, 125, 152)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(235, 110, 13)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(125, 50, 13)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(21, 25, 82)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(95, 194, 252)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(21, 25, 82)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(21, 25, 82)');
-  
   docRootStyle.setProperty('--item-bg-color', 'rgb(212, 232, 255)');
   docRootStyle.setProperty('--item-text', 'rgb(61, 85, 122)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(61, 85, 122)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(159, 176, 233)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(21, 25, 82)');
@@ -180,33 +169,31 @@ const changeTheme_Blue = () => {
 
 const changeTheme_Yellow = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #22c1c3, #fdbb2d)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(255, 240, 31)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(255, 226, 5)');
   docRootStyle.setProperty('--app-body-color', 'rgb(76, 63, 90)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(255, 253, 209)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(255, 240, 31)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(255, 226, 5)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(250, 97, 15)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(250, 226, 10)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(255, 226, 5)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(235, 220, 13)');
-  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(203, 183, 003)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(250, 97, 15)');
+  docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(250, 97, 15)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(255, 248, 148)');
   docRootStyle.setProperty('--item-text', 'rgb(78, 69, 79)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(67, 34, 83, 0.7)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(195, 195, 195)');
   docRootStyle.setProperty('--light-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(250, 97, 15)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--footer-text', 'rgb(203, 183, 003)');
+  docRootStyle.setProperty('--footer-text', 'rgb(255, 226, 5)');
   docRootStyle.setProperty('--box-shadow', 'rgb(67, 34, 83)');
-  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(235, 220, 13)');
+  docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(255, 226, 5)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-boxShadow', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--dark-boxShadow', 'rgb(25, 25, 25)');
@@ -215,26 +202,24 @@ const changeTheme_Yellow = () => {
 };
 
 const changeTheme_Purple = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #fbcd13, #34d50b)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, rgb(35, 23, 39), rgb(241, 207, 252))');
   docRootStyle.setProperty('--app-highlight', 'rgb(105, 0, 204)');
   docRootStyle.setProperty('--app-body-color', 'rgb(76, 63, 90)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(241, 207, 252)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(241, 207, 252)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(76, 63, 90)');
-  docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-item', 'rgb(254, 153, 1)');
-  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(173, 78, 0)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(241, 207, 252)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(211, 106, 246)');
+  docRootStyle.setProperty('--bttn-remove-all', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--bttn-remove-item', 'rgb(67, 34, 83, 1)');
+  docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(211, 106, 246)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(228, 148, 255)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(211, 106, 246)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(218, 124, 1)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(178, 51, 16)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(228, 148, 255)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(211, 106, 246)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(240, 233, 233)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(247, 225, 254)');
-  docRootStyle.setProperty('--item-text', 'rgb(78, 69, 79)');
+  docRootStyle.setProperty('--item-text', 'rgb(67, 34, 83, 1)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(67, 34, 83, 0.7)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(67, 34, 83, 1)');
   docRootStyle.setProperty('--light-text', 'rgb(67, 34, 83, 1)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(67, 34, 83, 1)');
@@ -250,26 +235,24 @@ const changeTheme_Purple = () => {
   updateThemeName("purple");
 };
 const changeTheme_Orange = () => {
-  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #d913fb, #34d50b)');
+  docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to bottom, #2f1f32, #2f1f32)');
   docRootStyle.setProperty('--app-highlight', 'rgb(230, 92, 0)');
   docRootStyle.setProperty('--app-body-color', 'rgb(252, 237, 212)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(253, 213, 150)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(253, 213, 150)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(173, 78, 0)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(178, 51, 16)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(254, 153, 1)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(178, 51, 16)');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(230, 92, 0)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(178, 51, 16)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(218, 124, 1)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(230, 92, 0)');
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(178, 51, 16)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(178, 51, 16)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(252, 237, 212)');
-  docRootStyle.setProperty('--item-text', 'rgb(79, 73, 69)');
+  docRootStyle.setProperty('--item-text', 'rgb(77, 34, 0)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(173, 78, 0, 0.7)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(77, 34, 0)');
   docRootStyle.setProperty('--light-text', 'rgb(245, 106, 0)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(178, 51, 16)');
@@ -290,21 +273,19 @@ const changeTheme_Pink = () => {
   docRootStyle.setProperty('--app-body-color', 'rgb(247, 212, 252)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(252, 230, 254)');
   docRootStyle.setProperty('--bttn-submit', 'rgb(239, 108, 223)');
-  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(216, 75, 199)');
+  docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(127, 21, 115)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(239, 108, 223)');
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(239, 108, 223)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(127, 21, 115)');
   docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(216, 75, 199)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(127, 21, 115)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(113, 129, 208)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(25, 42, 128)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(216, 75, 199)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(127, 21, 115)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(127, 21, 115)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(252, 230, 254)');
-  docRootStyle.setProperty('--item-text', 'rgb(79, 73, 69)');
+  docRootStyle.setProperty('--item-text', 'rgb(127, 21, 115)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(127, 21, 115)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(127, 21, 115)');
   docRootStyle.setProperty('--light-text', 'rgb(253, 221, 249)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(127, 21, 115)');
@@ -326,7 +307,6 @@ const changeTheme_Random = () => {
     const r = randomBetween(60, 255);
     const g = randomBetween(60, 255);
     const b = randomBetween(60, 255);
-    //const a = randomBetween(0, 1);
     const rgb = `rgb(${r},${g},${b})`;
     return rgb;
   };
@@ -335,7 +315,6 @@ const changeTheme_Random = () => {
     const r = randomBetween(0, 99);
     const g = randomBetween(0, 99);
     const b = randomBetween(0, 99);
-    //const a = randomBetween(0, 1);
     const rgb = `rgb(${r},${g},${b})`;
     return rgb;
   };
@@ -344,7 +323,6 @@ const changeTheme_Random = () => {
     const r = randomBetween(230, 255);
     const g = randomBetween(230, 255);
     const b = randomBetween(230, 255);
-    //const a = randomBetween(0, 1);
     const rgb = `rgb(${r},${g},${b})`;
     return rgb;
   };
@@ -353,7 +331,6 @@ const changeTheme_Random = () => {
     const r = randomBetween(0, 255);
     const g = randomBetween(0, 255);
     const b = randomBetween(0, 255);
-    //const a = randomBetween(0, 1);
     const rgb = `rgb(${r},${g},${b})`;
     
     const rr = randomBetween(0, 255);
@@ -387,11 +364,9 @@ const changeTheme_Random = () => {
   docRootStyle.setProperty('--bttn-remove-ingredients-toggled', random_rgb_dark_VAR2);
   docRootStyle.setProperty('--input-text', random_rgb_dark_VAR);
   docRootStyle.setProperty('--counter-text', random_rgb_bright_whites_VAR);
-
   docRootStyle.setProperty('--item-bg-color', random_rgb_bright_whites_VAR);
   docRootStyle.setProperty('--item-text', random_rgb_dark_VAR);
   docRootStyle.setProperty('--item-box-shadow', random_rgb_dark_VAR);
-
   docRootStyle.setProperty('--dark-text', random_rgb_dark_VAR);
   docRootStyle.setProperty('--light-text', random_rgb_bright_whites_VAR);
   docRootStyle.setProperty('--finalMealsDisplay-text', random_rgb_dark_VAR);
@@ -409,31 +384,29 @@ const changeTheme_Random = () => {
 
 const changeTheme_Reset = () => {
   docRootStyle.setProperty('--app-bg-color', 'linear-gradient(to top, #2C5364, #203A43, #0F2027)');
-  docRootStyle.setProperty('--app-highlight', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--app-highlight', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--app-body-color', 'rgb(68, 68, 68)');
   docRootStyle.setProperty('--app-body-color-light', 'rgb(240, 240, 243)');
-  docRootStyle.setProperty('--bttn-submit', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-submit', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--bttn-submit-toggled', 'rgb(59, 134, 155)');
   docRootStyle.setProperty('--bttn-remove-all', 'rgb(219, 34, 1)');
   docRootStyle.setProperty('--bttn-remove-item', 'rgb(219, 34, 1)');
   docRootStyle.setProperty('--bttn-remove-item-toggled', 'rgb(167, 57, 27)');
-  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(97, 221, 255)');
+  docRootStyle.setProperty('--bttn-add-ingredients', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--bttn-add-ingredients-toggled', 'rgb(59, 134, 155)');
-  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(219, 34, 1)');
-  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(167, 57, 27)');
+  docRootStyle.setProperty('--bttn-remove-ingredients','rgb(37, 195, 239)');
+  docRootStyle.setProperty('--bttn-remove-ingredients-toggled','rgb(59, 134, 155)');
   docRootStyle.setProperty('--input-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--counter-text', 'rgb(255, 255, 255)');
-
   docRootStyle.setProperty('--item-bg-color', 'rgb(240, 240, 245)');
   docRootStyle.setProperty('--item-text', 'rgb(58, 58, 93)');
   docRootStyle.setProperty('--item-box-shadow', 'rgb(58, 58, 93, 1)');
-
   docRootStyle.setProperty('--dark-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--light-text', 'rgb(255, 255, 255)');
   docRootStyle.setProperty('--finalMealsDisplay-text', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--finalMealsDisplay-text--p-bg', 'rgb(255, 255, 255)');
-  docRootStyle.setProperty('--footer-text', 'rgb(165, 201, 223)');
+  docRootStyle.setProperty('--footer-text', 'rgb(37, 195, 239)');
   docRootStyle.setProperty('--box-shadow', 'rgb(22, 22, 44)');
   docRootStyle.setProperty('--empty-cupboard-msg', 'rgb(55, 55, 55)');
   docRootStyle.setProperty('--theme-reset-text', 'rgb(55, 55, 55)');
@@ -454,7 +427,6 @@ function themePickerVisibility_toggle() {
   element.style.display === "none" ? element.style.display = "flex" : element.style.display = "none";
   fasClasses[0].classList.toggle("fa-chevron-up");
 };
-
 
 /* this is added as a prop to set initial style as "none", necessary for toggle to work!*/
 const styleObject = {

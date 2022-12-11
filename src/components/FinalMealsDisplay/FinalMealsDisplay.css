@@ -12,6 +12,9 @@
   padding: 3rem;
   font-family: 'Roboto' , sans-serif;
   font-size: 1.8rem;
+  line-height: 2.8rem;
+  //text-align: center;
+  //vertical-align: middle;
   min-height: 3rem;
   width: 60%;
   word-wrap: break-word;
@@ -22,7 +25,7 @@
   outline: 0.3rem solid var(--app-highlight);
 }
 .finalMealsDisplay-image-row {
-  margin: 2rem 0rem 0 0rem;
+  margin: 6rem 0rem 0 0rem;
   padding: 1.6vw;
   display: flex;  
   flex-direction: row;
@@ -31,6 +34,10 @@
   justify-content: center;
   column-gap: 1.6vw;
   background-color: var(--finalMealsDisplay-text--p-bg);
+  box-shadow: 
+        inset 0px 0.9rem 0.8rem -1rem var(--item-box-shadow),
+        inset 0px -0.9rem 0.8rem -1rem var(--item-box-shadow);
+  //outline: 1px solid var(--app-highlight); 
 }
 .finalMealsDisplay-imageWrapper {
   height: auto;

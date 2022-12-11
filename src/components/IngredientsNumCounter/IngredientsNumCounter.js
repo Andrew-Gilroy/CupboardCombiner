@@ -43,14 +43,24 @@ function IngredientsNumCounter({items, theme, counter, updateCounter, updateCirc
   useEffect(() => {
     if (theme === "light") {
       switch (counter) {
-        case 1: updateCircleStroke("RGBA(149,094,171, 1)"); break;
-        case 2: updateCircleStroke("RGBA(159,104,181, 1)"); break;
-        case 3: updateCircleStroke("RGBA(169,114,191, 1)"); break;
-        case 4: updateCircleStroke("RGBA(189,124,211, 1)"); break;
-        case 5: updateCircleStroke("RGBA(229,134,231, 1)"); break;
+        case 1: updateCircleStroke("rgb(090, 170, 180)"); break;
+        case 2: updateCircleStroke("rgb(100, 180, 180)"); break;
+        case 3: updateCircleStroke("rgb(110, 190, 190)"); break;
+        case 4: updateCircleStroke("rgb(120, 195, 200)"); break;
+        case 5: updateCircleStroke("rgb(130, 210, 220)"); break;
         default: updateCircleStroke("RGBA(255,000, 0, 0.29)"); break;      
       }
     }
+    // if (theme === "light") {
+    //   switch (counter) {
+    //     case 1: updateCircleStroke("RGBA(149,094,171, 1)"); break;
+    //     case 2: updateCircleStroke("RGBA(159,104,181, 1)"); break;
+    //     case 3: updateCircleStroke("RGBA(169,114,191, 1)"); break;
+    //     case 4: updateCircleStroke("RGBA(189,124,211, 1)"); break;
+    //     case 5: updateCircleStroke("RGBA(229,134,231, 1)"); break;
+    //     default: updateCircleStroke("RGBA(255,000, 0, 0.29)"); break;      
+    //   }
+    // }
   },[theme, counter]);
   
   useEffect(() => {
@@ -159,6 +169,11 @@ function IngredientsNumCounter({items, theme, counter, updateCounter, updateCirc
   //Returns random final results based on number of ingredients selected  
   const finalResultsHandler = () => {
 
+    /* duplicate the items array. Shuffle new array then slice *(counter num) of items. 
+    Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
+    ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
+    Update the state via updateResult with only one item if counter === 1 */
+
     const copyArray = [...items];
     const nameArray = [];
     console.log(copyArray);
@@ -178,11 +193,6 @@ function IngredientsNumCounter({items, theme, counter, updateCounter, updateCirc
     const sliced = shuffled.slice(0, counter);
     const poppedSingle = sliced.pop(0, 1);
     const finaltems = sliced.join(", ") + " & " + poppedSingle;
-    //
-    // const shuffled = nameArray.sort(() => 0.5 - Math.random());    
-    // const sliced = shuffled.slice(0, counter);
-    // const poppedSingle = sliced.pop(0, 1);
-    // const finaltems = sliced.join(", ") + " & " + poppedSingle + " 🍴"; 
 
     counter === 1 ? updateResult(poppedSingle) : updateResult(finaltems);
     counter === 1 ? updateUrlArray(urlArray.slice(0,1)) : console.log("counter 1");
@@ -190,12 +200,12 @@ function IngredientsNumCounter({items, theme, counter, updateCounter, updateCirc
     counter === 3 ? updateUrlArray(urlArray.slice(0,3)) : console.log("counter 3");
     counter === 4 ? updateUrlArray(urlArray.slice(0,4)) : console.log("counter 4");
     counter === 5 ? updateUrlArray(urlArray.slice(0,5)) : console.log("counter 5");
-    /* duplicate the items array. Shuffle new array then slice *(counter num) of items. 
-    Pop out the first sliced array item then Join "sliced" and "poppedSingle (now stringified) with ,'s. 
-    ternary operator to ensure if only 1 item is shown no "and" prefix is displayed in results
-    Update the state via updateResult with only one item if counter === 1 */
+
+    /*
+    Scroll to bottom when user clicks submit
+    */
     window.scrollBy({
-      top: 800,
+      top: 1800,
       left: 0,
       behavior: 'smooth'
     });

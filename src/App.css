@@ -4,26 +4,24 @@
   font-size: 62.5%;
   scroll-behavior: smooth;
   --app-bg-color: linear-gradient(to top, #2C5364, #203A43, #0F2027);
-  --app-highlight:rgb(97, 221, 255);
+  --app-highlight:rgb(37, 195, 239);
   --app-body-color: rgb(68, 68, 68);
   --app-body-color-light: rgb(240, 240, 243);
-  --bttn-submit: rgb(97, 221, 255);
+  --bttn-submit: rgb(37, 195, 239);
   --bttn-submit-toggled: rgb(59, 134, 155);
   --bttn-remove-item: rgb(219, 34, 1);
   --bttn-remove-item-toggled: rgb(167, 57, 27);
   --bttn-remove-all: rgb(219, 34, 1);
   --bttn-remove-all-toggled: rgb(167, 57, 27);
-  --bttn-add-ingredients:rgb(97, 221, 255);
+  --bttn-add-ingredients:rgb(37, 195, 239);
   --bttn-add-ingredients-toggled:rgb(59, 134, 155);
-  --bttn-remove-ingredients: rgb(219, 34, 1);
-  --bttn-remove-ingredients-toggled:rgb(167, 57, 27);
+  --bttn-remove-ingredients: rgb(37, 195, 239);
+  --bttn-remove-ingredients-toggled:rgb(59, 134, 155);
   --input-text: rgb(55, 55, 55);
   --counter-text: rgb(255, 255, 255);
-
   --item-bg-color: rgb(240, 240, 245);
   --item-text: rgb(58, 58, 93);
   --item-box-shadow: rgb(58, 58, 93, 1);
-  
   --dark-text: rgb(55, 55, 55);
   --light-text: rgb(255, 255, 255);
   --finalMealsDisplay-text: rgb(68, 68, 68);
@@ -46,12 +44,14 @@ body {
 
 #App {
   text-align: center;
-  margin: 70px auto;
+  margin: 7rem auto;
   width: 60vw;
   display: flex;
   flex-direction: column;
   background-color: var(--app-body-color-light);
-  box-shadow: 0px 2px 4px  var(--box-shadow);
+  box-shadow: 0rem 3.1rem 2.9rem -2.2rem var(--app-highlight);
+  -webkit-box-shadow: 0rem 3.1rem 2.9rem -2.2rem var(--app-highlight);
+  -moz-box-shadow: 0rem 3.1rem 2.9rem -2.2rem var(--app-highlight);
   outline:5px solid var(--app-highlight);
   border-radius: 12px;
   -webkit-transition: all 1.2s 0s ease-in-out;

@@ -69,7 +69,7 @@ function InputCupboardItem({value, term, updateTerm, imageURL, updateImageUrl,se
       //console.log(json); //updates state with returned API data
     }
     catch(err) {
-      console.log("Fetch Error");
+      console.log("Image Fetch Error");
     }
   };
   // When the user scrolls down 20px from the top of the document, show the button
@@ -78,10 +78,10 @@ function InputCupboardItem({value, term, updateTerm, imageURL, updateImageUrl,se
     let mybutton = document.getElementById("toTopBtn");
        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
          mybutton.style.display = "block";
-         console.log("visible")
+         console.log("scroll top visible")
        } else {
          mybutton.style.display = "none";
-         console.log("hidden")
+         console.log("scroll top hidden")
        }
      }
  
@@ -94,12 +94,12 @@ function InputCupboardItem({value, term, updateTerm, imageURL, updateImageUrl,se
    
 
   return <div className="AddCupboardItem">
-            <form onSubmit={onSubmitItemHandler}>
+            <form noValidate onSubmit={onSubmitItemHandler}>
               <input value={value} onChange={inputOnChange} placeholder="What is inside your cupboard?" id="AddCupboardItem-input" required maxLength="19"/>
               <button id="cupboardSubmitBtn">SUBMIT</button>
-              <button onClick={topFunction} style={{}} id="toTopBtn">&#8657;</button>
             </form>
-        </div>
+            <button onClick={topFunction} style={{}} id="toTopBtn">&#8657;</button>
+          </div>
 };
 
 export default InputCupboardItem;
