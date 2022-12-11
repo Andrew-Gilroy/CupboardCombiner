@@ -8,11 +8,11 @@ This is my first ReactJS App.
 
 ![App screenshot](https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2.png)
 
-![App screenshot - Light](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20light.png> "Light theme" =30%x)
+![App screenshot - Light](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20light.png> "Light theme" =10%x)
 
-![App screenshot - Orange](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20orange.png> "Orange theme" =30%x)
+![App screenshot - Orange](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20orange.png> "Orange theme" =10%x)
 
-![App screenshot - Purple](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20purple.png> "Purple theme" =20%x)
+![App screenshot - Purple](<https://raw.githubusercontent.com/Andrew-Gilroy/CupboardCombiner/master/readmeimages/Cupboard%20Combiner%20V2%20purple.png> "Purple theme" =10%x)
 
 ---
 
@@ -44,8 +44,7 @@ This is my first ReactJS App.
 
 ## Todo
 
-* #v2
-* +Update app dependencies and react version.
+* +Improve window alert prompt -> Modal or pop out.
 
 ## Author
 
