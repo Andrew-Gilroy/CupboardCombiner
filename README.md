@@ -42,6 +42,7 @@ This is my first ReactJS App.
 ## Todo
 
 * +Improve window alert prompt -> Modal or pop out.
+* +Further logic cleanup.
 
 ## Author
 
